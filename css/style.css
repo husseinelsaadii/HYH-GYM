@@ -157,3 +157,195 @@
          padding: 0.4rem 0.8rem;
      }
  }
+ /*---------------------MAIN-------------------------------------*/
+ /* Hero Section Styles */
+ .hero-section {
+     position: relative;
+     width: 100%;
+     height: 100vh;
+     overflow: hidden;
+ }
+
+ /* Slide Indicator */
+ .slide-indicator {
+     position: absolute;
+     top: 20px; /* Position below nav bar */
+     right: 30px;
+     z-index: 10;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     color: white;
+ }
+
+ .slide-number {
+     font-size: 0.8rem;
+     margin-bottom: 5px;
+     font-weight: bold;
+ }
+
+ .slide-timer {
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     background-color: rgba(0, 0, 0, 0.3);
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .timer-progress {
+     width: 36px;
+     height: 36px;
+     border-radius: 50%;
+     background: conic-gradient(#f44336 0%, transparent 0%);
+     transition: background 1s linear;
+ }
+
+ /* Slides Container */
+ .slides-container {
+     width: 100%;
+     height: 100%;
+     position: relative;
+ }
+
+ /* Individual Slides */
+ .slide {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     opacity: 0;
+     transform: translateX(100%);
+     transition: transform 1s ease, opacity 1s ease;
+ }
+
+ .slide.active {
+     opacity: 1;
+     transform: translateX(0);
+ }
+
+ .slide.prev {
+     opacity: 0;
+     transform: translateX(-100%);
+ }
+
+ /* Video Background */
+ .video-background {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: -1;
+ }
+
+ .video-background::after {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+ }
+
+ .video-background video {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ /* Content Positioning */
+ .hero-content {
+     display: flex;
+     height: 100%;
+     width: 100%;
+     padding: 0 10%;
+ }
+
+ .hero-text {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     width: 50%;
+     color: white;
+     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+ }
+
+ .hero-text h1 {
+     font-family: 'Bebas Neue', sans-serif;
+     font-size: 4rem;
+     margin: 0;
+     line-height: 1;
+ }
+
+ .hero-text h2 {
+     font-family: 'Bebas Neue', sans-serif;
+     font-size: 3rem;
+     margin: 0 0 1.5rem 0;
+     line-height: 1;
+ }
+
+ .hero-text p {
+     font-size: 1.2rem;
+     margin-bottom: 2rem;
+     max-width: 80%;
+ }
+
+ /* Button Styles */
+ .hero-buttons {
+     display: flex;
+     gap: 1rem;
+ }
+
+ .btn {
+     font-family: 'Bebas Neue', sans-serif;
+     font-size: 1.2rem;
+     padding: 0.8rem 2rem;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     letter-spacing: 1px;
+     transition: all 0.3s ease;
+ }
+
+ .primary-btn {
+     background-color: #f44336; /* Red color similar to your "Start A Trial" button */
+     color: white;
+ }
+
+ .primary-btn:hover {
+     background-color: #d32f2f;
+     transform: translateY(-2px);
+ }
+
+ .secondary-btn {
+     background-color: transparent;
+     color: white;
+     border: 2px solid white;
+ }
+
+ .secondary-btn:hover {
+     background-color: rgba(255, 255, 255, 0.1);
+     transform: translateY(-2px);
+ }
+
+ /* Make sure to add proper responsiveness */
+ @media (max-width: 768px) {
+     .hero-text {
+         width: 100%;
+         text-align: center;
+         padding: 0 1rem;
+     }
+
+     .hero-text p {
+         max-width: 100%;
+     }
+
+     .hero-buttons {
+         justify-content: center;
+     }
+ }
