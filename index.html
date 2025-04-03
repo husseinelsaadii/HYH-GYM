@@ -2,24 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>
-    HYH Training | Lif Changing Gym & Functional Team Training
-  </title>
+  <title>HYH Training | Life Changing Gym & Functional Team Training</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
 </head>
 <body>
 <!-- nav bar -->
-  <nav class="nav-bar">
-    <!-- Logo Div -->
-    <div class="nav-logo">
+<nav class="nav-bar">
+  <div class="nav-logo">
     <img class="logo" src="images/logo.jpeg" alt="HYH-logo">
-    </div>
-    <!-- Navbar Menu Container -->
-    <div class="navbar-container">
+  </div>
+  <div class="navbar-container">
     <ul class="nav-menu nav-left-links">
       <li><a href="#">WHAT IS HYH?</a></li>
-
       <li class="nav-dropdown">
         <a href="#">HYH WORKOUTS</a>
         <div class="nav-dropdown-content">
@@ -29,128 +25,167 @@
           <a href="#">RECOVERY</a>
         </div>
       </li>
-
-       <li>
-         <a href="#">HYH CHALLENGE</a>
-          <div class="nav-dropdown-content">
-            <a href="#">ARTICLES</a>
-          </div>
-       </li>
-
-      <li>
-        <a href="#">PARTNERS</a>
-      </li>
-
-      <li>
-        <a href="#">BLOG</a>
-      </li>
-
+      <li><a href="#">HYH CHALLENGE</a></li>
+      <li><a href="#">PARTNERS</a></li>
+      <li><a href="#">BLOG</a></li>
     </ul>
-
     <div class="divider"></div>
-
     <ul class="nav-menu nav-right-links">
       <li><a href="#">Find A Studio</a></li>
       <li><a href="#">HYH Shop</a></li>
       <li>
         <a href="#">
-          <button class="trial-btn">
-            Start A Trial
-          </button>
+          <button class="trial-btn">Start A Trial</button>
         </a>
       </li>
     </ul>
-    </div>
-  </nav>
+  </div>
+</nav>
 
 <!-- Main Section -->
 <main>
-
   <section class="hero-section">
-  <!-- Slide Indicator -->
-  <div class="slide-indicator">
-    <div class="slide-number">1/3</div>
-    <div class="slide-timer">
-      <div class="timer-progress"></div>
+    <div class="slide-indicator">
+      <div class="slide-number">1/3</div>
+      <div class="slide-timer">
+        <div class="timer-progress"></div>
+      </div>
     </div>
-  </div>
 
-  <!-- Slides Container -->
-  <div class="slides-container">
-    <!-- Slide 1 -->
-    <div class="slide active">
-      <div class="video-background">
-        <video autoplay muted loop id="video1">
-          <source src="videos/hero1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+    <div class="slides-container">
+      <div class="slide active">
+        <div class="video-background">
+          <video autoplay muted loop id="video1">
+            <source src="videos/hero1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>TRANSFORM YOUR BODY</h1>
+            <h2>TRANSFORM YOUR LIFE</h2>
+            <p>Experience functional group fitness with the effectiveness and attention of a certified personal trainer.</p>
+            <div class="hero-buttons">
+              <button class="btn primary-btn">Book A Class</button>
+              <button class="btn secondary-btn">Learn More</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>TRANSFORM YOUR BODY</h1>
-          <h2>TRANSFORM YOUR LIFE</h2>
-          <p>Experience functional group fitness with the effectiveness and attention of a certified personal trainer.</p>
+      <div class="slide">
+        <div class="video-background">
+          <video autoplay muted loop id="video2">
+            <source src="videos/hero2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>UNLEASH YOUR POTENTIAL</h1>
+            <h2>JOIN OUR COMMUNITY</h2>
+            <p>Push your limits with our high-intensity workouts designed to maximize results and build strength.</p>
+            <div class="hero-buttons">
+              <button class="btn primary-btn">Start Your Journey</button>
+              <button class="btn secondary-btn">View Workouts</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-          <div class="hero-buttons">
-            <button class="btn primary-btn">Book A Class</button>
-            <button class="btn secondary-btn">Learn More</button>
+      <div class="slide">
+        <div class="video-background">
+          <video autoplay muted loop id="video3">
+            <source src="videos/hero3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>RESULTS THAT LAST</h1>
+            <h2>TRAINING THAT WORKS</h2>
+            <p>Our proven methods combine cardio, strength, and recovery to create lasting changes to your body and mind.</p>
+            <div class="hero-buttons">
+              <button class="btn primary-btn">Join HYH Challenge</button>
+              <button class="btn secondary-btn">Meet Our Trainers</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Slide 2 -->
-    <div class="slide">
-      <div class="video-background">
-        <video autoplay muted loop id="video2">
-          <source src="videos/hero2.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>UNLEASH YOUR POTENTIAL</h1>
-          <h2>JOIN OUR COMMUNITY</h2>
-          <p>Push your limits with our high-intensity workouts designed to maximize results and build strength.</p>
-
-          <div class="hero-buttons">
-            <button class="btn primary-btn">Start Your Journey</button>
-            <button class="btn secondary-btn">View Workouts</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 3 -->
-    <div class="slide">
-      <div class="video-background">
-        <video autoplay muted loop id="video3">
-          <source src="videos/hero3.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>RESULTS THAT LAST</h1>
-          <h2>TRAINING THAT WORKS</h2>
-          <p>Our proven methods combine cardio, strength, and recovery to create lasting changes to your body and mind.</p>
-
-          <div class="hero-buttons">
-            <button class="btn primary-btn">Join HYH Challenge</button>
-            <button class="btn secondary-btn">Meet Our Trainers</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   </section>
 </main>
-<footer>
 
+<footer class="app-footer">
+  <div class="footer-content">
+    <!-- Top Section: Logo & Social Icons -->
+    <div class="footer-top">
+      <div class="footer-logo-container">
+        <a href="#" class="navbar-brand">
+          <img class="footer-logo" src="images/logo.jpeg" alt="HYH Logo">
+        </a>
+      </div>
+      <div class="social-menu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fa-brands fa-youtube"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="footer-divider">
+
+    <!-- Mailing List Section -->
+    <div class="app-footer__mailing-list">
+      <div class="small-text mb-3">JOIN OUR MAILING LIST TODAY</div>
+      <h3>GET 20% OFF YOUR FIRST ORDER AT THE HYH SHOP</h3>
+      <p>Gain exclusive access to special offers, product drops, new workouts, and upcoming events.</p>
+      <a class="btn btn-sign-up" href="#">Sign Up</a>
+    </div>
+
+    <!-- Footer Links & Partner Badges -->
+    <div class="footer-links-container">
+      <div class="footer-links">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="#" class="nav-link">Studios</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Newsroom</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Invest</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Careers</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Download App</a></li>
+        </ul>
+      </div>
+
+      <!-- Partner Badges (with cool hover effect) -->
+      <div class="footer-partners">
+        <img class="footer-badge" src="images/entrepreneur-2023.png" alt="Franchise Award">
+        <img class="footer-badge" src="images/mens-journal-1.png" alt="Men's Journal">
+      </div>
+
+      <!-- Region Selector -->
+      <div class="language">
+        <button class="btn btn-outline-white">Change Region</button>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+      <p>&copy; 2025 HYH TRAINING. ALL RIGHTS RESERVED.</p>
+    </div>
+  </div>
 </footer>
+
+
+
+</body>
+</html>
+</body>
+</html>
+
 <script src="js/slideshow.js"></script>
 </body>
 </html>
