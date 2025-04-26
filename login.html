@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HYH Training | Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- NAV-BAR -->
+<nav class="nav-bar">
+    <div class="nav-logo">
+        <a href="index.html">
+            <img class="logo" src="images/GYM%20Logo.png" alt="HYH-logo">
+        </a>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main class="login-container">
+    <div class="form-container">
+        <!-- Form Toggle -->
+        <div class="form-toggle">
+            <button id="login-toggle" class="toggle-btn active">SIGN IN</button>
+            <button id="register-toggle" class="toggle-btn">SIGN UP</button>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-form" class="form">
+            <h2>WELCOME BACK</h2>
+            <div class="form-group">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" required>
+            </div>
+            <button id="login-btn" class="primary-btn">SIGN IN</button>
+            <div class="form-footer">
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+        </div>
+
+        <!-- Register Form -->
+        <div id="register-form" class="form hidden">
+            <h2>JOIN THE COMMUNITY</h2>
+            <div class="form-group">
+                <label for="register-name">Full Name</label>
+                <input type="text" id="register-name" required>
+            </div>
+            <div class="form-group">
+                <label for="register-email">Email</label>
+                <input type="email" id="register-email" required>
+            </div>
+            <div class="form-group">
+                <label for="register-password">Password</label>
+                <input type="password" id="register-password" required>
+            </div>
+            <div class="form-group">
+                <label for="register-confirm">Confirm Password</label>
+                <input type="password" id="register-confirm" required>
+            </div>
+            <button id="register-btn" class="primary-btn">CREATE ACCOUNT</button>
+        </div>
+    </div>
+</main>
+
+<!-- Footer Section (Simplified) -->
+<footer class="app-footer simplified-footer">
+    <div class="footer-content">
+        <div class="footer-logo-container">
+            <img class="footer-logo" src="images/GYM%20Logo.png" alt="HYH Logo">
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 HYH TRAINING. ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/login.js"></script>
+</body>
+</html>

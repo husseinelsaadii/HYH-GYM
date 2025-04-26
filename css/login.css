@@ -1,0 +1,150 @@
+/* Login Page Specific Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    background-color: #1A1A1A;
+    padding: 2rem;
+}
+
+.form-container {
+    background-color: #2A2A2A;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
+.form-toggle {
+    display: flex;
+    border-bottom: 1px solid #444;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    flex: 1;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    padding: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+    background-color: #333;
+    color: #FFDD00;
+}
+
+.toggle-btn:hover:not(.active) {
+    background-color: #333;
+}
+
+.form {
+    padding: 2rem;
+}
+
+.form.hidden {
+    display: none;
+}
+
+.form h2 {
+    color: #FFDD00;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #FFDD00;
+    outline: none;
+}
+
+.form-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.forgot-password {
+    color: #999;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.forgot-password:hover {
+    color: #FFDD00;
+}
+
+/* Primary Button Modified for Form */
+.form .primary-btn {
+    width: 100%;
+    background-image: linear-gradient(to bottom, #ff4d4d, #e60000);
+    font-size: 1.3rem;
+    padding: 0.8rem 0;
+    margin-top: 1rem;
+}
+
+.form .primary-btn:hover {
+    background-image: linear-gradient(to bottom, #ff6666, #cc0000);
+}
+
+/* Simplified Footer for Login Page */
+.simplified-footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+.simplified-footer .footer-content {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.simplified-footer .footer-logo {
+    width: 80px;
+}
+
+@media screen and (max-width: 480px) {
+    .login-container {
+        padding: 1rem;
+    }
+
+    .form {
+        padding: 1.5rem;
+    }
+
+    .form h2 {
+        font-size: 1.8rem;
+    }
+
+    .toggle-btn {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+}

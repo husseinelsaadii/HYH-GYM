@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HYH Training | User Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- NAV-BAR -->
+<nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="index.html">
+      <img class="logo" src="images/GYM%20Logo.png" alt="HYH-logo">
+    </a>
+  </div>
+
+  <div class="navbar-container">
+    <ul class="nav-menu nav-left-links">
+      <li><a href="#">WORKOUTS</a></li>
+      <li><a href="#">SCHEDULE</a></li>
+      <li><a href="#">PROGRESS</a></li>
+      <li><a href="#">NUTRITION</a></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <ul class="nav-menu nav-right-links">
+      <li><a href="#" id="userName">Welcome, User</a></li>
+      <li><a href="#" id="logout-btn">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main class="dashboard-container">
+  <div class="dashboard-header">
+    <h1>USER DASHBOARD</h1>
+    <p class="welcome-message">Welcome back! Ready to crush today's workout?</p>
+  </div>
+
+  <div class="dashboard-grid">
+    <div class="dashboard-card">
+      <h2>TODAY'S WORKOUT</h2>
+      <p>HIIT Cardio + Core</p>
+      <p>45 minutes</p>
+      <button class="primary-btn">Start Workout</button>
+    </div>
+
+    <div class="dashboard-card">
+      <h2>YOUR PROGRESS</h2>
+      <p>Workouts completed: 12</p>
+      <p>Current streak: 3 days</p>
+      <button class="secondary-btn">View Details</button>
+    </div>
+
+    <div class="dashboard-card">
+      <h2>UPCOMING CLASSES</h2>
+      <p>Team Training: Tomorrow, 6:00 PM</p>
+      <p>Strength Focus: Thursday, 7:30 AM</p>
+      <button class="secondary-btn">Book Class</button>
+    </div>
+
+    <div class="dashboard-card">
+      <h2>GOALS</h2>
+      <p>Weight training: 3x weekly</p>
+      <p>Cardio: 2x weekly</p>
+      <button class="secondary-btn">Update Goals</button>
+    </div>
+  </div>
+</main>
+
+<!-- Footer Section (Simplified) -->
+<footer class="app-footer simplified-footer">
+  <div class="footer-content">
+    <div class="footer-logo-container">
+      <img class="footer-logo" src="images/GYM%20Logo.png" alt="HYH Logo">
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 HYH TRAINING. ALL RIGHTS RESERVED.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Check if user is logged in
+  document.addEventListener('DOMContentLoaded', function() {
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+    if (!currentUser) {
+      // Redirect to login if not logged in
+      window.location.href = 'login.html';
+      return;
+    }
+
+    // Make sure this is not an admin
+    if (currentUser.isAdmin) {
+      window.location.href = 'home-admin.html';
+      return;
+    }
+
+    // Update username in nav
+    document.getElementById('userName').textContent = `Welcome, ${currentUser.name}`;
+
+    // Handle logout
+    document.getElementById('logout-btn').addEventListener('click', function() {
+      localStorage.removeItem('currentUser');
+      window.location.href = 'login.html';
+    });
+  });
+</script>
+</body>
+</html>

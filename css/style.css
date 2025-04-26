@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #222;
+    background-color: #1A1A1A;
     padding: 1rem 2rem;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .nav-menu li a:hover {
-    color: yellow;
+    color: #FFDD00;
 }
 
 .divider {
@@ -56,7 +56,7 @@
 }
 
 .trial-btn {
-    background-color: red;
+    background-image: linear-gradient(to bottom, #ff4d4d, #e60000);
     color: white;
     padding: 0.5rem 1rem;
     margin: -1rem 1rem;
@@ -65,12 +65,13 @@
     cursor: pointer;
     font-weight: bold;
     font-size: 1.5rem;
-    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(255, 77, 77, 0.3);
+    transition: all 0.3s ease;
 }
 
 .trial-btn:hover {
-    background-color: red;
-    box-shadow: 0 4px 10px #7c6b6b;
+    background: linear-gradient(to bottom, #ff6666, #cc0000);
+    transform: translateY(-2px);
 }
 
 /* Dropdown Styling */
@@ -327,10 +328,11 @@
 }
 /*------------------------------------- Feature Styling -----------------------------*/
 .feature-container {
-    max-width: 1400px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 40px 20px;
     background: #373131;
+    border-top: 10px solid black;
 }
 
 .stars {
@@ -412,6 +414,7 @@
 .cta-button:hover {
     background-color: #f5f5f5;
     color: #121212;
+    transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
@@ -506,7 +509,7 @@
     font-weight: 600;
     font-size: 14px;
     border-radius: 4px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
     border: none;
     cursor: pointer;
     text-align: center;
@@ -515,6 +518,7 @@
 
 .workout-feature-button:hover {
     background-color: #b71c1c;
+    transform: translateY(-2px);
 }
 
 /* Responsive design */
@@ -586,20 +590,23 @@
     background-color: #d9131a;
     width: 100%;
 }
+
+/* --------------------------------General Footer Styling---------------------- */
 /* --------------------------------General Footer Styling---------------------- */
 .app-footer {
     background-color: #1c1c1c; /* Black background */
     color: #fff;
-    padding: 1.5rem 2rem; /* Reduced padding for a more compact look */
+    padding: 3rem 2rem; /* Increased top/bottom padding for better spacing */
     font-family: 'Bebas Neue', cursive;
-    text-align: center;
-    border-top: 1px solid #ffdd00; /* Yellow border for a more bold look */
+    border-top: 10px solid black; /* Slightly thicker yellow border */
 }
 
 .footer-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
     width: 100%;
 }
 
@@ -609,17 +616,15 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
-    margin-bottom: 1rem; /* Reduced bottom margin */
+    margin-bottom: 2rem;
 }
 
 .footer-logo-container {
-    flex: 1;
-    margin-right: 1rem;
+    text-align: left;
 }
 
 .footer-logo {
-    width: 140px; /* Increased logo size slightly */
+    width: 140px;
     height: auto;
 }
 
@@ -635,6 +640,9 @@
     color: #ffdd00; /* Yellow color for icons */
     font-size: 1.8rem;
     transition: color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-menu ul li a:hover {
@@ -645,37 +653,51 @@
 /* Divider */
 .footer-divider {
     width: 100%;
-    border: 1px solid white;
-    margin: 1rem 0;
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle divider */
+    margin: 1.5rem 0 2.5rem;
 }
 
 /* Mailing List Section */
 .app-footer__mailing-list {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
+    max-width: 700px;
+}
+
+.small-text {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    opacity: 0.8;
 }
 
 .app-footer__mailing-list h3 {
     font-size: 2.5rem;
-    margin-bottom: 0.8rem;
+    margin: 0.5rem 0 1rem;
     color: #ffdd00; /* Yellow color for the heading */
+    letter-spacing: 1px;
 }
 
 .app-footer__mailing-list p {
     font-size: 1.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-family: Arial, sans-serif; /* Different font for better readability */
+    font-weight: 300;
+    line-height: 1.5;
 }
 
 .btn-sign-up {
     background-color: #ffdd00; /* Yellow button */
     color: black;
-    padding: 1rem 2.5rem;
+    padding: 0.8rem 2.5rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
     letter-spacing: 1px;
     transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
 }
 
 .btn-sign-up:hover {
@@ -688,9 +710,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .footer-links ul {
@@ -698,18 +719,20 @@
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 3rem;
+    gap: 2.5rem;
 }
 
 .footer-links ul li a {
     color: #ffdd00; /* Yellow text for links */
     text-decoration: none;
-    font-size: 1.2rem; /* Increased font size */
+    font-size: 1.2rem;
     transition: color 0.3s;
+    letter-spacing: 0.5px;
 }
 
 .footer-links ul li a:hover {
     color: white;
+    text-decoration: underline;
 }
 
 /* Footer Partner Badges Section */
@@ -720,65 +743,110 @@
 }
 
 .footer-badge {
-    max-height: 80px;
+    max-height: 60px; /* Slightly smaller for better proportion */
     transition: transform 0.3s ease, opacity 0.3s ease;
+    filter: grayscale(0.3); /* Subtle grayscale effect */
 }
 
 .footer-badge:hover {
     transform: scale(1.1);
-    opacity: 0.9;
+    opacity: 1;
+    filter: grayscale(0); /* Remove grayscale on hover */
 }
 
 /* Region Selector Button */
 .language button.btn-outline-white {
     background: transparent;
-    border: 1px solid #fff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     color: #fff;
     padding: 0.6rem 1.8rem;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    transition: all 0.3s;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
 }
 
 .language button.btn-outline-white:hover {
-    background-color: #ffdd00; /* Yellow on hover */
+    background-color: #ffdd00;
     color: black;
+    border-color: #ffdd00;
 }
 
 /* Copyright */
 .copyright {
     margin-top: 1rem;
-    font-size: 1rem;
-    color: white;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 1px;
+    font-family: Arial, sans-serif;
 }
 
 /* Responsive Design for Smaller Screens */
+@media screen and (max-width: 992px) {
+    .footer-links-container {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .footer-partners {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+
+    .language {
+        order: 2;
+    }
+}
+
 @media screen and (max-width: 768px) {
+    .app-footer {
+        padding: 2rem 1.5rem;
+    }
+
     .footer-top {
         flex-direction: column;
-        align-items: center;
+        gap: 1.5rem;
     }
 
     .footer-links-container {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        gap: 2rem;
     }
 
     .footer-links ul {
         flex-direction: column;
+        align-items: center;
         gap: 1rem;
     }
 
-    .footer-partners {
-        margin-top: 1.5rem;
+    .app-footer__mailing-list h3 {
+        font-size: 2rem;
     }
 
-    .footer-logo {
-        width: 120px; /* Adjust logo size for smaller screens */
+    .footer-badge {
+        max-height: 50px;
     }
 }
 
+@media screen and (max-width: 480px) {
+    .social-menu ul {
+        gap: 1rem;
+    }
 
+    .social-menu ul li a {
+        font-size: 1.5rem;
+    }
 
+    .app-footer__mailing-list h3 {
+        font-size: 1.7rem;
+    }
 
+    .app-footer__mailing-list p {
+        font-size: 1rem;
+    }
+}

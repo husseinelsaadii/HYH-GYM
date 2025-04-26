@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HYH Training | Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- NAV-BAR -->
+<nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="index.html">
+      <img class="logo" src="images/GYM%20Logo.png" alt="HYH-logo">
+    </a>
+  </div>
+
+  <div class="navbar-container">
+    <ul class="nav-menu nav-left-links">
+      <li><a href="#">USERS</a></li>
+      <li><a href="#">WORKOUTS</a></li>
+      <li><a href="#">CLASSES</a></li>
+      <li><a href="#">REPORTS</a></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <ul class="nav-menu nav-right-links">
+      <li><a href="#" id="adminName">Admin Panel</a></li>
+      <li><a href="#" id="logout-btn">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main class="dashboard-container">
+  <div class="dashboard-header admin-header">
+    <h1>ADMIN DASHBOARD</h1>
+    <p class="welcome-message">Manage your fitness studio operations</p>
+  </div>
+
+  <div class="dashboard-grid">
+    <div class="dashboard-card">
+      <h2>USER MANAGEMENT</h2>
+      <p>Total members: 245</p>
+      <p>New this week: 12</p>
+      <button class="primary-btn">Manage Users</button>
+    </div>
+
+    <div class="dashboard-card">
+      <h2>CLASS SCHEDULE</h2>
+      <p>Classes today: 8</p>
+      <p>Total bookings: 124</p>
+      <button class="secondary-btn">Edit Schedule</button>
+    </div>
+
+    <div class="dashboard-card">
+      <h2>TRAINER ASSIGNMENTS</h2>
+      <p>Active trainers: 6</p>
+      <p>Pending approvals: 2</p>
+      <button class="secondary-btn">Manage Trainers</button>
+    </div>
+
+    <div class="dashboard-card">
+      <h2>ANALYTICS</h2>
+      <p>Attendance rate: 86%</p>
+      <p>Member retention: 92%</p>
+      <button class="secondary-btn">View Reports</button>
+    </div>
+  </div>
+</main>
+
+<!-- Footer Section (Simplified) -->
+<footer class="app-footer simplified-footer">
+  <div class="footer-content">
+    <div class="footer-logo-container">
+      <img class="footer-logo" src="images/GYM%20Logo.png" alt="HYH Logo">
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 HYH TRAINING. ALL RIGHTS RESERVED.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Check if admin is logged in
+  document.addEventListener('DOMContentLoaded', function() {
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+    if (!currentUser) {
+      // Redirect to login if not logged in
+      window.location.href = 'login.html';
+      return;
+    }
+
+    // Make sure this is an admin
+    if (!currentUser.isAdmin) {
+      window.location.href = 'home-user.html';
+      return;
+    }
+
+    // Update admin name in nav
+    document.getElementById('adminName').textContent = `Admin: ${currentUser.name}`;
+
+    // Handle logout
+    document.getElementById('logout-btn').addEventListener('click', function() {
+      localStorage.removeItem('currentUser');
+      window.location.href = 'login.html';
+    });
+  });
+</script>
+</body>
+</html>

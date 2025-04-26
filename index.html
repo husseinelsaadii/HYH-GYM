@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>HYH Training | Life Changing Gym & Functional Team Training</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
 </head>
+
 <body>
-<!-- nav bar -->
+<!-- ------------------------------NAV-BAR----------------------- -->
 <nav class="nav-bar">
+
   <div class="nav-logo">
     <img class="logo" src="images/GYM%20Logo.png" alt="HYH-logo">
   </div>
+
   <div class="navbar-container">
     <ul class="nav-menu nav-left-links">
       <li><a href="#">WHAT IS HYH?</a></li>
@@ -27,15 +30,17 @@
       </li>
       <li><a href="#">HYH CHALLENGE</a></li>
       <li><a href="#">PARTNERS</a></li>
-      <li><a href="#">BLOG</a></li>
+      <li><a href="about-us.html">ABOUT US</a></li>
     </ul>
+
     <div class="divider"></div>
+
     <ul class="nav-menu nav-right-links">
       <li><a href="#">Find A Studio</a></li>
       <li><a href="#">HYH Shop</a></li>
       <li>
         <a href="#">
-          <button class="trial-btn">Start A Trial</button>
+          <button class="trial-btn" onclick="location.href='login.html'">Start A Trial</button>
         </a>
       </li>
     </ul>
@@ -44,14 +49,16 @@
 
 <!-- Main Section -->
 <main>
+
   <section class="hero-section">
+<!--    The timer displayer in the corner which shows the time-->
     <div class="slide-indicator">
       <div class="slide-number">1/3</div>
       <div class="slide-timer">
         <div class="timer-progress"></div>
       </div>
     </div>
-
+<!--    first slide-->
     <div class="slides-container">
       <div class="slide active">
         <div class="video-background">
@@ -73,6 +80,7 @@
         </div>
       </div>
 
+      <!--    The timer displayer in the corner which shows the time-->
       <div class="slide">
         <div class="video-background">
           <video autoplay muted loop id="video2">
@@ -80,6 +88,7 @@
             Your browser does not support the video tag.
           </video>
         </div>
+<!--        second slide-->
         <div class="hero-content">
           <div class="hero-text">
             <h1>UNLEASH YOUR POTENTIAL</h1>
@@ -93,6 +102,7 @@
         </div>
       </div>
 
+      <!--    The timer displayer in the corner which shows the time-->
       <div class="slide">
         <div class="video-background">
           <video autoplay muted loop id="video3">
@@ -100,6 +110,7 @@
             Your browser does not support the video tag.
           </video>
         </div>
+<!--        third slide-->
         <div class="hero-content">
           <div class="hero-text">
             <h1>RESULTS THAT LAST</h1>
@@ -115,7 +126,7 @@
     </div>
   </section>
 
-
+<!--    feature section-->
     <section class="feature-container">
       <div class="stars">★ ★ ★</div>
       <p class="subtitle">Backed by science</p>
@@ -132,28 +143,14 @@
         </div>
 
         <div class="image">
-          <img src="images/Person-kettlebell.webp" alt="Person doing kettlebell workout">
+          <img src="images/hijab-woman.jpg" alt="Hijab Woman in gym">
         </div>
       </div>
 
       <a href="#" class="cta-button">Learn More</a>
     </section>
 
-  <section class="workout-feature-section">
-    <div class="workout-feature-bg">
-      <img src="images/plank-man.jpg" alt="HYH workout session">
-    </div>
-
-    <div class="workout-feature-content">
-      <p class="workout-feature-tagline">SWEAT-DRIPPING, HEART-PUMPING FUN.</p>
-      <div class="workout-feature-separator"></div>
-      <h2 class="workout-feature-title">START YOUR HYH WORKOUT</h2>
-      <p class="workout-feature-description">With over 5,000 exercises and 80+ workout classes in our database, HYH has an extensive selection of fun, fast-paced exercises that will keep you motivated to do more, achieve more, and be more! But no need to feel intimidated. This workout is for all ages and every body. And no two workouts are ever the same.</p>
-      <a href="#" class="workout-feature-button">Explore Our Exercises</a>
-    </div>
-  </section>
-
-<!--  slide shows-->
+  <!--  slide shows-->
   <section class="banner-container">
     <div class="banner-content">
       <!-- First set of text -->
@@ -185,17 +182,28 @@
     </div>
   </section>
   <div class="red-bar"></div>
+
+<!--  workout feature section-->
+  <section class="workout-feature-section">
+    <div class="workout-feature-bg">
+      <img src="images/plank-man.jpg" alt="HYH workout session">
+    </div>
+
+    <div class="workout-feature-content">
+      <p class="workout-feature-tagline">SWEAT-DRIPPING, HEART-PUMPING FUN.</p>
+      <div class="workout-feature-separator"></div>
+      <h2 class="workout-feature-title">START YOUR HYH WORKOUT</h2>
+      <p class="workout-feature-description">With over 5,000 exercises and 80+ workout classes in our database, HYH has an extensive selection of fun, fast-paced exercises that will keep you motivated to do more, achieve more, and be more! But no need to feel intimidated. This workout is for all ages and every body. And no two workouts are ever the same.</p>
+      <a href="#" class="workout-feature-button">Explore Our Exercises</a>
+    </div>
+  </section>
+
 </main>
 
 <footer class="app-footer">
   <div class="footer-content">
     <!-- Top Section: Logo & Social Icons -->
     <div class="footer-top">
-      <div class="footer-logo-container">
-        <a href="#" class="navbar-brand">
-          <img class="footer-logo" src="images/GYM%20Logo.png" alt="HYH Logo">
-        </a>
-      </div>
       <div class="social-menu">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#"><i class="fa-brands fa-instagram"></i></a></li>
