@@ -533,6 +533,59 @@
         font-size: 32px;
     }
 }
+/*-------------------------------Slide showing section -------------------------*/
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background-color: #1a1154;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.scrolling-wrapper {
+    display: flex;
+    width: max-content;
+}
+
+.banner-content {
+    display: inline-flex;
+    align-items: center;
+    animation: scroll-left 20s linear infinite;
+}
+
+.banner-container:hover .banner-content {
+    animation-play-state: paused;
+}
+
+.banner-text {
+    display: inline-block;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.star {
+    color: white;
+    font-size: 36px;
+    margin: 0 15px;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.red-bar {
+    height: 20px;
+    background-color: #d9131a;
+    width: 100%;
+}
 /* --------------------------------General Footer Styling---------------------- */
 .app-footer {
     background-color: #1c1c1c; /* Black background */

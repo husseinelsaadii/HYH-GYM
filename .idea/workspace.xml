@@ -37,12 +37,12 @@
     &quot;assignee&quot;: &quot;husseinelsaadii&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/husseinelsaadii/HYH-GYM.git",
-    "accountId": "acc48848-fab0-4aa9-a754-b6f14c95d61b"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/husseinelsaadii/HYH-GYM.git&quot;,
+    &quot;accountId&quot;: &quot;acc48848-fab0-4aa9-a754-b6f14c95d61b&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -100,7 +100,12 @@
       <workItem from="1743658164831" duration="944000" />
       <workItem from="1743659204835" duration="9841000" />
       <workItem from="1744180717877" duration="94000" />
-      <workItem from="1744968097707" duration="3301000" />
+      <workItem from="1744968097707" duration="4097000" />
+      <workItem from="1745142955421" duration="160000" />
+      <workItem from="1745145002927" duration="2199000" />
+      <workItem from="1745174355391" duration="18000" />
+      <workItem from="1745570625296" duration="248000" />
+      <workItem from="1745642607723" duration="84000" />
     </task>
     <servers />
   </component>
