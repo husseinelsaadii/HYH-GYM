@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HYH Training | Membership Plans</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        /* Membership Page Specific Styles */
+        :root {
+            --primary-color: #f44336;
+            --dark-bg: #1A1A1A;
+            --light-text: #f5f5f5;
+            --container-padding: 1rem;
+            --border-radius: 1rem;
+            --transition-speed: 0.3s;
+        }
+
+        body {
+            font-family: 'Bebas Neue', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            margin: 0;
+            padding: 0;
+        }
+
+        .membership-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: var(--container-padding);
+        }
+
+        .membership-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .membership-header h1 {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .membership-header p {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .plans-toggle {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+
+        .toggle-btn {
+            padding: 0.8rem 1.5rem;
+            background-color: #333;
+            border: none;
+            border-radius: 0.5rem;
+            color: var(--light-text);
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color var(--transition-speed);
+        }
+
+        .toggle-btn.active {
+            background-color: var(--primary-color);
+        }
+
+        .membership-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .plan-card {
+            background-color: #222;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+            flex: 1 1 300px;
+            max-width: 350px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .popular-tag {
+            position: absolute;
+            top: 20px;
+            right: -60px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 4rem;
+            transform: rotate(45deg);
+            font-size: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .plan-name {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-time {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .plan-price {
+            font-size: 3.5rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .price-period {
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .plan-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-available {
+            color: var(--light-text);
+        }
+
+        .feature-unavailable {
+            color: #777;
+            text-decoration: line-through;
+        }
+
+        .feature-icon {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .plan-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color var(--transition-speed);
+            text-align: center;
+            text-decoration: none;
+            margin-top: 2rem;
+        }
+
+        .plan-btn.secondary {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .plan-btn:hover {
+            background-color: #d32f2f;
+        }
+
+        .plan-btn.secondary:hover {
+            background-color: rgba(244, 67, 54, 0.1);
+        }
+
+        .plan-comparison {
+            margin-top: 4rem;
+            background-color: #222;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .comparison-header {
+            background-color: var(--primary-color);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .comparison-header h2 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .comparison-table th {
+            background-color: #2a2a2a;
+            font-size: 1.2rem;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .check-icon {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .x-icon {
+            color: #777;
+            font-size: 1.5rem;
+        }
+
+        .faq-section {
+            margin-top: 4rem;
+        }
+
+        .faq-section h2 {
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .faq-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            background-color: #222;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2a2a2a;
+            transition: background-color var(--transition-speed);
+        }
+
+        .faq-question:hover {
+            background-color: #333;
+        }
+
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.3rem;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-speed), padding var(--transition-speed);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 1.5rem;
+        }
+
+        .cta-section {
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: background-color var(--transition-speed), transform var(--transition-speed);
+            text-decoration: none;
+        }
+
+        .cta-btn:hover {
+            background-color: #d32f2f;
+            transform: translateY(-3px);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .membership-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .plan-card {
+                max-width: 100%;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th, .comparison-table td {
+                padding: 0.7rem 0.5rem;
+            }
+
+            .membership-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-bar {
+                flex-direction: column;
+            }
+
+            .navbar-container {
+                flex-direction: column;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-dropdown-content {
+                position: static;
+                display: none;
+                width: 100%;
+            }
+
+            .nav-dropdown:hover .nav-dropdown-content {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        /* Plan Toggle Animation */
+        .plan-container {
+            display: none;
+        }
+
+        .plan-container.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+<!-- NAV-BAR -->
+<nav class="nav-bar">
+    <div class="nav-logo">
+        <a href="index.html">
+            <img class="logo" src="images/GYM%20Logo.png" alt="HYH-logo">
+        </a>
+    </div>
+
+    <div class="navbar-container">
+        <ul class="nav-menu nav-left-links">
+            <li><a href="about-us.html">WHAT IS HYH?</a></li>
+            <li class="nav-dropdown">
+                <a href="#">HYH WORKOUTS</a>
+                <div class="nav-dropdown-content">
+                    <a href="#">Cardio</a>
+                    <a href="#">Resistance</a>
+                    <a href="#">HYBRID</a>
+                    <a href="#">RECOVERY</a>
+                </div>
+            </li>
+            <li><a href="schedule.html">SCHEDULE</a></li>
+            <li><a href="membership.html" class="active">MEMBERSHIP</a></li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <ul class="nav-menu nav-right-links">
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="join.html" class="highlight-btn">JOIN NOW</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main class="membership-container">
+    <div class="membership-header">
+        <h1>MEMBERSHIP PLANS</h1>
+        <p>Choose the membership plan that fits your schedule and training needs. Whether you're an early bird or night owl, we have options designed for your lifestyle.</p>
+    </div>
+
+    <div class="plans-toggle">
+        <button class="toggle-btn active" data-target="monthly">MONTHLY</button>
+        <button class="toggle-btn" data-target="annual">ANNUAL (SAVE 20%)</button>
+    </div>
+
+    <!-- Monthly Plans Section -->
+    <div id="monthly-plans" class="plan-container active">
+        <div class="membership-grid">
+            <!-- Off-Peak Plan -->
+            <div class="plan-card">
+                <h2 class="plan-name">OFF-PEAK ACCESS</h2>
+                <p class="plan-time">Access before 12PM & after 8PM</p>
+                <div class="plan-price">
+                    $49<span class="price-period">/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li class="feature-available"><span class="feature-icon">✓</span> Access to main gym</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> Basic fitness assessment</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> Free locker use</li>
+                    <li class="feature-unavailable"><span class="feature-icon">✗</span> Pool access</li>
+                    <li class="feature-unavailable"><span class="feature-icon">✗</span> Group classes</li>
+                    <li class="feature-unavailable"><span class="feature-icon">✗</span> Personal training sessions</li>
+                </ul>
+                <a href="join.html" class="plan-btn primary">SELECT PLAN</a>
+            </div>
+
+            <!-- Full Access Plan -->
+            <div class="plan-card">
+                <div class="popular-tag">POPULAR</div>
+                <h2 class="plan-name">FULL ACCESS</h2>
+                <p class="plan-time">24/7 gym access</p>
+                <div class="plan-price">
+                    $79<span class="price-period">/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li class="feature-available"><span class="feature-icon">✓</span> Unlimited 24/7 gym access</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> Comprehensive fitness assessment</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> Free locker use</li>
+                    <li class="feature-unavailable"><span class="feature-icon">✗</span> Pool access</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> 8 group classes per month</li>
+                    <li class="feature-unavailable"><span class="feature-icon">✗</span> Personal training sessions</li>
+                </ul>
+                <a href="join.html" class="plan-btn">SELECT PLAN</a>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="plan-card">
+                <h2 class="plan-name">PREMIUM</h2>
+                <p class="plan-time">All-inclusive experience</p>
+                <div class="plan-price">
+                    $119<span class="price-period">/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li class="feature-available"><span class="feature-icon">✓</span> Unlimited 24/7 gym access</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> Advanced fitness assessment</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> Premium locker & towel service</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> Pool & spa access</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> Unlimited group classes</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> 2 personal training sessions/month</li>
+                </ul>
+                <a href="join.html" class="plan-btn">SELECT PLAN</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Annual Plans Section -->
+    <div id="annual-plans" class="plan-container">
+        <div class="membership-grid">
+            <!-- Off-Peak Annual Plan -->
+            <div class="plan-card">
+                <h2 class="plan-name">OFF-PEAK ACCESS</h2>
+                <p class="plan-time">Access before 12PM & after 8PM</p>
+                <div class="plan-price">
+                    $39<span class="price-period">/month</span>
+                </div>
+                <p>Billed as $468 annually (save $120)</p>
+                <ul class="plan-features">
+                    <li class="feature-available"><span class="feature-icon">✓</span> Access to main gym</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> Basic fitness assessment</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> Free locker use</li>
+                    <li class="feature-unavailable"><span class="feature-icon">✗</span> Pool access</li>
+                    <li class="feature-unavailable"><span class="feature-icon">✗</span> Group classes</li>
+                    <li class="feature-unavailable"><span class="feature-icon">✗</span> Personal training sessions</li>
+                </ul>
+                <a href="join.html" class="plan-btn primary">SELECT PLAN</a>
+            </div>
+
+            <!-- Full Access Annual Plan -->
+            <div class="plan-card">
+                <div class="popular-tag">BEST VALUE</div>
+                <h2 class="plan-name">FULL ACCESS</h2>
+                <p class="plan-time">24/7 gym access</p>
+                <div class="plan-price">
+                    $63<span class="price-period">/month</span>
+                </div>
+                <p>Billed as $756 annually (save $192)</p>
+                <ul class="plan-features">
+                    <li class="feature-available"><span class="feature-icon">✓</span> Unlimited 24/7 gym access</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> Comprehensive fitness assessment</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> Free locker use</li>
+                    <li class="feature-unavailable"><span class="feature-icon">✗</span> Pool access</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> 8 group classes per month</li>
+                    <li class="feature-unavailable"><span class="feature-icon">✗</span> Personal training sessions</li>
+                </ul>
+                <a href="join.html" class="plan-btn">SELECT PLAN</a>
+            </div>
+
+            <!-- Premium Annual Plan -->
+            <div class="plan-card">
+                <h2 class="plan-name">PREMIUM</h2>
+                <p class="plan-time">All-inclusive experience</p>
+                <div class="plan-price">
+                    $95<span class="price-period">/month</span>
+                </div>
+                <p>Billed as $1,140 annually (save $288)</p>
+                <ul class="plan-features">
+                    <li class="feature-available"><span class="feature-icon">✓</span> Unlimited 24/7 gym access</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> Advanced fitness assessment</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> Premium locker & towel service</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> Pool & spa access</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> Unlimited group classes</li>
+                    <li class="feature-available"><span class="feature-icon">✓</span> 2 personal training sessions/month</li>
+                </ul>
+                <a href="join.html" class="plan-btn">SELECT PLAN</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Plan Comparison Table -->
+    <div class="plan-comparison">
+        <div class="comparison-header">
+            <h2>PLAN COMPARISON</h2>
+        </div>
+        <table class="comparison-table">
+            <thead>
+            <tr>
+                <th>FEATURE</th>
+                <th>OFF-PEAK</th>
+                <th>FULL ACCESS</th>
+                <th>PREMIUM</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Hours</td>
+                <td>Before 12PM & After 8PM</td>
+                <td>24/7</td>
+                <td>24/7</td>
+            </tr>
+            <tr>
+                <td>Fitness Assessment</td>
+                <td>Basic</td>
+                <td>Comprehensive</td>
+                <td>Advanced</td>
+            </tr>
+            <tr>
+                <td>Pool Access</td>
+                <td><span class="x-icon">✗</span></td>
+                <td><span class="x-icon">✗</span></td>
+                <td><span class="check-icon">✓</span></td>
+            </tr>
+            <tr>
+                <td>Group Classes</td>
+                <td><span class="x-icon">✗</span></td>
+                <td>8/month</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>Personal Training</td>
+                <td><span class="x-icon">✗</span></td>
+                <td><span class="x-icon">✗</span></td>
+                <td>2 sessions/month</td>
+            </tr>
+            <tr>
+                <td>Guest Passes</td>
+                <td>0</td>
+                <td>2/month</td>
+                <td>4/month</td>
+            </tr>
+            <tr>
+                <td>Towel Service</td>
+                <td><span class="x-icon">✗</span></td>
+                <td><span class="x-icon">✗</span></td>
+                <td><span class="check-icon">✓</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-section">
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What's the difference between the membership types?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our Off-Peak membership offers access to the gym during less busy hours (before 12PM and after 8PM). Full Access gives you 24/7 gym access plus 8 group classes per month. Premium includes everything in Full Access plus pool access, unlimited group classes, and personal training sessions.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can I freeze my membership?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, members can freeze their membership for up to 3 months per year. For monthly memberships, a $15 freeze fee applies per month. Annual memberships can freeze for free up to 30 days, with a $15 fee for additional months.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Is there a joining fee?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, there is a one-time joining fee of $49 for all new members. This fee covers your initial fitness assessment, membership card, and account setup. We occasionally run promotions that waive this fee.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How do I book classes?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Class bookings can be made through our mobile app, website, or at the front desk. Full Access members can book classes up to 7 days in advance, while Premium members can book 14 days ahead. We recommend booking early as popular classes fill up quickly.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can I upgrade my membership?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! You can upgrade your membership at any time. Just speak with our front desk staff or log into your account online. When upgrading, you'll only pay the prorated difference between your current plan and the new plan for the remainder of your billing cycle.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="cta-section">
+        <h2>READY TO TRANSFORM YOUR FITNESS?</h2>
+        <p>Start your fitness journey today with a 7-day free trial. Experience our world-class facilities, expert trainers, and supportive community with no obligation.</p>
+        <a href="join.html" class="cta-btn">START FREE TRIAL</a>
+    </div>
+</main>
+
+<!-- Footer Section -->
+<footer class="app-footer simplified-footer">
+    <div class="footer-content">
+        <div class="footer-logo-container">
+            <img class="footer-logo" src="images/GYM%20Logo.png" alt="HYH Logo">
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 HYH TRAINING. ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Toggle between monthly and annual plans
+        const toggleBtns = document.querySelectorAll('.toggle-btn');
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                toggleBtns.forEach(b => b.classList.remove('active'));
+
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                // Hide all plan containers
+                document.querySelectorAll('.plan-container').forEach(container => {
+                    container.classList.remove('active');
+                });
+
+                // Show the target container
+                const targetContainer = document.getElementById(this.dataset.target + '-plans');
+                if (targetContainer) {
+                    targetContainer.classList.add('active');
+                }
+            });
+        });
+
+        // FAQ accordion functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', function() {
+                // Toggle active class on the clicked item
+                item.classList.toggle('active');
+
+                // Update the toggle icon
+                const toggleIcon = this.querySelector('.toggle-icon');
+                if (item.classList.contains('active')) {
+                    toggleIcon.textContent = '−';
+                } else {
+                    toggleIcon.textContent = '+';
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

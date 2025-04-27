@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9186725f-77ef-402c-8f56-59a56d8d7518" name="Changes" comment="Updated footer layout and adjusted design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home-user.html" beforeDir="false" afterPath="$PROJECT_DIR$/home-user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +106,7 @@
       <workItem from="1745570625296" duration="248000" />
       <workItem from="1745642607723" duration="7991000" />
       <workItem from="1745665508372" duration="10336000" />
-      <workItem from="1745736668012" duration="5284000" />
+      <workItem from="1745736668012" duration="8235000" />
     </task>
     <servers />
   </component>
