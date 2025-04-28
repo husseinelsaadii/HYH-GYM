@@ -1,0 +1,286 @@
+/* Location Page Styles */
+
+/* Hero Section */
+.location-hero {
+    position: relative;
+    height: 60vh;
+    background-image: url('../images/gym-location-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.location-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.location-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.location-hero-content h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.location-hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Location Intro Section */
+.location-intro {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+}
+
+.location-intro h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.location-intro p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Locations Container */
+.locations-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Location Cards */
+.location-card {
+    display: flex;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.location-image {
+    flex: 1;
+    min-height: 300px;
+}
+
+.location-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.location-details {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.location-details h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.location-address, .location-contact {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.location-hours {
+    margin: 20px 0;
+}
+
+.location-hours p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.location-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.location-btn {
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.location-btn.primary-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+.location-btn.primary-btn:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+}
+
+.location-btn.secondary-btn {
+    background-color: transparent;
+    color: #1a1a1a;
+    border: 2px solid #1a1a1a;
+}
+
+.location-btn.secondary-btn:hover {
+    background-color: rgba(26, 26, 26, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Map Section */
+.map-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+}
+
+.map-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+}
+
+.contact-card {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.contact-card p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.contact-btn {
+    font-family: 'Bebas Neue', sans-serif;
+    display: inline-block;
+    background-color: #ffdd00;
+    color: #1a1a1a;
+    padding: 12px 35px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #f4a261;
+    transform: translateY(-2px);
+}
+
+/* Active nav link */
+.nav-menu li a.active {
+    color: #FFDD00;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .location-card {
+        flex-direction: column;
+    }
+
+    .location-image {
+        min-height: 250px;
+    }
+
+    .location-hero-content h1 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .location-hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .location-hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .location-intro h2 {
+        font-size: 2.8rem;
+    }
+
+    .location-actions {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .location-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .location-details {
+        padding: 20px;
+    }
+
+    .location-details h3 {
+        font-size: 2rem;
+    }
+
+    .map-section h2 {
+        font-size: 2.2rem;
+    }
+}

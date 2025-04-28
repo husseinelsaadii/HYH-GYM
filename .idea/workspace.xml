@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9186725f-77ef-402c-8f56-59a56d8d7518" name="Changes" comment="Updated footer layout and adjusted design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule-admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/schedule-admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule.html" beforeDir="false" afterPath="$PROJECT_DIR$/schedule.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +109,10 @@
       <workItem from="1745570625296" duration="248000" />
       <workItem from="1745642607723" duration="7991000" />
       <workItem from="1745665508372" duration="10336000" />
-      <workItem from="1745736668012" duration="8235000" />
+      <workItem from="1745736668012" duration="12801000" />
+      <workItem from="1745771916494" duration="338000" />
+      <workItem from="1745778968037" duration="4000" />
+      <workItem from="1745814436367" duration="4456000" />
     </task>
     <servers />
   </component>
