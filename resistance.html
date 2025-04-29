@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HYH Training | Resistance</title>
+  <link rel="stylesheet" href="css/resistance.css"> <!-- 🔥 LINKING EXTERNAL CSS FILE -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- GSAP Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+<!-- HEADER / NAVBAR - Redesigned and Shortened -->
+<nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="index.html">
+      <img class="logo" src="images/GYM%20Logo.png" alt="HYH-logo">
+    </a>
+  </div>
+
+  <div class="nav-links">
+    <ul class="nav-menu">
+      <li><a href="about-us.html" class="menu-link">WHAT IS HYH?</a></li>
+      <li><a href="cardio.html" class="menu-link">CARDIO</a></li>
+      <li><a href="resistance.html" class="menu-link active">RESISTANCE</a></li>
+      <li><a href="schedule.html" class="menu-link">SCHEDULE</a></li>
+      <li><a href="membership.html" class="menu-link">MEMBERSHIP</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-cta">
+    <a href="join.html" class="nav-btn pulse-btn">JOIN NOW</a>
+  </div>
+
+  <div class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</nav>
+
+<!-- HERO SECTION - Enhanced with parallax effect -->
+<section class="hero-section">
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="videos/resistance-hero2.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+  </div>
+
+  <div class="hero-content reveal-text">
+    <h1 class="hero-title">BUILD <span class="text-glow">UNBREAKABLE</span> STRENGTH</h1>
+    <h2 class="hero-subtitle">Resistance Training That Pushes Limits</h2>
+    <p class="hero-description">Unlock pure power, enhance endurance, and sculpt the strongest version of yourself.</p>
+    <div class="hero-buttons">
+      <button class="hero-btn primary-btn" onclick="location.href='membership.html'">
+        <span class="btn-text">JOIN NOW</span>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+      <button class="hero-btn secondary-btn" onclick="location.href='schedule.html'">
+        <span class="btn-text">SEE CLASSES</span>
+        <i class="fas fa-calendar-alt"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+    <div class="arrow">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</section>
+
+<!-- OUR RESISTANCE WORKOUTS SECTION - With animated cards -->
+<section class="workouts-section" data-aos="fade-up">
+  <div class="section-header">
+    <h1 class="section-title">Our Resistance Workouts</h1>
+    <div class="title-bar"></div>
+    <p class="section-description">
+      Power through carefully crafted resistance programs — designed to build brute strength, athletic stamina, and complete body mastery.
+    </p>
+  </div>
+
+  <div class="card-container">
+    <!-- Workout Card 1: Powerlifting -->
+    <div class="card workout-card" data-aos="zoom-in" data-aos-delay="100">
+      <div class="card-image-container">
+        <img src="images/powerlifting.jpg" alt="Powerlifting Strength">
+        <div class="card-overlay">
+          <span class="card-tag">STRENGTH</span>
+        </div>
+      </div>
+      <div class="card-content">
+        <h2 class="card-title red-text">Powerlifting Strength</h2>
+        <p class="card-description">Heavy squats, deadlifts, and presses designed to unlock raw unstoppable power.</p>
+        <a href="#" class="card-link">
+          <span>Learn More</span>
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Workout Card 2: Bodyweight Strength -->
+    <div class="card workout-card" data-aos="zoom-in" data-aos-delay="200">
+      <div class="card-image-container">
+        <img src="images/bodyweight.jpg" alt="Bodyweight Mastery">
+        <div class="card-overlay">
+          <span class="card-tag">BODYWEIGHT</span>
+        </div>
+      </div>
+      <div class="card-content">
+        <h2 class="card-title blue-text">Bodyweight Mastery</h2>
+        <p class="card-description">Pure strength through calisthenics, explosive movements, and high-level body control.</p>
+        <a href="#" class="card-link">
+          <span>Learn More</span>
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Workout Card 3: Endurance Lifting -->
+    <div class="card workout-card" data-aos="zoom-in" data-aos-delay="300">
+      <div class="card-image-container">
+        <img src="images/endurance-lifting.jpg" alt="Endurance Lifting">
+        <div class="card-overlay">
+          <span class="card-tag">ENDURANCE</span>
+        </div>
+      </div>
+      <div class="card-content">
+        <h2 class="card-title green-text">Endurance Lifting</h2>
+        <p class="card-description">Volume-focused resistance training to build stamina, hypertrophy, and athletic toughness.</p>
+        <a href="#" class="card-link">
+          <span>Learn More</span>
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS OF RESISTANCE TRAINING - With animated counters -->
+<section class="benefits-section" data-aos="fade-up">
+  <div class="section-header">
+    <h1 class="section-title">Why Resistance Training?</h1>
+    <div class="title-bar"></div>
+    <p class="section-description">
+      Resistance training isn't just about muscles. It's about forging a body and mind that can handle anything life throws at you.
+    </p>
+  </div>
+
+  <div class="benefits-stats">
+    <div class="stat-item" data-aos="fade-right">
+      <div class="stat-number"><span class="counter" data-target="45">0</span>%</div>
+      <p>More Daily Energy</p>
+    </div>
+    <div class="stat-item" data-aos="fade-up">
+      <div class="stat-number"><span class="counter" data-target="70">0</span>%</div>
+      <p>Stronger Bone Density</p>
+    </div>
+    <div class="stat-item" data-aos="fade-left">
+      <div class="stat-number"><span class="counter" data-target="30">0</span>%</div>
+      <p>Increased Metabolism</p>
+    </div>
+  </div>
+
+  <div class="benefit-cards">
+    <!-- Benefit Card 1 -->
+    <div class="card benefit-card" data-aos="flip-left" data-aos-delay="100">
+      <div class="benefit-icon red-bg">
+        <i class="fas fa-fire"></i>
+      </div>
+      <h2 class="red-text">Torch Fat</h2>
+      <p>Burn calories even while resting. Boost metabolism through lean muscle building.</p>
+    </div>
+
+    <!-- Benefit Card 2 -->
+    <div class="card benefit-card" data-aos="flip-left" data-aos-delay="200">
+      <div class="benefit-icon blue-bg">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h2 class="blue-text">Stronger Bones</h2>
+      <p>Fight aging with denser bones and protect yourself from injuries and fractures.</p>
+    </div>
+
+    <!-- Benefit Card 3 -->
+    <div class="card benefit-card" data-aos="flip-left" data-aos-delay="300">
+      <div class="benefit-icon green-bg">
+        <i class="fas fa-brain"></i>
+      </div>
+      <h2 class="green-text">Mental Resilience</h2>
+      <p>Resistance training improves confidence, determination, and mental toughness.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MEET YOUR RESISTANCE COACHES - With hover effects -->
+<section class="coaches-section" data-aos="fade-up">
+  <div class="section-header">
+    <h1 class="section-title">Meet Your Resistance Coaches</h1>
+    <div class="title-bar"></div>
+    <p class="section-description">
+      Learn from the legends. Train under the mindset of the strongest warriors in the world.
+    </p>
+  </div>
+
+  <div class="coaches-container">
+    <!-- Coach 1: Arnold Schwarzenegger -->
+    <div class="coach-card" data-aos="fade-right" data-aos-delay="100">
+      <div class="coach-image-container">
+        <img src="images/coach-arnold.jpg" alt="Arnold Schwarzenegger">
+        <div class="coach-overlay">
+          <div class="coach-info">
+            <p>7-time Mr. Olympia</p>
+            <p>Bodybuilding legend</p>
+            <p>Strength pioneer</p>
+          </div>
+        </div>
+      </div>
+      <div class="coach-content">
+        <h2 class="red-text">Arnold Schwarzenegger</h2>
+        <p>Mr. Olympia Legend • Powerlifting Mentor • Goal Crusher</p>
+        <a href="#" class="coach-link">View Profile <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Coach 2: Mohamed Salah -->
+    <div class="coach-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="coach-image-container">
+        <img src="images/coach-mohamed-salah.jpg" alt="Mohamed Salah">
+        <div class="coach-overlay">
+          <div class="coach-info">
+            <p>Premier League Icon</p>
+            <p>Speed & Agility Specialist</p>
+            <p>Top Goal Scorer</p>
+          </div>
+        </div>
+      </div>
+      <div class="coach-content">
+        <h2 class="blue-text">Mohamed Salah</h2>
+        <p>Premier League Champion • Elite Athlete • Goal Machine</p>
+        <a href="#" class="coach-link">View Profile <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Coach 3: Joe Rogan -->
+    <div class="coach-card" data-aos="fade-left" data-aos-delay="300">
+      <div class="coach-image-container">
+        <img src="images/coach-joe-rogan.jpg" alt="Joe Rogan">
+        <div class="coach-overlay">
+          <div class="coach-info">
+            <p>Ultimate Fighter</p>
+            <p>Jiu-Jitsu Black Belt</p>
+            <p>Fitness & Mindset Guru</p>
+          </div>
+        </div>
+      </div>
+      <div class="coach-content">
+        <h2 class="green-text">Joe Rogan</h2>
+        <p>Podcast Host • MMA Commentator • Mindset Master</p>
+        <a href="#" class="coach-link">View Profile <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TESTIMONIALS SECTION - With slider -->
+<section class="testimonials-section" data-aos="fade-up">
+  <div class="section-header">
+    <h1 class="section-title">What Our Warriors Say</h1>
+    <div class="title-bar"></div>
+    <p class="section-description">
+      Real people. Real strength transformations. Hear from those who chose to dominate with HYH Resistance Training.
+    </p>
+  </div>
+
+  <div class="testimonial-slider">
+    <div class="slider-container">
+      <div class="testimonial-slide active-slide">
+        <div class="testimonial-content">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"HYH made me believe in my own strength. I went from zero to deadlifting 200kg in just 6 months of focused training. The coaches pushed me beyond what I thought possible!"</p>
+          <div class="testimonial-author">
+            <div class="author-image">
+              <img src="images/testimonial-1.jpg" alt="Mark D.">
+            </div>
+            <div class="author-info">
+              <h3 class="red-text">Mark D.</h3>
+              <p>Member since 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-slide">
+        <div class="testimonial-content">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"The coaches don't just train your body. They build your mind and toughness too. Every session I leave stronger physically and mentally. Best decision I ever made was joining HYH!"</p>
+          <div class="testimonial-author">
+            <div class="author-image">
+              <img src="images/testimonial-2.jpg" alt="Sara L.">
+            </div>
+            <div class="author-info">
+              <h3 class="blue-text">Sara L.</h3>
+              <p>Member since 2022</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-slide">
+        <div class="testimonial-content">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"Resistance training with HYH gave me the confidence and the muscle I've dreamed of. Their approach to strength training is scientific, methodical, and incredibly effective for real results."</p>
+          <div class="testimonial-author">
+            <div class="author-image">
+              <img src="images/testimonial-3.jpg" alt="Jordan P.">
+            </div>
+            <div class="author-info">
+              <h3 class="green-text">Jordan P.</h3>
+              <p>Member since 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-controls">
+      <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+      <div class="slider-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+      </div>
+      <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CALL TO ACTION SECTION - With parallax -->
+<section class="cta-section parallax-section" data-aos="fade-up">
+  <div class="cta-content">
+    <h1 class="cta-title">Ready to Become the Strongest Version of Yourself?</h1>
+    <p class="cta-description">
+      Start your Resistance Journey with HYH today. Dominate your goals, crush your limits, and sculpt pure unstoppable strength.
+    </p>
+    <button class="cta-btn" onclick="location.href='join.html'">
+      <span class="btn-text">Start Free Trial</span>
+      <span class="btn-icon"><i class="fas fa-bolt"></i></span>
+    </button>
+  </div>
+  <div class="cta-background"></div>
+</section>
+
+<!-- STICKY JOIN FREE TRIAL BUTTON -->
+<a href="join.html" class="sticky-button">
+  <span>Start Free Trial</span>
+  <i class="fas fa-bolt"></i>
+</a>
+
+<!-- SCROLL TO TOP BUTTON -->
+<button onclick="topFunction()" id="topBtn" title="Go to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- FOOTER - Modern design -->
+<footer class="app-footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="images/GYM%20Logo.png" alt="HYH Logo">
+    </div>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h3>NAVIGATE</h3>
+        <ul>
+          <li><a href="about-us.html">What is HYH?</a></li>
+          <li><a href="cardio.html">Cardio</a></li>
+          <li><a href="resistance.html">Resistance</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>JOIN US</h3>
+        <ul>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="join.html">Free Trial</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>FOLLOW US</h3>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 HYH TRAINING. ALL RIGHTS RESERVED.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<!-- AOS Animation Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // AOS initialization
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+  });
+
+  // Mobile Menu Toggle
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (hamburger) {
+      hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+    }
+
+    // Counter Animation
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+
+    function animateCounters() {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const increment = target / speed;
+
+        function updateCount() {
+          if (count < target) {
+            count += increment;
+            counter.innerText = Math.min(Math.ceil(count), target);
+            setTimeout(updateCount, 10);
+          } else {
+            counter.innerText = target;
+          }
+        }
+
+        updateCount();
+      });
+    }
+
+    // Intersection Observer for counters
+    const statsSection = document.querySelector('.benefits-stats');
+
+    if (statsSection) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounters();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      observer.observe(statsSection);
+    }
+
+    // Testimonial Slider
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active-slide'));
+      dots.forEach(dot => dot.classList.remove('active'));
+
+      slides[index].classList.add('active-slide');
+      dots[index].classList.add('active');
+      currentSlide = index;
+    }
+
+    if (prevBtn && nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      });
+
+      prevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      });
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          showSlide(index);
+        });
+      });
+
+      // Auto-rotate slides
+      setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }, 5000);
+    }
+  });
+
+  // Scroll to top function
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  // Show/hide scroll to top button
+  window.onscroll = function() {
+    let topButton = document.getElementById("topBtn");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      topButton.style.display = "block";
+      topButton.classList.add('fade-in');
+    } else {
+      topButton.classList.remove('fade-in');
+      topButton.classList.add('fade-out');
+      setTimeout(() => {
+        if (document.body.scrollTop <= 300 && document.documentElement.scrollTop <= 300) {
+          topButton.style.display = "none";
+          topButton.classList.remove('fade-out');
+        }
+      }, 300);
+    }
+  };
+
+  // GSAP Animations
+  document.addEventListener('DOMContentLoaded', function() {
+    // Hero animations
+    gsap.from(".hero-title", {
+      duration: 1.2,
+      y: 50,
+      opacity: 0,
+      ease: "power3.out",
+      delay: 0.3
+    });
+
+    gsap.from(".hero-subtitle", {
+      duration: 1.2,
+      y: 30,
+      opacity: 0,
+      ease: "power3.out",
+      delay: 0.6
+    });
+
+    gsap.from(".hero-description", {
+      duration: 1.2,
+      y: 30,
+      opacity: 0,
+      ease: "power3.out",
+      delay: 0.9
+    });
+
+    gsap.from(".hero-buttons", {
+      duration: 1.2,
+      y: 30,
+      opacity: 0,
+      ease: "power3.out",
+      delay: 1.2
+    });
+
+    // Scroll animations
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Section title animations
+    gsap.utils.toArray(".section-title").forEach(title => {
+      gsap.from(title, {
+        scrollTrigger: {
+          trigger: title,
+          start: "top 80%",
+          toggleActions: "play none none none"
+        },
+        duration: 1,
+        y: 30,
+        opacity: 0,
+        ease: "power3.out"
+      });
+    });
+
+    // Title bar animations
+    gsap.utils.toArray(".title-bar").forEach(bar => {
+      gsap.from(bar, {
+        scrollTrigger: {
+          trigger: bar,
+          start: "top 80%",
+          toggleActions: "play none none none"
+        },
+        duration: 1.2,
+        width: 0,
+        ease: "power3.inOut",
+        delay: 0.3
+      });
+    });
+
+    // Parallax effect for CTA section
+    gsap.to(".cta-background", {
+      scrollTrigger: {
+        trigger: ".cta-section",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      },
+      y: -100,
+      ease: "none"
+    });
+  });
+</script>
+</body>
+</html>
