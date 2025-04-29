@@ -6,7 +6,10 @@
   <title>Class Schedule - HYH Gym</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/location.css">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
     /* Base Styles */
     :root {
@@ -189,6 +192,44 @@
   </style>
 </head>
 <body>
+<!-- ------------------------------NAV-BAR----------------------- -->
+<nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="index.html">
+    <img class="logo" src="images/GYM%20Logo.png" alt="HYH-logo">
+    </a>
+  </div>
+
+  <div class="navbar-container">
+    <ul class="nav-menu nav-left-links">
+      <li><a href="about-us.html">WHAT IS HYH?</a></li>
+      <li class="nav-dropdown">
+        <a href="#">HYH WORKOUTS</a>
+        <div class="nav-dropdown-content">
+          <a href="#">Cardio</a>
+          <a href="#">Resistance</a>
+          <a href="#">HYBRID</a>
+          <a href="#">RECOVERY</a>
+        </div>
+      </li>
+      <li><a href="schedule.html" class="active">SCHEDULE</a></li>
+      <li><a href="membership.html">MEMBERSHIP</a></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <ul class="nav-menu nav-right-links">
+      <li><a href="location.html">Find A Studio</a></li>
+      <li><a href="shop.html">HYH Shop</a></li>
+      <li>
+        <a href="#">
+          <button class="trial-btn" onclick="location.href='login.html'">Start A Trial</button>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <div class="container">
   <h1>Class Schedule</h1>
 
@@ -241,12 +282,55 @@
 
 </div>
 
-<!-- Footer Section (Simplified) -->
-<footer class="app-footer simplified-footer">
+<footer class="app-footer">
   <div class="footer-content">
-    <div class="footer-logo-container">
-      <img class="footer-logo" src="images/GYM%20Logo.png" alt="HYH Logo">
+    <!-- Top Section: Logo & Social Icons -->
+    <div class="social-menu">
+      <ul>
+        <li><a href="#"><i class="fa-brands fa-instagram footer-icons"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-facebook footer-icons"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-twitter footer-icons"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-linkedin footer-icons"></i></a></li>
+      </ul>
     </div>
+
+    <!-- Divider -->
+    <hr class="footer-divider">
+
+    <!-- Mailing List Section -->
+    <div class="app-footer__mailing-list">
+      <div class="small-text mb-3">JOIN OUR MAILING LIST TODAY</div>
+      <h3>GET 20% OFF YOUR FIRST ORDER AT THE HYH SHOP</h3>
+      <p>Gain exclusive access to special offers, product drops, new workouts, and upcoming events.</p>
+      <a class="btn btn-sign-up" href="login.html">Sign Up</a>
+    </div>
+
+    <!-- Footer Links & Partner Badges -->
+    <div class="footer-links-container">
+      <div class="footer-links">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="#" class="nav-link">Studios</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Newsroom</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Invest</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Careers</a></li>
+          <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Partner Badges (with cool hover effect) -->
+      <div class="footer-partners">
+        <img class="footer-badge" src="images/entrepreneur-2023.png" alt="Franchise Award">
+        <img class="footer-badge" src="images/mens-journal-1.png" alt="Men's Journal">
+      </div>
+
+      <!-- Region Selector -->
+      <div class="language">
+        <button class="btn btn-outline-white">Change Region</button>
+      </div>
+    </div>
+
+    <!-- Copyright -->
     <div class="copyright">
       <p>&copy; 2025 HYH TRAINING. ALL RIGHTS RESERVED.</p>
     </div>

@@ -42,6 +42,10 @@
     margin-bottom: 30px;
 }
 
+.titles {
+    color: #ffdd00;
+}
+
 /* Location Intro Section */
 .location-intro {
     padding: 60px 20px;

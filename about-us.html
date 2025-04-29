@@ -4,17 +4,61 @@
     <meta charset="UTF-8">
     <title>About Us</title>
     <link rel="stylesheet" href="css/about-us.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/location.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+<!-- ------------------------------NAV-BAR----------------------- -->
+<nav class="nav-bar">
+    <div class="nav-logo">
+        <a href="index.html">
+        <img class="logo" src="images/GYM%20Logo.png" alt="HYH-logo">
+        </a>
+    </div>
+
+    <div class="navbar-container">
+        <ul class="nav-menu nav-left-links">
+            <li><a href="about-us.html" class="active">WHAT IS HYH?</a></li>
+            <li class="nav-dropdown">
+                <a href="#">HYH WORKOUTS</a>
+                <div class="nav-dropdown-content">
+                    <a href="#">Cardio</a>
+                    <a href="#">Resistance</a>
+                    <a href="#">HYBRID</a>
+                    <a href="#">RECOVERY</a>
+                </div>
+            </li>
+            <li><a href="schedule.html">SCHEDULE</a></li>
+            <li><a href="membership.html">MEMBERSHIP</a></li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <ul class="nav-menu nav-right-links">
+            <li><a href="location.html">Find A Studio</a></li>
+            <li><a href="shop.html">HYH Shop</a></li>
+            <li>
+                <a href="#">
+                    <button class="trial-btn" onclick="location.href='login.html'">Start A Trial</button>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-----------------------------------MAIN-------------------------->
 <main>
-    <h1>About Us</h1>
+
+    <h1 class="titles">Who We Are?</h1>
     <img src="images/background-gym.jpg" alt="Our gym facility" class="hero-image">
 
     <div class="content">
         <!-- First row: Text | Image -->
         <div class="grid-section">
             <div class="section-text">
-                <h2>Our Story</h2>
+                <h2 class="titles">Our Story</h2>
                 <p>Founded in 2010, we've been dedicated to helping our members achieve their fitness goals through personalized training and state-of-the-art equipment. Our journey began with a simple vision of creating a fitness center that focuses on individual needs and builds a supportive community.</p>
             </div>
             <img src="images/gym-journey.jpg" alt="Our gym's journey" class="section-image">
@@ -23,7 +67,7 @@
         <!-- Second row: Image | Text -->
         <div class="grid-section">
             <div class="section-text">
-                <h2>Our Mission</h2>
+                <h2 class="titles">Our Mission</h2>
                 <p>We strive to create a welcoming environment where everyone, regardless of fitness level, can work towards a healthier lifestyle. Our mission is to inspire, motivate, and guide each member to discover their full potential through customized fitness programs that deliver real results.</p>
             </div>
             <img src="images/boxing-man.jpg" alt="Our mission in action" class="section-image">
@@ -32,12 +76,67 @@
         <!-- Third row: Text | Image -->
         <div class="grid-section">
             <div class="section-text">
-                <h2>Our Team</h2>
+                <h2 class="titles">Our Team</h2>
                 <p>Our certified trainers bring years of experience and passion to help you on your fitness journey. Each member of our team is committed to providing expert guidance, continuous support, and the motivation you need to overcome challenges and achieve your fitness goals.</p>
             </div>
             <img src="images/section-image.jpg" alt="Our professional trainers" class="section-image">
         </div>
     </div>
 </main>
+
+<footer class="app-footer">
+    <div class="footer-content">
+        <!-- Top Section: Logo & Social Icons -->
+        <div class="social-menu">
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-instagram footer-icons"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook footer-icons"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter footer-icons"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin footer-icons"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- Divider -->
+        <hr class="footer-divider">
+
+        <!-- Mailing List Section -->
+        <div class="app-footer__mailing-list">
+            <div class="small-text mb-3">JOIN OUR MAILING LIST TODAY</div>
+            <h3>GET 20% OFF YOUR FIRST ORDER AT THE HYH SHOP</h3>
+            <p>Gain exclusive access to special offers, product drops, new workouts, and upcoming events.</p>
+            <a class="btn btn-sign-up" href="login.html">Sign Up</a>
+        </div>
+
+        <!-- Footer Links & Partner Badges -->
+        <div class="footer-links-container">
+            <div class="footer-links">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link">Studios</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Newsroom</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Invest</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Careers</a></li>
+                    <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Partner Badges (with cool hover effect) -->
+            <div class="footer-partners">
+                <img class="footer-badge" src="images/entrepreneur-2023.png" alt="Franchise Award">
+                <img class="footer-badge" src="images/mens-journal-1.png" alt="Men's Journal">
+            </div>
+
+            <!-- Region Selector -->
+            <div class="language">
+                <button class="btn btn-outline-white">Change Region</button>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>&copy; 2025 HYH TRAINING. ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
