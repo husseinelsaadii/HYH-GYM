@@ -15,7 +15,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.nav-menu li a.active {
+    color: #FFDD00;
+}
 .membership-container {
     max-width: 1200px;
     margin: 2rem auto;

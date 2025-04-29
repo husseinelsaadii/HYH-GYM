@@ -24,6 +24,10 @@ h1 {
     letter-spacing: 2px;
 }
 
+.nav-menu li a.active {
+    color: #FFDD00;
+}
+
 .hero-image {
     width: 100%;
     height: 400px;

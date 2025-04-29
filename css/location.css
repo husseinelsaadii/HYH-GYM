@@ -4,7 +4,7 @@
 .location-hero {
     position: relative;
     height: 60vh;
-    background-image: url('../images/gym-location-hero.jpg');
+    background-image: url('../images/boxing-background.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
