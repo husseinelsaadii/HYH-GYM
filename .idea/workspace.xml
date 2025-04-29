@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9186725f-77ef-402c-8f56-59a56d8d7518" name="Changes" comment="Updated footer layout and adjusted design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/about-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/about-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/about-us.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/location.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/location.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/membership.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/membership.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/join.html" beforeDir="false" afterPath="$PROJECT_DIR$/join.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/membership.html" beforeDir="false" afterPath="$PROJECT_DIR$/membership.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule.html" beforeDir="false" afterPath="$PROJECT_DIR$/schedule.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +109,7 @@
       <workItem from="1745736668012" duration="12801000" />
       <workItem from="1745771916494" duration="338000" />
       <workItem from="1745778968037" duration="4000" />
-      <workItem from="1745814436367" duration="17100000" />
+      <workItem from="1745814436367" duration="18161000" />
     </task>
     <servers />
   </component>
