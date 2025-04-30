@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9186725f-77ef-402c-8f56-59a56d8d7518" name="Changes" comment="Updated footer layout and adjusted design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.25659.40" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
       </set>
     </attachedChunks>
   </component>
@@ -109,7 +108,9 @@
       <workItem from="1745736668012" duration="12801000" />
       <workItem from="1745771916494" duration="338000" />
       <workItem from="1745778968037" duration="4000" />
-      <workItem from="1745814436367" duration="18161000" />
+      <workItem from="1745814436367" duration="18228000" />
+      <workItem from="1745992171198" duration="1269000" />
+      <workItem from="1746039619512" duration="970000" />
     </task>
     <servers />
   </component>
