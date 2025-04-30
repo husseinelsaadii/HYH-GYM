@@ -331,7 +331,7 @@
     max-width: 100%;
     margin: 0 auto;
     padding: 40px 20px;
-    background: #373131;
+    background: #1c1c1c;;
     border-top: 10px solid black;
 }
 
@@ -355,7 +355,7 @@
     text-align: center;
     font-size: 60px;
     font-weight: bold;
-    color: #f5f5f5;
+    color: #ffdd00;
     text-transform: uppercase;
     margin-bottom: 30px;
 }
@@ -593,7 +593,6 @@
 }
 
 /* --------------------------------General Footer Styling---------------------- */
-/* --------------------------------General Footer Styling---------------------- */
 .app-footer {
     background-color: #1c1c1c; /* Black background */
     color: #fff;
@@ -702,7 +701,7 @@
 }
 
 .btn-sign-up:hover {
-    background-color: #f4a261; /* Light orange for hover */
+    background-color: #e6c700;
     transform: scale(1.05);
 }
 
@@ -734,6 +733,13 @@
 .footer-links ul li a:hover {
     color: white;
     text-decoration: underline;
+}
+
+.social-menu ul li a,
+.social-menu ul li a:hover,
+.social-menu ul li a:focus,
+.social-menu ul li a:active {
+    text-decoration: none !important;
 }
 
 /* Footer Partner Badges Section */
@@ -851,4 +857,3 @@
         font-size: 1rem;
     }
 }
-

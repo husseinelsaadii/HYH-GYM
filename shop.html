@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Class Schedule - HYH Gym</title>
+  <title>HYH Training | Shop</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/dashboard.css">
-  <link rel="stylesheet" href="css/schedule.css">
+  <link rel="stylesheet" href="css/shop.css">
+
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <style>
-
-  </style>
 </head>
+
 <body>
 <!-- ------------------------------NAV-BAR----------------------- -->
 <nav class="nav-bar">
   <div class="nav-logo">
     <a href="index.html">
-    <img class="logo" src="images/GYM%20Logo.png" alt="HYH-logo">
+      <img class="logo" src="images/GYM%20Logo.png" alt="HYH-logo">
     </a>
   </div>
 
@@ -35,7 +32,7 @@
           <a href="#">RECOVERY</a>
         </div>
       </li>
-      <li><a href="schedule.html" class="active">SCHEDULE</a></li>
+      <li><a href="schedule.html">SCHEDULE</a></li>
       <li><a href="membership.html">MEMBERSHIP</a></li>
     </ul>
 
@@ -43,7 +40,7 @@
 
     <ul class="nav-menu nav-right-links">
       <li><a href="location.html">Find A Studio</a></li>
-      <li><a href="shop.html">HYH Shop</a></li>
+      <li><a href="shop.html" class="active">HYH Shop</a></li>
       <li>
         <a href="#">
           <button class="trial-btn" onclick="location.href='login.html'">Start A Trial</button>
@@ -53,58 +50,36 @@
   </div>
 </nav>
 
-<div class="container">
-  <h1>Class Schedule</h1>
+<!-- Main Content -->
+<main class="shop-container">
+  <div class="coming-soon-wrapper">
+    <div class="coming-soon-content">
+      <h1>THE HYH SHOP IS</h1>
+      <div class="highlight-text">COMING SOON</div>
+      <div class="construction-icon">
+        <i class="fas fa-dumbbell"></i>
+        <i class="fas fa-tools"></i>
+        <i class="fas fa-dumbbell"></i>
+      </div>
+      <p>We're currently working on bringing you the best fitness gear, supplements, and HYH merchandise to elevate your training experience.</p>
+      <p>Check back soon for exclusive products curated by our fitness experts.</p>
 
-  <!-- Schedule Tabs -->
-  <div class="schedule-tabs">
-    <button class="tab-button active" data-day="monday">Monday</button>
-    <button class="tab-button" data-day="tuesday">Tuesday</button>
-    <button class="tab-button" data-day="wednesday">Wednesday</button>
-    <button class="tab-button" data-day="thursday">Thursday</button>
-    <button class="tab-button" data-day="friday">Friday</button>
-    <button class="tab-button" data-day="saturday">Saturday</button>
-  </div>
+      <div class="notification-box">
+        <h2>WANT TO BE THE FIRST TO KNOW?</h2>
+        <p>Sign up for our newsletter and get 20% off your first order when we launch!</p>
+        <a href="login.html" class="notify-btn">NOTIFY ME</a>
+      </div>
 
-  <!-- Schedule Content -->
-  <div id="monday" class="schedule-content active">
-    <div class="schedule-grid" id="monday-grid">
-      <!-- Classes will be dynamically inserted here -->
+      <div class="return-home">
+        <a href="index.html" class="return-link">
+          <i class="fas fa-arrow-left"></i> RETURN TO HOMEPAGE
+        </a>
+      </div>
     </div>
   </div>
+</main>
 
-  <div id="tuesday" class="schedule-content">
-    <div class="schedule-grid" id="tuesday-grid">
-      <!-- Classes will be dynamically inserted here -->
-    </div>
-  </div>
-
-  <div id="wednesday" class="schedule-content">
-    <div class="schedule-grid" id="wednesday-grid">
-      <!-- Classes will be dynamically inserted here -->
-    </div>
-  </div>
-
-  <div id="thursday" class="schedule-content">
-    <div class="schedule-grid" id="thursday-grid">
-      <!-- Classes will be dynamically inserted here -->
-    </div>
-  </div>
-
-  <div id="friday" class="schedule-content">
-    <div class="schedule-grid" id="friday-grid">
-      <!-- Classes will be dynamically inserted here -->
-    </div>
-  </div>
-
-  <div id="saturday" class="schedule-content">
-    <div class="schedule-grid" id="saturday-grid">
-      <!-- Classes will be dynamically inserted here -->
-    </div>
-  </div>
-
-</div>
-
+<!-- Footer Section -->
 <footer class="app-footer">
   <div class="footer-content">
     <!-- Top Section: Logo & Social Icons -->
@@ -160,6 +135,5 @@
   </div>
 </footer>
 
-<script src="js/schedule.js"></script>
 </body>
 </html>
