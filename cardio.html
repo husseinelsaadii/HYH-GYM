@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYH Training | Cardio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cardio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+<!-- HEADER / NAVBAR - Redesigned and Shortened -->
+<nav class="nav-bar">
+    <div class="nav-logo">
+        <a href="index.html">
+            <img class="logo" src="images/GYM%20Logo.png" alt="HYH-logo">
+        </a>
+    </div>
+
+    <div class="nav-links">
+        <ul class="nav-menu">
+            <li><a href="about-us.html" class="menu-link">WHAT IS HYH?</a></li>
+            <li><a href="cardio.html" class="menu-link active">CARDIO</a></li>
+            <li><a href="resistance.html" class="menu-link">RESISTANCE</a></li>
+            <li><a href="schedule.html" class="menu-link">SCHEDULE</a></li>
+            <li><a href="membership.html" class="menu-link">MEMBERSHIP</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-cta">
+        <a href="join.html" class="nav-btn pulse-btn">JOIN NOW</a>
+    </div>
+
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+    <div class="video-container">
+        <video autoplay muted loop playsinline>
+            <source src="videos/cardio-hero.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <div class="hero-content">
+        <h1 class="hero-title" data-aos="fade-down" data-aos-delay="100">UNLEASH YOUR POWER</h1>
+        <h2 class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">CARDIO THAT AWAKENS THE WARRIOR INSIDE</h2>
+        <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+            Get ready for a heart-racing, sweat-dripping, energy-boosting experience with HYH Cardio Programs.
+        </p>
+
+        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+            <button class="btn primary-btn" onclick="location.href='membership.html'">JOIN NOW</button>
+            <button class="btn secondary-btn" onclick="location.href='schedule.html'">SEE CLASSES</button>
+        </div>
+    </div>
+</section>
+
+<!-- MOTIVATIONAL BANNER -->
+<section class="motivational-banner" data-aos="fade-up">
+    <h2>"It never gets easier, you just get stronger."</h2>
+    <p>Every drop of sweat, every beat of your heart brings you closer to a better, stronger YOU.</p>
+</section>
+
+<!-- OUR CARDIO WORKOUTS -->
+<section class="workouts-section" data-aos="fade-up">
+    <h1 class="section-title">Our Cardio Workouts</h1>
+    <p class="section-description">
+        Choose your battlefield. Whether you're sprinting, lifting, or circling the circuit — we have the cardio workout that matches your energy.
+    </p>
+
+    <div class="workout-cards">
+        <!-- Workout Card 1 -->
+        <div class="card workout-card" data-aos="fade-right" data-aos-delay="100">
+            <img src="images/hiit-session.jpg" alt="HIIT Training">
+            <div class="card-content">
+                <h2 class="red-text">HIIT Training</h2>
+                <p>30-minute fat-burning blasts. Maximum sweat. Maximum impact.</p>
+            </div>
+        </div>
+
+        <!-- Workout Card 2 -->
+        <div class="card workout-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="images/endurance-run.jpg" alt="Endurance Runs">
+            <div class="card-content">
+                <h2 class="blue-text">Endurance Runs</h2>
+                <p>Build stamina and lung power with guided pace and distance challenges.</p>
+            </div>
+        </div>
+
+        <!-- Workout Card 3 -->
+        <div class="card workout-card" data-aos="fade-left" data-aos-delay="300">
+            <img src="images/circuit-training.jpg" alt="Circuit Cardio">
+            <div class="card-content">
+                <h2 class="green-text">Circuit Cardio</h2>
+                <p>Move fast, lift smart, and breathe hard through dynamic cardio circuits.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BENEFITS OF CARDIO -->
+<section class="benefits-section" data-aos="fade-up">
+    <h1 class="section-title">Why Cardio Transforms Your Life</h1>
+    <p class="section-description">
+        Cardio isn't just about calories. It's about energy, focus, freedom, and strength. Here's what happens when you commit:
+    </p>
+
+    <div class="benefits-container">
+        <!-- Left side: Benefits -->
+        <div class="benefits-list" data-aos="fade-right" data-aos-delay="100">
+            <div class="card benefit-card" data-aos="fade-up" data-aos-delay="150">
+                <h2 class="red-text">🔥 Torch Fat</h2>
+                <p>Accelerate your metabolism, burn stubborn fat, and build lean muscle mass at the same time.</p>
+            </div>
+
+            <div class="card benefit-card" data-aos="fade-up" data-aos-delay="250">
+                <h2 class="green-text">🫀 Stronger Heart</h2>
+                <p>Strengthen your most important muscle: your heart. Improve blood flow and live longer, stronger.</p>
+            </div>
+
+            <div class="card benefit-card" data-aos="fade-up" data-aos-delay="350">
+                <h2 class="yellow-text">🧠 Sharper Mind</h2>
+                <p>Release stress, boost mental clarity, and stay sharp thanks to endorphin-fueled training sessions.</p>
+            </div>
+        </div>
+
+        <!-- Right side: Cardio Benefits Image -->
+        <div class="benefits-image" data-aos="fade-left" data-aos-delay="200">
+            <img src="images/cardio-benefits.jpg" alt="Cardio Benefits">
+        </div>
+    </div>
+</section>
+
+<!-- MEET YOUR CARDIO COACHES -->
+<section class="coaches-section" data-aos="fade-up">
+    <h1 class="section-title">Meet Your Cardio Coaches</h1>
+    <p class="section-description">
+        The legends behind your transformation — pushing you, guiding you, inspiring you. Your HYH family.
+    </p>
+
+    <div class="coach-cards">
+        <!-- Coach 1: Dwayne Johnson -->
+        <div class="card coach-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/trainer1.jpg" alt="Dwayne Johnson">
+            <div class="card-content">
+                <h2 class="red-text">Dwayne "The Rock" Johnson</h2>
+                <p>Strength Specialist • Building champions with unstoppable energy and focus.</p>
+            </div>
+        </div>
+
+        <!-- Coach 2: Cristiano Ronaldo -->
+        <div class="card coach-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="images/trainer2.jpg" alt="Cristiano Ronaldo">
+            <div class="card-content">
+                <h2 class="blue-text">Cristiano Ronaldo</h2>
+                <p>Endurance Machine • Training like the world's most elite athlete.</p>
+            </div>
+        </div>
+
+        <!-- Coach 3: Conor McGregor -->
+        <div class="card coach-card" data-aos="fade-up" data-aos-delay="300">
+            <img src="images/trainer3.jpg" alt="Conor McGregor">
+            <div class="card-content">
+                <h2 class="green-text">Conor McGregor</h2>
+                <p>Cardio Warrior • Transforming stamina, attitude, and discipline through grit.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CALL TO ACTION -->
+<section class="cta-section" data-aos="fade-up">
+    <h1>Ready to Transform Your Body and Mind?</h1>
+    <p>
+        Join HYH Cardio today. Take the first step to a healthier, stronger, unstoppable you. Your journey starts NOW — and it starts HERE.
+    </p>
+
+    <div class="cta-button">
+        <button class="btn primary-btn pulse" onclick="location.href='join.html'">
+            Start My Free Trial
+        </button>
+    </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section class="testimonials-section" data-aos="fade-up">
+    <h1 class="section-title">What Our Members Say</h1>
+
+    <div class="testimonial-cards">
+        <!-- Testimonial 1 -->
+        <div class="card testimonial-card" data-aos="fade-up" data-aos-delay="100">
+            <p>"HYH Cardio completely changed my life. I feel stronger, faster, and more confident!"</p>
+            <h3 class="red-text">– Sarah K.</h3>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="card testimonial-card" data-aos="fade-up" data-aos-delay="200">
+            <p>"The trainers are incredible, the energy is insane. I've never loved cardio before now!"</p>
+            <h3 class="blue-text">– Jason M.</h3>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="card testimonial-card" data-aos="fade-up" data-aos-delay="300">
+            <p>"I lost 10kg in 3 months thanks to HYH Cardio. Best decision I ever made!"</p>
+            <h3 class="green-text">– Amina R.</h3>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="faq-section" data-aos="fade-up">
+    <h1 class="section-title">Frequently Asked Questions</h1>
+
+    <div class="faq-container">
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="red-text">Is HYH Cardio good for beginners?</h3>
+            <p>Absolutely! Every workout can be scaled to your fitness level. Our coaches guide you personally every step of the way.</p>
+        </div>
+
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="blue-text">How many cardio classes should I do per week?</h3>
+            <p>We recommend starting with 3-4 classes per week for best results, but you can adjust based on your goals.</p>
+        </div>
+
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="green-text">What do I need to bring?</h3>
+            <p>Just yourself, a towel, a water bottle, and your unstoppable energy. We'll handle the rest!</p>
+        </div>
+    </div>
+</section>
+
+<!-- STICKY JOIN FREE TRIAL BUTTON -->
+<a href="join.html" class="sticky-button">
+    <span>Start Free Trial</span>
+    <i class="fas fa-bolt"></i>
+</a>
+
+<!-- SCROLL TO TOP BUTTON -->
+<button onclick="topFunction()" id="topBtn" title="Go to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- FOOTER - Modern design -->
+<footer class="app-footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="images/GYM%20Logo.png" alt="HYH Logo">
+        </div>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>NAVIGATE</h3>
+                <ul>
+                    <li><a href="about-us.html">What is HYH?</a></li>
+                    <li><a href="cardio.html">Cardio</a></li>
+                    <li><a href="resistance.html">Resistance</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>JOIN US</h3>
+                <ul>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="join.html">Free Trial</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>FOLLOW US</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 HYH TRAINING. ALL RIGHTS RESERVED.</p>
+    </div>
+</footer>
+
+<!-- AOS Animation Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+    });
+
+    // Mobile Menu Toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Scroll to top button
+        let topButton = document.getElementById("topBtn");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                topButton.style.display = "block";
+                topButton.classList.add('fade-in');
+            } else {
+                topButton.classList.remove('fade-in');
+                topButton.classList.add('fade-out');
+                setTimeout(() => {
+                    if (document.body.scrollTop <= 300 && document.documentElement.scrollTop <= 300) {
+                        topButton.style.display = "none";
+                        topButton.classList.remove('fade-out');
+                    }
+                }, 300);
+            }
+        };
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    });
+</script>
+</body>
+</html>
