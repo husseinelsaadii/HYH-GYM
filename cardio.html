@@ -27,16 +27,16 @@
 
     <div class="nav-links">
         <ul class="nav-menu">
-            <li><a href="about-us.html" class="menu-link">WHAT IS HYH?</a></li>
+<!--            <li><a href="about-us.html" class="menu-link">WHAT IS HYH?</a></li>-->
             <li><a href="cardio.html" class="menu-link active">CARDIO</a></li>
             <li><a href="resistance.html" class="menu-link">RESISTANCE</a></li>
-            <li><a href="schedule.html" class="menu-link">SCHEDULE</a></li>
-            <li><a href="membership.html" class="menu-link">MEMBERSHIP</a></li>
+<!--            <li><a href="schedule.html" class="menu-link">SCHEDULE</a></li>-->
+<!--            <li><a href="membership.html" class="menu-link">MEMBERSHIP</a></li>-->
         </ul>
     </div>
 
     <div class="nav-cta">
-        <a href="join.html" class="nav-btn pulse-btn">JOIN NOW</a>
+        <a href="login.html" class="nav-btn pulse-btn">JOIN NOW</a>
     </div>
 
     <div class="hamburger">
@@ -63,7 +63,7 @@
         </p>
 
         <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
-            <button class="btn primary-btn" onclick="location.href='membership.html'">JOIN NOW</button>
+            <button class="btn primary-btn" onclick="location.href='login.html'">JOIN NOW</button>
             <button class="btn secondary-btn" onclick="location.href='schedule.html'">SEE CLASSES</button>
         </div>
     </div>
@@ -190,8 +190,8 @@
     </p>
 
     <div class="cta-button">
-        <button class="btn primary-btn pulse" onclick="location.href='join.html'">
-            Start My Free Trial
+        <button class="btn primary-btn pulse" onclick="location.href='login.html'">
+            JOIN NOW!
         </button>
     </div>
 </section>
@@ -244,7 +244,7 @@
 </section>
 
 <!-- STICKY JOIN FREE TRIAL BUTTON -->
-<a href="join.html" class="sticky-button">
+<a href="login.html" class="sticky-button">
     <span>Start Free Trial</span>
     <i class="fas fa-bolt"></i>
 </a>
@@ -275,8 +275,8 @@
                 <ul>
                     <li><a href="membership.html">Membership</a></li>
                     <li><a href="join.html">Free Trial</a></li>
-                    <li><a href="locations.html">Locations</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="location.html">Locations</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -297,48 +297,6 @@
 
 <!-- AOS Animation Script -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 100
-    });
-
-    // Mobile Menu Toggle
-    document.addEventListener('DOMContentLoaded', function() {
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-
-        if (hamburger) {
-            hamburger.addEventListener('click', function() {
-                hamburger.classList.toggle('active');
-                navMenu.classList.toggle('active');
-            });
-        }
-
-        // Scroll to top button
-        let topButton = document.getElementById("topBtn");
-        window.onscroll = function() {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                topButton.style.display = "block";
-                topButton.classList.add('fade-in');
-            } else {
-                topButton.classList.remove('fade-in');
-                topButton.classList.add('fade-out');
-                setTimeout(() => {
-                    if (document.body.scrollTop <= 300 && document.documentElement.scrollTop <= 300) {
-                        topButton.style.display = "none";
-                        topButton.classList.remove('fade-out');
-                    }
-                }, 300);
-            }
-        };
-
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    });
-</script>
+<script src="js/cardio.js"></script>
 </body>
 </html>

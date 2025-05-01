@@ -1,4 +1,7 @@
-/* Shop Page Specific Styles */
+/*
+* VARIABLES
+* CSS custom properties for consistent theming
+*/
 :root {
     --primary-color: #ffdd00;
     --dark-bg: #1A1A1A;
@@ -8,6 +11,10 @@
     --transition-speed: 0.3s;
 }
 
+/*
+* GLOBAL STYLES
+* Base styling for the shop page
+*/
 body {
     font-family: 'Bebas Neue', sans-serif;
     background-color: var(--dark-bg);
@@ -16,6 +23,10 @@ body {
     padding: 0;
 }
 
+/*
+* SHOP CONTAINER
+* Main container for shop content
+*/
 .shop-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -26,6 +37,10 @@ body {
     justify-content: center;
 }
 
+/*
+* COMING SOON SECTION
+* Styling for the coming soon page elements
+*/
 .coming-soon-wrapper {
     width: 100%;
     background-color: #222;
@@ -37,24 +52,9 @@ body {
     animation: fadeIn 1s ease-in-out;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .coming-soon-content {
     max-width: 800px;
     margin: 0 auto;
-}
-
-.nav-menu li a.active {
-    color: #FFDD00;
 }
 
 .coming-soon-content h1 {
@@ -82,6 +82,24 @@ body {
     left: 0;
 }
 
+.coming-soon-content p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+/*
+* NAVIGATION STYLES
+* Specific styles for navigation in shop page
+*/
+.nav-menu li a.active {
+    color: #FFDD00;
+}
+
+/*
+* CONSTRUCTION ICON
+* Animated icons for the coming soon page
+*/
 .construction-icon {
     font-size: 3rem;
     margin: 2rem 0;
@@ -103,23 +121,10 @@ body {
     animation-delay: 1s;
 }
 
-@keyframes pulse {
-    from {
-        transform: scale(1);
-        opacity: 0.8;
-    }
-    to {
-        transform: scale(1.2);
-        opacity: 1;
-    }
-}
-
-.coming-soon-content p {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.4;
-}
-
+/*
+* NOTIFICATION SECTION
+* Styles for the notification box and button
+*/
 .notification-box {
     background-color: #333;
     border-radius: var(--border-radius);
@@ -160,6 +165,10 @@ body {
     transform: translateY(-3px);
 }
 
+/*
+* RETURN TO HOME LINK
+* Styling for the return to home link
+*/
 .return-home {
     margin-top: 3rem;
 }
@@ -178,7 +187,36 @@ body {
     color: var(--primary-color);
 }
 
-/* Mobile responsiveness */
+/*
+* ANIMATIONS
+* Keyframe animations used throughout the shop page
+*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    to {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+/*
+* RESPONSIVE STYLES
+* Media queries for responsive design
+*/
 @media (max-width: 768px) {
     .coming-soon-wrapper {
         padding: 2rem 1rem;

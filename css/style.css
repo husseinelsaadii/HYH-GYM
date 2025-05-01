@@ -1,12 +1,17 @@
-/* Global Reset */
+/*
+* GLOBAL RESET
+* Basic reset for all elements
+*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Bebas Neue', cursive;
 }
-
-/* NAVBAR STYLES */
+/*
+* NAVBAR STYLES
+* Styling for the navigation bar and its components
+*/
 .nav-bar {
     display: flex;
     justify-content: space-between;
@@ -102,63 +107,10 @@
     display: block;
 }
 
-/* Responsive Design for Navbar */
-@media screen and (max-width: 1024px) {
-    .nav-bar {
-        padding: 0.75rem 1rem;
-        flex-direction: column;
-    }
-
-    .navbar-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-menu {
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        margin: 0.5rem 0;
-    }
-
-    .nav-menu li {
-        margin: 0.5rem 0;
-    }
-
-    .divider {
-        width: 80%;
-        height: 1px;
-        margin: 0.5rem 0;
-    }
-
-    .nav-dropdown-content {
-        position: static;
-        width: 100%;
-        box-shadow: none;
-        border-radius: 0;
-    }
-
-    .trial-btn {
-        margin: 0.5rem 0;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .nav-menu li a {
-        font-size: 1.2rem;
-    }
-
-    .logo {
-        width: 60px;
-    }
-
-    .trial-btn {
-        font-size: 1.2rem;
-        padding: 0.4rem 0.8rem;
-    }
-}
-
-/* HERO SECTION STYLES */
+/*
+* HERO SECTION STYLES
+* Styling for the hero section with slides and video background
+*/
 .hero-section {
     position: relative;
     width: 100%;
@@ -326,7 +278,11 @@
     background-color: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
 }
-/*------------------------------------- Feature Styling -----------------------------*/
+
+/*
+* FEATURE SECTION STYLING
+* General feature section with image and text display
+*/
 .feature-container {
     max-width: 100%;
     margin: 0 auto;
@@ -389,8 +345,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
+
 .image:hover {
     transform: scale(1.02);
 }
@@ -417,21 +373,10 @@
     transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-    .flex-container {
-        flex-direction: column;
-    }
-
-    .main-title {
-        font-size: 40px;
-    }
-
-    .image {
-        width: 100%;
-    }
-}
-/*-------------------------Feature Workout Styling --------------------------------*/
-/* Section-specific styles */
+/*
+* FEATURE WORKOUT STYLING
+* Special section for workout features with background image
+*/
 .workout-feature-section {
     position: relative;
     display: flex;
@@ -522,23 +467,10 @@
     transform: translateY(-2px);
 }
 
-/* Responsive design */
-@media screen and (max-width: 768px) {
-    .workout-feature-section {
-        flex-direction: column;
-    }
-
-    .workout-feature-content {
-        width: 100%;
-        min-width: 100%;
-        padding: 40px 20px;
-    }
-
-    .workout-feature-title {
-        font-size: 32px;
-    }
-}
-/*-------------------------------Slide showing section -------------------------*/
+/*
+* SCROLLING BANNER SECTION
+* Horizontal scrolling banner with animation
+*/
 .banner-container {
     position: relative;
     width: 100%;
@@ -592,13 +524,16 @@
     width: 100%;
 }
 
-/* --------------------------------General Footer Styling---------------------- */
+/*
+* FOOTER STYLING
+* Complete footer with multiple sections
+*/
 .app-footer {
-    background-color: #1c1c1c; /* Black background */
+    background-color: #1c1c1c;
     color: #fff;
-    padding: 3rem 2rem; /* Increased top/bottom padding for better spacing */
+    padding: 3rem 2rem;
     font-family: 'Bebas Neue', cursive;
-    border-top: 10px solid black; /* Slightly thicker yellow border */
+    border-top: 10px solid black;
 }
 
 .footer-content {
@@ -637,7 +572,7 @@
 }
 
 .social-menu ul li a {
-    color: #ffdd00; /* Yellow color for icons */
+    color: #ffdd00;
     font-size: 1.8rem;
     transition: color 0.3s, transform 0.3s;
     display: flex;
@@ -646,7 +581,7 @@
 }
 
 .social-menu ul li a:hover {
-    color: #fff; /* White color when hovering */
+    color: #fff;
     transform: scale(1.2);
 }
 
@@ -655,7 +590,7 @@
     width: 100%;
     border: none;
     height: 1px;
-    background-color: rgba(255, 255, 255, 0.2); /* Subtle divider */
+    background-color: rgba(255, 255, 255, 0.2);
     margin: 1.5rem 0 2.5rem;
 }
 
@@ -675,20 +610,20 @@
 .app-footer__mailing-list h3 {
     font-size: 2.5rem;
     margin: 0.5rem 0 1rem;
-    color: #ffdd00; /* Yellow color for the heading */
+    color: #ffdd00;
     letter-spacing: 1px;
 }
 
 .app-footer__mailing-list p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
-    font-family: Arial, sans-serif; /* Different font for better readability */
+    font-family: Arial, sans-serif;
     font-weight: 300;
     line-height: 1.5;
 }
 
 .btn-sign-up {
-    background-color: #ffdd00; /* Yellow button */
+    background-color: #ffdd00;
     color: black;
     padding: 0.8rem 2.5rem;
     border-radius: 50px;
@@ -723,7 +658,7 @@
 }
 
 .footer-links ul li a {
-    color: #ffdd00; /* Yellow text for links */
+    color: #ffdd00;
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s;
@@ -750,15 +685,15 @@
 }
 
 .footer-badge {
-    max-height: 60px; /* Slightly smaller for better proportion */
+    max-height: 60px;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    filter: grayscale(0.3); /* Subtle grayscale effect */
+    filter: grayscale(0.3);
 }
 
 .footer-badge:hover {
     transform: scale(1.1);
     opacity: 1;
-    filter: grayscale(0); /* Remove grayscale on hover */
+    filter: grayscale(0);
 }
 
 /* Region Selector Button */
@@ -791,7 +726,101 @@
     font-family: Arial, sans-serif;
 }
 
-/* Responsive Design for Smaller Screens */
+/*
+* RESPONSIVE DESIGN
+* Media queries for different screen sizes
+*/
+
+/* Responsive Design for Navbar */
+@media screen and (max-width: 1024px) {
+    .nav-bar {
+        padding: 0.75rem 1rem;
+        flex-direction: column;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    .nav-menu li {
+        margin: 0.5rem 0;
+    }
+
+    .divider {
+        width: 80%;
+        height: 1px;
+        margin: 0.5rem 0;
+    }
+
+    .nav-dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .trial-btn {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Responsive Design for Feature Section */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .main-title {
+        font-size: 40px;
+    }
+
+    .image {
+        width: 100%;
+    }
+}
+
+/* Responsive Design for Workout Feature */
+@media screen and (max-width: 768px) {
+    .workout-feature-section {
+        flex-direction: column;
+    }
+
+    .workout-feature-content {
+        width: 100%;
+        min-width: 100%;
+        padding: 40px 20px;
+    }
+
+    .workout-feature-title {
+        font-size: 32px;
+    }
+}
+
+/* Responsive Design for Hero Section */
+@media screen and (max-width: 480px) {
+    .nav-menu li a {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .trial-btn {
+        font-size: 1.2rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Responsive Design for Footer */
 @media screen and (max-width: 992px) {
     .footer-links-container {
         flex-wrap: wrap;

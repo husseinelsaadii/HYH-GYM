@@ -1001,7 +1001,7 @@ section {
     to { opacity: 0; }
 }
 
-/* FOOTER */
+/* FOOTER STYLES */
 .app-footer {
     background-color: var(--darker-bg);
     padding: 3rem 2rem 1rem;
@@ -1088,6 +1088,7 @@ section {
     color: var(--text-muted);
     font-size: 0.9rem;
 }
+
 
 /* RESPONSIVE STYLES */
 @media (max-width: 992px) {

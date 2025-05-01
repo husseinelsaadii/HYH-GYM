@@ -71,6 +71,8 @@ p {
     line-height: 1.6;
 }
 
+
+
 @media (min-width: 768px) {
     .grid-section {
         grid-template-columns: 1fr 1fr;
