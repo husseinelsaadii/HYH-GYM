@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HYH Training | Check Users</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    .users-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .users-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+
+    .users-table th {
+      background-color: #232323;
+      color: #fff;
+      padding: 15px;
+      text-align: left;
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 1px;
+      font-size: 18px;
+    }
+
+    .users-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .users-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .users-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    .users-table tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .admin-badge {
+      background-color: #e53637;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .user-badge {
+      background-color: #3a3a3a;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .search-tools {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+
+    .search-bar {
+      flex-grow: 1;
+      max-width: 400px;
+      position: relative;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 10px 15px;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .search-bar input:focus {
+      border-color: #e53637;
+      outline: none;
+    }
+
+    .controls {
+      display: flex;
+      gap: 15px;
+    }
+
+    .filter-button, .refresh-button {
+      background-color: #3a3a3a;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    .filter-button:hover, .refresh-button:hover {
+      background-color: #e53637;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #3a3a3a;
+      letter-spacing: 1px;
+    }
+
+    .status-indicator {
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .status-active {
+      background-color: #4CAF50;
+    }
+
+    .status-inactive {
+      background-color: #9e9e9e;
+    }
+
+    .last-login {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .no-users-message {
+      text-align: center;
+      padding: 40px;
+      font-size: 18px;
+      color: #666;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+<!-- NAV-BAR -->
+<nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="index.html">
+      <img class="logo" src="images/GYM%20Logo.png" alt="HYH-logo">
+    </a>
+  </div>
+
+  <div class="navbar-container">
+    <ul class="nav-menu nav-left-links">
+      <li><a href="check-users.html" class="active">CHECK USERS</a></li>
+      <li><a href="schedule-admin.html">EDIT CLASSES</a></li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <ul class="nav-menu nav-right-links">
+      <li><a href="home-admin.html" id="adminName">Admin Panel</a></li>
+      <li><a href="index.html" id="logout-btn">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main class="users-container">
+  <h1 class="section-title">USER MANAGEMENT</h1>
+  <p>View and manage all registered users in the system</p>
+
+  <div class="search-tools">
+    <div class="search-bar">
+      <input type="text" id="user-search" placeholder="Search by name or email...">
+    </div>
+    <div class="controls">
+      <button class="filter-button" id="filter-toggle">Filter Options</button>
+      <button class="refresh-button" id="refresh-users">Refresh</button>
+    </div>
+  </div>
+
+  <div id="users-table-container">
+    <table class="users-table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Status</th>
+        <th>Last Login</th>
+      </tr>
+      </thead>
+      <tbody id="users-list">
+      <!-- User rows will be populated dynamically -->
+      </tbody>
+    </table>
+  </div>
+
+  <div id="no-users-message" class="no-users-message hidden">
+    No users found matching your search criteria.
+  </div>
+</main>
+
+<!-- Footer Section -->
+<footer class="app-footer simplified-footer">
+  <div class="footer-content">
+    <div class="footer-logo-container">
+      <img class="footer-logo" src="images/GYM%20Logo.png" alt="HYH Logo">
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 HYH TRAINING. ALL RIGHTS RESERVED.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Check if admin is logged in
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+    if (!currentUser) {
+      // Redirect to login if not logged in
+      window.location.href = 'login.html';
+      return;
+    }
+
+    // Make sure this is an admin
+    if (!currentUser.isAdmin) {
+      window.location.href = 'home-user.html';
+      return;
+    }
+
+    // Update admin name in nav
+    document.getElementById('adminName').textContent = `Admin: ${currentUser.name}`;
+
+    // Handle logout
+    document.getElementById('logout-btn').addEventListener('click', function() {
+      localStorage.removeItem('currentUser');
+      window.location.href = 'login.html';
+    });
+
+    // Get users data (in a real app, this would come from a server)
+    // For this demo, we'll retrieve the sample users from your login.js file
+    const users = [
+      { email: 'h.saadi@hyh.com', password: 'admin123', name: 'Hussein El Saadi', isAdmin: true,
+        status: 'active', lastLogin: '2025-05-01 08:45 AM' },
+      { email: 'y.hamdan@hyh.com', password: 'admin123', name: 'Yasser Hamdan', isAdmin: true,
+        status: 'active', lastLogin: '2025-04-30 02:15 PM' },
+      { email: 'h.harakeh@hyh.com', password: 'admin123', name: 'Haidar El Harakeh', isAdmin: true,
+        status: 'active', lastLogin: '2025-04-29 11:30 AM' },
+      { email: 'user@example.com', password: 'user123', name: 'Test User', isAdmin: false,
+        status: 'active', lastLogin: '2025-04-28 04:20 PM' },
+      { email: 'jane.doe@example.com', password: 'password123', name: 'Jane Doe', isAdmin: false,
+        status: 'active', lastLogin: '2025-04-27 09:15 AM' },
+      { email: 'john.smith@example.com', password: 'password123', name: 'John Smith', isAdmin: false,
+        status: 'inactive', lastLogin: '2025-04-15 11:45 AM' },
+      { email: 'sarah.jones@example.com', password: 'password123', name: 'Sarah Jones', isAdmin: false,
+        status: 'active', lastLogin: '2025-04-29 10:30 AM' },
+      { email: 'mike.wilson@example.com', password: 'password123', name: 'Mike Wilson', isAdmin: false,
+        status: 'inactive', lastLogin: '2025-03-18 03:45 PM' }
+    ];
+
+    // Add more realistic sample users
+    for (let i = 1; i <= 10; i++) {
+      users.push({
+        email: `member${i}@example.com`,
+        password: 'password123',
+        name: `Member ${i}`,
+        isAdmin: false,
+        status: i % 5 === 0 ? 'inactive' : 'active',
+        lastLogin: `2025-${String(04 - (i % 2)).padStart(2, '0')}-${String(20 - (i % 15)).padStart(2, '0')} ${i % 12 + 1}:${String((i * 5) % 60).padStart(2, '0')} ${i % 2 === 0 ? 'AM' : 'PM'}`
+      });
+    }
+
+    // Function to display users
+    function displayUsers(usersToDisplay) {
+      const usersTable = document.getElementById('users-list');
+      const noUsersMessage = document.getElementById('no-users-message');
+
+      // Clear existing rows
+      usersTable.innerHTML = '';
+
+      if (usersToDisplay.length === 0) {
+        document.getElementById('users-table-container').classList.add('hidden');
+        noUsersMessage.classList.remove('hidden');
+        return;
+      }
+
+      document.getElementById('users-table-container').classList.remove('hidden');
+      noUsersMessage.classList.add('hidden');
+
+      // Add user rows
+      usersToDisplay.forEach(user => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${user.name}</td>
+          <td>${user.email}</td>
+          <td>${user.isAdmin ? '<span class="admin-badge">Admin</span>' : '<span class="user-badge">Member</span>'}</td>
+          <td><span class="status-indicator status-${user.status}"></span>${user.status.charAt(0).toUpperCase() + user.status.slice(1)}</td>
+          <td class="last-login">${user.lastLogin}</td>
+        `;
+        usersTable.appendChild(row);
+      });
+    }
+
+    // Initial display
+    displayUsers(users);
+
+    // Search functionality
+    const searchInput = document.getElementById('user-search');
+    searchInput.addEventListener('input', function() {
+      const searchTerm = this.value.toLowerCase();
+      const filteredUsers = users.filter(user =>
+              user.name.toLowerCase().includes(searchTerm) ||
+              user.email.toLowerCase().includes(searchTerm)
+      );
+      displayUsers(filteredUsers);
+    });
+
+    // Refresh button functionality
+    document.getElementById('refresh-users').addEventListener('click', function() {
+      searchInput.value = '';
+      displayUsers(users);
+    });
+
+    // Filter button functionality (placeholder for future enhancement)
+    document.getElementById('filter-toggle').addEventListener('click', function() {
+      alert('Filter functionality would be implemented here in a real application.');
+    });
+  });
+</script>
+</body>
+</html>

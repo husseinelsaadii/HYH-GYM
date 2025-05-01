@@ -6,6 +6,10 @@
     color: white;
 }
 
+.nav-menu li a.active {
+    color: #FFDD00;
+}
+
 .dashboard-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -49,7 +53,7 @@
 
 .dashboard-card h2 {
     font-size: 1.8rem;
-    color: #ff4d4d;
+    color: #FFDD00;
     margin-bottom: 1.5rem;
     border-bottom: 1px solid #444;
     padding-bottom: 0.8rem;
@@ -67,7 +71,7 @@
 
 /* Admin-specific styles */
 .admin-header h1 {
-    color: #ff4d4d;
+    color: #FFDD00;
 }
 
 /* Responsive adjustments */
