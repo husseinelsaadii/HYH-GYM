@@ -193,7 +193,12 @@ button {
     background-color: var(--danger-color);
     color: white;
 }
-
+.upper {
+    text-transform: uppercase;
+}
+.lower {
+    text-transform: none;
+}
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .form-group {

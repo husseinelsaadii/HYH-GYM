@@ -20,7 +20,12 @@ body {
 .nav-menu li a.active {
     color: #FFDD00;
 }
-
+.upper {
+    text-transform: uppercase;
+}
+.lower {
+    text-transform: none;
+}
 /* Main Content Styles */
 .container {
     max-width: 1200px;

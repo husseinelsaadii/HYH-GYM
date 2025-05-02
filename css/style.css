@@ -732,7 +732,12 @@
     letter-spacing: 1px;
     font-family: Arial, sans-serif;
 }
-
+.upper {
+    text-transform: uppercase;
+}
+.lower {
+    text-transform: none;
+}
 /*
 * RESPONSIVE DESIGN
 * Media queries for different screen sizes

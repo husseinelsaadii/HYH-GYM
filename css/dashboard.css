@@ -68,7 +68,12 @@
     margin-top: auto;
     align-self: flex-start;
 }
-
+.upper {
+    text-transform: uppercase;
+}
+.lower {
+    text-transform: none;
+}
 /* Admin-specific styles */
 .admin-header h1 {
     color: #FFDD00;

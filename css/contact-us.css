@@ -205,7 +205,12 @@
     margin: 5px 0;
     font-size: 1.1rem;
 }
-
+.upper {
+    text-transform: uppercase;
+}
+.lower {
+    text-transform: none;
+}
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .contact-hero-content h1 {

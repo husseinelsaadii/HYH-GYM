@@ -212,7 +212,12 @@ body {
         opacity: 1;
     }
 }
-
+.upper {
+    text-transform: uppercase;
+}
+.lower {
+    text-transform: none;
+}
 /*
 * RESPONSIVE STYLES
 * Media queries for responsive design

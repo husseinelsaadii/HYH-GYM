@@ -75,7 +75,12 @@ h1 {
     height: 2px;
     background-color: var(--accent-color);
 }
-
+.upper {
+    text-transform: uppercase;
+}
+.lower {
+    text-transform: none;
+}
 /* Schedule Grid */
 .schedule-content {
     display: none;

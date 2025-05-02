@@ -1088,7 +1088,12 @@ section {
     color: var(--text-muted);
     font-size: 0.9rem;
 }
-
+.upper {
+    text-transform: uppercase;
+}
+.lower {
+    text-transform: none;
+}
 /* RESPONSIVE STYLES */
 @media (max-width: 992px) {
     .nav-bar {

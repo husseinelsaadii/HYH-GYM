@@ -226,7 +226,12 @@ p {
     color: var(--text-muted);
     font-size: 0.9rem;
 }
-
+.upper {
+    text-transform: uppercase;
+}
+.lower {
+    text-transform: none;
+}
 /* Hamburger Menu */
 .hamburger {
     display: none;

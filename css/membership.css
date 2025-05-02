@@ -379,7 +379,12 @@ body {
         flex-direction: column;
     }
 }
-
+.upper {
+    text-transform: uppercase;
+}
+.lower {
+    text-transform: none;
+}
 /* Plan Toggle Animation */
 .plan-container {
     display: none;

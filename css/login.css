@@ -114,7 +114,12 @@
 .form .primary-btn:hover {
     background-image: linear-gradient(to bottom, #ff6666, #cc0000);
 }
-
+.upper {
+    text-transform: uppercase;
+}
+.lower {
+    text-transform: none;
+}
 /* Simplified Footer for Login Page */
 .simplified-footer {
     padding: 1rem;

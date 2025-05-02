@@ -237,7 +237,12 @@
 .nav-menu li a.active {
     color: #FFDD00;
 }
-
+.upper {
+    text-transform: uppercase;
+}
+.lower {
+    text-transform: none;
+}
 /* Responsive Design */
 @media screen and (max-width: 992px) {
     .location-card {
