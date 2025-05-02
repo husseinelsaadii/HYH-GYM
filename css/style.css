@@ -341,10 +341,17 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+
 .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.image-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .image:hover {
@@ -400,7 +407,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 80% 70%;
+    object-position: 80px 70%;
     opacity: 0.9;
 }
 

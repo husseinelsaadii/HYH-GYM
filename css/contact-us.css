@@ -10,7 +10,7 @@
     height: 50vh;
     background-image: url('../images/contact-hero.jpg') ;
     background-size: cover;
-    background-position: center;
+    background-position: center -200px;
     display: flex;
     align-items: center;
     justify-content: center;
