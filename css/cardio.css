@@ -152,8 +152,7 @@ p {
     justify-content: space-between;
     gap: 2rem;
     max-width: 1200px;
-    margin: 0 auto;
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem;
 }
 
 .footer-logo img {
