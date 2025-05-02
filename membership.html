@@ -336,8 +336,8 @@
         <div class="footer-links-container">
             <div class="footer-links">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="#" class="nav-link">Studios</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdwDiBgdGIWtEXVy0-GAehkD_U_CkeFiDbQrSO7ByL12VXpPg/viewform?usp=sharing" class="nav-link">RATE US!</a></li>
+                    <li class="nav-item"><a href="location.html" class="nav-link">Locations</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Newsroom</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Invest</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Careers</a></li>
@@ -365,49 +365,6 @@
 </footer>
 
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Toggle between monthly and annual plans
-        const toggleBtns = document.querySelectorAll('.toggle-btn');
-        toggleBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                // Remove active class from all buttons
-                toggleBtns.forEach(b => b.classList.remove('active'));
-
-                // Add active class to clicked button
-                this.classList.add('active');
-
-                // Hide all plan containers
-                document.querySelectorAll('.plan-container').forEach(container => {
-                    container.classList.remove('active');
-                });
-
-                // Show the target container
-                const targetContainer = document.getElementById(this.dataset.target + '-plans');
-                if (targetContainer) {
-                    targetContainer.classList.add('active');
-                }
-            });
-        });
-
-        // FAQ accordion functionality
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            question.addEventListener('click', function() {
-                // Toggle active class on the clicked item
-                item.classList.toggle('active');
-
-                // Update the toggle icon
-                const toggleIcon = this.querySelector('.toggle-icon');
-                if (item.classList.contains('active')) {
-                    toggleIcon.textContent = '−';
-                } else {
-                    toggleIcon.textContent = '+';
-                }
-            });
-        });
-    });
-</script>
+<script src="js/membership.js"></script>
 </body>
 </html>

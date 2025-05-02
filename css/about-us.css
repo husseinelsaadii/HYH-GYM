@@ -486,7 +486,7 @@ main {
     text-transform: uppercase;
 }
 .lower {
-    text-transform: none;
+    text-transform: lowercase !important;;
 }
 /* ---------------------- DECORATIVE ELEMENTS ---------------------- */
 /* Floating shapes */

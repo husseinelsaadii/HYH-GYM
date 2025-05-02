@@ -188,24 +188,6 @@ body {
     display: none;
 }
 
-/* Footer */
-.app-footer {
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
-    text-align: center;
-    margin-top: 3rem;
-}
-
-.footer-logo {
-    height: 50px;
-    margin-bottom: 1rem;
-}
-
-.copyright {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
 /* Notification */
 .notification {
     padding: 1rem;
