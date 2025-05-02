@@ -1,52 +1,96 @@
-# HYH Gym Website
+# HYH-GYM Website
 
-## 🚀 About the Project
-The **HYH Gym Website** is a highly advanced, modern, and fully responsive web application designed for fitness enthusiasts. Built using **HTML, CSS, and JavaScript**, this project aims to provide an immersive user experience with interactive elements, smooth animations, and an intuitive UI.
+## 🏋️ About the Project  
+**HYH-GYM** is a full-featured, responsive website built with **HTML, CSS, and JavaScript**, designed for gym users and administrators. It offers workout information, membership details, user interaction features, and admin functionality. The site combines usability and design with practical tools like nutrition calculators and a workout info hub.
 
-## 🌟 Features
-- **Fully Responsive Design** – Optimized for all screen sizes (mobile, tablet, and desktop).
-- **Dynamic Navigation Bar** – Includes dropdown menus and interactive links.
-- **Custom Animations & Transitions** – Smooth hover effects and transitions for a modern feel.
-- **Advanced CSS Styling** – Includes flexbox, grid, and media queries for precise layout control.
-- **JavaScript Interactivity** – Enhances the user experience with dynamic elements like modals, carousels, and event-driven interactions.
-- **Engaging Workouts Section** – Categorized fitness programs (Cardio, Resistance, Hybrid, Recovery).
-- **Call-to-Action (CTA) Buttons** – Includes a shadow effect on hover for an engaging UI.
+---
+
+## 🌟 Key Features
+
+- 🔐 **Login & Logout System**  
+- 👥 **Admin and User Roles**  
+  - Admins can:  
+    - Add and manage classes  
+    - View registered users  
+  - Users can:  
+    - Browse and register for available classes  
+    - Use health tools like BMI and water intake calculators  
+- 🏃 **Cardio & Resistance Info Pages**  
+  - Learn about different workout types  
+- 💳 **Membership Page**  
+  - View payment methods and plans  
+- 📍 **Locations & Contact Us**  
+- 🧾 **About Us Page**  
+- 🛒 **Shop (Coming Soon)**  
+- ⭐ **Feedback Form**  
+  - Link in the footer to rate the website: [Rate Our Project](https://docs.google.com/forms/d/e/1FAIpQLSdwDiBgdGIWtEXVy0-GAehkD_U_CkeFiDbQrSO7ByL12VXpPg/viewform?usp=sharing)
+
+---
+
+## 🧱 Project Structure
+
+```
+HYH-GYM/
+│── index.html               # Main homepage
+│── login.html               # Login page
+│── register.html            # Registration page
+│── membership.html          # Membership plans and payments
+│── cardio.html              # Cardio workouts info
+│── resistance.html          # Resistance training info
+│── admin.html               # Admin dashboard (for adding classes, viewing users)
+│── nutrition.html           # BMI & water intake calculator
+│── about.html               # About us page
+│── contact.html             # Contact and locations
+│── shop.html                # Shop page (coming soon)
+│
+├── css/
+│   └── style.css            # All site styling
+│
+├── js/
+│   └── script.js            # All site interactivity
+│
+├── images/                  # All images used in the website
+├── videos/                  # Video files used on pages
+```
+
+---
 
 ## 🛠️ Tech Stack
-- **HTML5** – Semantic and structured markup.
-- **CSS3** – Advanced styling with animations, transitions, and responsive design.
-- **JavaScript (ES6+)** – Enhances interactivity and dynamic behavior.
 
-## 📁 Project Structure
-```
-HYH-Gym-Website/
-│── index.html          # Main landing page
-│── styles.css          # Core styling
-│── script.js           # JavaScript functionalities
-│── images/             # Logo and UI assets
-│── fonts/              # Custom typography (Bebas Neue)
-│── pages/              # Additional site pages (Workouts, Challenges, About, etc.)
-```
+- **HTML5** – Semantic structure for all pages  
+- **CSS3** – Flexbox, Grid, and media queries for layout and responsiveness  
+- **JavaScript (ES6)** – Interactivity, DOM manipulation, form logic  
 
-## 📌 How to Run the Project
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/your-username/HYH-Gym-Website.git
+---
+
+## 🚀 How to Run Locally
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/husseinelsaadii/HYH-GYM.git
    ```
-2. Navigate to the project folder:
-   ```sh
-   cd HYH-Gym-Website
-   ```
-3. Open `index.html` in your browser.
+2. Open the folder in your editor.
+3. Open `index.html` in any browser.
 
-## 📅 Future Enhancements
-- Add a **Workout Tracker** with local storage.
-- Implement a **Dark Mode** toggle.
-- Introduce **User Authentication** for personalized experience.
-- Improve animations using **GSAP** or **CSS keyframes**.
+---
 
-## 📞 Contact
-For any inquiries or suggestions, feel free to reach out!
+## 🔮 Future Enhancements
 
-🚀 Let's build an outstanding gym website! 💪🔥
+- 🛒 Finish implementing the **shop** section  
+- 🌙 Add a **dark mode** toggle  
+- 📈 Add **progress tracking** for workouts  
+- 📅 Enable **calendar scheduling** for classes  
 
+---
+
+## 👨‍💻 Developed By
+
+- Hussein El Saadi  
+- Yasser Hamdan  
+- Haidar El Harakeh  
+
+---
+
+## 📩 Feedback  
+We'd love to hear your thoughts!  
+👉 [Click here to rate our website](https://docs.google.com/forms/d/e/1FAIpQLSdwDiBgdGIWtEXVy0-GAehkD_U_CkeFiDbQrSO7ByL12VXpPg/viewform?usp=sharing)
