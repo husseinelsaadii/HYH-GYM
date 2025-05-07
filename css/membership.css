@@ -185,6 +185,7 @@ body {
     background-color: rgba(244, 67, 54, 0.1);
 }
 
+/*Comparion Table Section*/
 .plan-comparison {
     margin-top: 4rem;
     background-color: #222;
@@ -294,7 +295,7 @@ body {
     padding: 1.5rem;
 
 }
-
+/*Call To Action*/
 .cta-section {
     margin: 4rem 0;
     text-align: center;

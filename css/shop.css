@@ -216,7 +216,7 @@ body {
     text-transform: uppercase;
 }
 .lower {
-    text-transform: none;
+    text-transform: lowercase;
 }
 /*
 * RESPONSIVE STYLES
