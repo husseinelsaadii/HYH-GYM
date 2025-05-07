@@ -1,0 +1,428 @@
+Index: cardio.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>HYH Training | Cardio</title>\r\n    <link rel=\"stylesheet\" href=\"css/style.css\">\r\n    <link rel=\"stylesheet\" href=\"css/cardio.css\">\r\n    <link href=\"https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap\" rel=\"stylesheet\">\r\n    <link href=\"https://unpkg.com/aos@2.3.1/dist/aos.css\" rel=\"stylesheet\">\r\n    <!-- Font Awesome for icons -->\r\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\">\r\n    <!-- GSAP Animation Library -->\r\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js\"></script>\r\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js\"></script>\r\n</head>\r\n\r\n<body>\r\n\r\n<!-- HEADER / NAVBAR - Redesigned and Shortened -->\r\n<nav class=\"nav-bar\">\r\n    <div class=\"nav-logo\">\r\n        <a href=\"index.html\">\r\n            <img class=\"logo\" src=\"images/GYM%20Logo.png\" alt=\"HYH-logo\">\r\n        </a>\r\n    </div>\r\n\r\n    <div class=\"nav-links\">\r\n        <ul class=\"nav-menu\">\r\n<!--            <li><a href=\"about-us.html\" class=\"menu-link\">WHAT IS HYH?</a></li>-->\r\n            <li><a href=\"cardio.html\" class=\"menu-link active\">CARDIO</a></li>\r\n            <li><a href=\"resistance.html\" class=\"menu-link\">RESISTANCE</a></li>\r\n<!--            <li><a href=\"schedule.html\" class=\"menu-link\">SCHEDULE</a></li>-->\r\n<!--            <li><a href=\"membership.html\" class=\"menu-link\">MEMBERSHIP</a></li>-->\r\n        </ul>\r\n    </div>\r\n\r\n    <div class=\"nav-cta\">\r\n        <a href=\"login.html\" class=\"nav-btn pulse-btn\">JOIN NOW</a>\r\n    </div>\r\n\r\n    <div class=\"hamburger\">\r\n        <span class=\"bar\"></span>\r\n        <span class=\"bar\"></span>\r\n        <span class=\"bar\"></span>\r\n    </div>\r\n</nav>\r\n\r\n<!-- HERO SECTION -->\r\n<section class=\"hero-section\">\r\n    <div class=\"video-container\">\r\n        <video autoplay muted loop playsinline>\r\n            <source src=\"videos/cardio-hero.mov\" type=\"video/mp4\">\r\n        </video>\r\n        <div class=\"overlay\"></div>\r\n    </div>\r\n\r\n    <div class=\"hero-content\">\r\n        <h1 class=\"hero-title\" data-aos=\"fade-down\" data-aos-delay=\"100\">UNLEASH YOUR POWER</h1>\r\n        <h2 class=\"hero-subtitle\" data-aos=\"fade-up\" data-aos-delay=\"200\">CARDIO THAT AWAKENS THE WARRIOR INSIDE</h2>\r\n        <p class=\"hero-description\" data-aos=\"fade-up\" data-aos-delay=\"300\">\r\n            Get ready for a heart-racing, sweat-dripping, energy-boosting experience with HYH Cardio Programs.\r\n        </p>\r\n\r\n        <div class=\"hero-buttons\" data-aos=\"fade-up\" data-aos-delay=\"400\">\r\n            <button class=\"btn primary-btn\" onclick=\"location.href='login.html'\">JOIN NOW</button>\r\n            <button class=\"btn secondary-btn\" onclick=\"location.href='login.html'\">SEE CLASSES</button>\r\n        </div>\r\n    </div>\r\n</section>\r\n\r\n<!-- MOTIVATIONAL BANNER -->\r\n<section class=\"motivational-banner\" data-aos=\"fade-up\">\r\n    <h2>\"It never gets easier, you just get stronger.\"</h2>\r\n    <p>Every drop of sweat, every beat of your heart brings you closer to a better, stronger YOU.</p>\r\n</section>\r\n\r\n<!-- OUR CARDIO WORKOUTS -->\r\n<section class=\"workouts-section\" data-aos=\"fade-up\">\r\n    <h1 class=\"section-title\">Our Cardio Workouts</h1>\r\n    <p class=\"section-description\">\r\n        Choose your battlefield. Whether you're sprinting, lifting, or circling the circuit — we have the cardio workout that matches your energy.\r\n    </p>\r\n\r\n    <div class=\"workout-cards\">\r\n        <!-- Workout Card 1 -->\r\n        <div class=\"card workout-card\" data-aos=\"fade-right\" data-aos-delay=\"100\">\r\n            <img src=\"images/hiit-session.jpg\" alt=\"HIIT Training\">\r\n            <div class=\"card-content\">\r\n                <h2 class=\"red-text\">HIIT Training</h2>\r\n                <p>30-minute fat-burning blasts. Maximum sweat. Maximum impact.</p>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Workout Card 2 -->\r\n        <div class=\"card workout-card\" data-aos=\"fade-up\" data-aos-delay=\"200\">\r\n            <img src=\"images/endurance-run.jpg\" alt=\"Endurance Runs\">\r\n            <div class=\"card-content\">\r\n                <h2 class=\"blue-text\">Endurance Runs</h2>\r\n                <p>Build stamina and lung power with guided pace and distance challenges.</p>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Workout Card 3 -->\r\n        <div class=\"card workout-card\" data-aos=\"fade-left\" data-aos-delay=\"300\">\r\n            <img src=\"images/circuit-training.jpg\" alt=\"Circuit Cardio\">\r\n            <div class=\"card-content\">\r\n                <h2 class=\"green-text\">Circuit Cardio</h2>\r\n                <p>Move fast, lift smart, and breathe hard through dynamic cardio circuits.</p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</section>\r\n\r\n<!-- BENEFITS OF CARDIO -->\r\n<section class=\"benefits-section\" data-aos=\"fade-up\">\r\n    <h1 class=\"section-title\">Why Cardio Transforms Your Life</h1>\r\n    <p class=\"section-description\">\r\n        Cardio isn't just about calories. It's about energy, focus, freedom, and strength. Here's what happens when you commit:\r\n    </p>\r\n\r\n    <div class=\"benefits-container\">\r\n        <!-- Left side: Benefits -->\r\n        <div class=\"benefits-list\" data-aos=\"fade-right\" data-aos-delay=\"100\">\r\n            <div class=\"card benefit-card\" data-aos=\"fade-up\" data-aos-delay=\"150\">\r\n                <h2 class=\"red-text\">\uD83D\uDD25 Torch Fat</h2>\r\n                <p>Accelerate your metabolism, burn stubborn fat, and build lean muscle mass at the same time.</p>\r\n            </div>\r\n\r\n            <div class=\"card benefit-card\" data-aos=\"fade-up\" data-aos-delay=\"250\">\r\n                <h2 class=\"green-text\">\uD83E\uDEC0 Stronger Heart</h2>\r\n                <p>Strengthen your most important muscle: your heart. Improve blood flow and live longer, stronger.</p>\r\n            </div>\r\n\r\n            <div class=\"card benefit-card\" data-aos=\"fade-up\" data-aos-delay=\"350\">\r\n                <h2 class=\"yellow-text\">\uD83E\uDDE0 Sharper Mind</h2>\r\n                <p>Release stress, boost mental clarity, and stay sharp thanks to endorphin-fueled training sessions.</p>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Right side: Cardio Benefits Image -->\r\n        <div class=\"benefits-image\" data-aos=\"fade-left\" data-aos-delay=\"200\">\r\n            <img src=\"images/cardio-benefits.jpg\" alt=\"Cardio Benefits\">\r\n        </div>\r\n    </div>\r\n</section>\r\n\r\n<!-- MEET YOUR CARDIO COACHES -->\r\n<section class=\"coaches-section\" data-aos=\"fade-up\">\r\n    <h1 class=\"section-title\">Meet Your Cardio Coaches</h1>\r\n    <p class=\"section-description\">\r\n        The legends behind your transformation — pushing you, guiding you, inspiring you. Your HYH family.\r\n    </p>\r\n\r\n    <div class=\"coach-cards\">\r\n        <!-- Coach 1: Dwayne Johnson -->\r\n        <div class=\"card coach-card\" data-aos=\"fade-up\" data-aos-delay=\"100\">\r\n            <img src=\"images/trainer1.jpg\" alt=\"Dwayne Johnson\">\r\n            <div class=\"card-content\">\r\n                <h2 class=\"red-text\">Dwayne \"The Rock\" Johnson</h2>\r\n                <p>Strength Specialist • Building champions with unstoppable energy and focus.</p>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Coach 2: Cristiano Ronaldo -->\r\n        <div class=\"card coach-card\" data-aos=\"fade-up\" data-aos-delay=\"200\">\r\n            <img src=\"images/trainer2.jpg\" alt=\"Cristiano Ronaldo\">\r\n            <div class=\"card-content\">\r\n                <h2 class=\"blue-text\">Cristiano Ronaldo</h2>\r\n                <p>Endurance Machine • Training like the world's most elite athlete.</p>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Coach 3: Conor McGregor -->\r\n        <div class=\"card coach-card\" data-aos=\"fade-up\" data-aos-delay=\"300\">\r\n            <img src=\"images/trainer3.jpg\" alt=\"Conor McGregor\">\r\n            <div class=\"card-content\">\r\n                <h2 class=\"green-text\">Conor McGregor</h2>\r\n                <p>Cardio Warrior • Transforming stamina, attitude, and discipline through grit.</p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</section>\r\n\r\n<!-- FINAL CALL TO ACTION -->\r\n<section class=\"cta-section\" data-aos=\"fade-up\">\r\n    <h1>Ready to Transform Your Body and Mind?</h1>\r\n    <p>\r\n        Join HYH Cardio today. Take the first step to a healthier, stronger, unstoppable you. Your journey starts NOW — and it starts HERE.\r\n    </p>\r\n\r\n    <div class=\"cta-button\">\r\n        <button class=\"btn primary-btn pulse\" onclick=\"location.href='login.html'\">\r\n            JOIN NOW!\r\n        </button>\r\n    </div>\r\n</section>\r\n\r\n<!-- TESTIMONIALS SECTION -->\r\n<section class=\"testimonials-section\" data-aos=\"fade-up\">\r\n    <h1 class=\"section-title\">What Our Members Say</h1>\r\n\r\n    <div class=\"testimonial-cards\">\r\n        <!-- Testimonial 1 -->\r\n        <div class=\"card testimonial-card\" data-aos=\"fade-up\" data-aos-delay=\"100\">\r\n            <p>\"HYH Cardio completely changed my life. I feel stronger, faster, and more confident!\"</p>\r\n            <h3 class=\"red-text\">– Sarah K.</h3>\r\n        </div>\r\n\r\n        <!-- Testimonial 2 -->\r\n        <div class=\"card testimonial-card\" data-aos=\"fade-up\" data-aos-delay=\"200\">\r\n            <p>\"The trainers are incredible, the energy is insane. I've never loved cardio before now!\"</p>\r\n            <h3 class=\"blue-text\">– Jason M.</h3>\r\n        </div>\r\n\r\n        <!-- Testimonial 3 -->\r\n        <div class=\"card testimonial-card\" data-aos=\"fade-up\" data-aos-delay=\"300\">\r\n            <p>\"I lost 10kg in 3 months thanks to HYH Cardio. Best decision I ever made!\"</p>\r\n            <h3 class=\"green-text\">– Amina R.</h3>\r\n        </div>\r\n    </div>\r\n</section>\r\n\r\n<!-- FAQ SECTION -->\r\n<section class=\"faq-section\" data-aos=\"fade-up\">\r\n    <h1 class=\"section-title\">Frequently Asked Questions</h1>\r\n\r\n    <div class=\"faq-container\">\r\n        <div class=\"faq-item\" data-aos=\"fade-up\" data-aos-delay=\"100\">\r\n            <h3 class=\"red-text\">Is HYH Cardio good for beginners?</h3>\r\n            <p>Absolutely! Every workout can be scaled to your fitness level. Our coaches guide you personally every step of the way.</p>\r\n        </div>\r\n\r\n        <div class=\"faq-item\" data-aos=\"fade-up\" data-aos-delay=\"200\">\r\n            <h3 class=\"blue-text\">How many cardio classes should I do per week?</h3>\r\n            <p>We recommend starting with 3-4 classes per week for best results, but you can adjust based on your goals.</p>\r\n        </div>\r\n\r\n        <div class=\"faq-item\" data-aos=\"fade-up\" data-aos-delay=\"300\">\r\n            <h3 class=\"green-text\">What do I need to bring?</h3>\r\n            <p>Just yourself, a towel, a water bottle, and your unstoppable energy. We'll handle the rest!</p>\r\n        </div>\r\n    </div>\r\n</section>\r\n\r\n<!-- STICKY JOIN FREE TRIAL BUTTON -->\r\n<a href=\"login.html\" class=\"sticky-button\">\r\n    <span>Start Free Trial</span>\r\n    <i class=\"fas fa-bolt\"></i>\r\n</a>\r\n\r\n<!-- SCROLL TO TOP BUTTON -->\r\n<button onclick=\"topFunction()\" id=\"topBtn\" title=\"Go to top\">\r\n    <i class=\"fas fa-chevron-up\"></i>\r\n</button>\r\n\r\n<!-- FOOTER - Modern design -->\r\n<footer class=\"app-footer\">\r\n    <div class=\"footer-content\">\r\n        <div class=\"footer-logo\">\r\n            <img src=\"images/GYM%20Logo.png\" alt=\"HYH Logo\">\r\n        </div>\r\n        <div class=\"footer-links\">\r\n            <div class=\"footer-column\">\r\n                <h3>NAVIGATE</h3>\r\n                <ul>\r\n                    <li><a href=\"about-us.html\">What is HYH?</a></li>\r\n                    <li><a href=\"cardio.html\">Cardio</a></li>\r\n                    <li><a href=\"resistance.html\">Resistance</a></li>\r\n<!--                    <li><a href=\"schedule.html\">Schedule</a></li>-->\r\n                </ul>\r\n            </div>\r\n            <div class=\"footer-column\">\r\n                <h3>JOIN US</h3>\r\n                <ul>\r\n                    <li><a href=\"membership.html\">Membership</a></li>\r\n                    <li><a href=\"join.html\">Free Trial</a></li>\r\n                    <li><a href=\"location.html\">Locations</a></li>\r\n                    <li><a href=\"contact-us.html\">Contact</a></li>\r\n                </ul>\r\n            </div>\r\n            <div class=\"footer-column\">\r\n                <h3>FOLLOW US</h3>\r\n                <div class=\"social-icons\">\r\n                    <a href=\"#\" class=\"social-icon\"><i class=\"fab fa-instagram\"></i></a>\r\n                    <a href=\"#\" class=\"social-icon\"><i class=\"fab fa-facebook\"></i></a>\r\n                    <a href=\"#\" class=\"social-icon\"><i class=\"fab fa-twitter\"></i></a>\r\n                    <a href=\"#\" class=\"social-icon\"><i class=\"fab fa-youtube\"></i></a>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"footer-bottom\">\r\n        <p>&copy; 2025 HYH TRAINING. ALL RIGHTS RESERVED.</p>\r\n    </div>\r\n</footer>\r\n\r\n<!-- AOS Animation Script -->\r\n<script src=\"https://unpkg.com/aos@2.3.1/dist/aos.js\"></script>\r\n<script src=\"js/cardio.js\"></script>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cardio.html b/cardio.html
+--- a/cardio.html	(revision 162157a1372482e3f96cbb30560a55de20903f7d)
++++ b/cardio.html	(date 1746642774135)
+@@ -27,11 +27,11 @@
+ 
+     <div class="nav-links">
+         <ul class="nav-menu">
+-<!--            <li><a href="about-us.html" class="menu-link">WHAT IS HYH?</a></li>-->
++            <!--            <li><a href="about-us.html" class="menu-link">WHAT IS HYH?</a></li>-->
+             <li><a href="cardio.html" class="menu-link active">CARDIO</a></li>
+             <li><a href="resistance.html" class="menu-link">RESISTANCE</a></li>
+-<!--            <li><a href="schedule.html" class="menu-link">SCHEDULE</a></li>-->
+-<!--            <li><a href="membership.html" class="menu-link">MEMBERSHIP</a></li>-->
++            <!--            <li><a href="schedule.html" class="menu-link">SCHEDULE</a></li>-->
++            <!--            <li><a href="membership.html" class="menu-link">MEMBERSHIP</a></li>-->
+         </ul>
+     </div>
+ 
+@@ -267,7 +267,7 @@
+                     <li><a href="about-us.html">What is HYH?</a></li>
+                     <li><a href="cardio.html">Cardio</a></li>
+                     <li><a href="resistance.html">Resistance</a></li>
+-<!--                    <li><a href="schedule.html">Schedule</a></li>-->
++                    <!--                    <li><a href="schedule.html">Schedule</a></li>-->
+                 </ul>
+             </div>
+             <div class="footer-column">
+Index: js/resistance.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// AOS initialization\r\nAOS.init({\r\n    duration: 1000,\r\n    once: true,\r\n    offset: 100\r\n});\r\n\r\n// Mobile Menu Toggle\r\ndocument.addEventListener('DOMContentLoaded', function() {\r\n    const hamburger = document.querySelector('.hamburger');\r\n    const navMenu = document.querySelector('.nav-menu');\r\n\r\n    if (hamburger) {\r\n        hamburger.addEventListener('click', function() {\r\n            hamburger.classList.toggle('active');\r\n            navMenu.classList.toggle('active');\r\n        });\r\n    }\r\n\r\n    // Counter Animation\r\n    const counters = document.querySelectorAll('.counter');\r\n    const speed = 200;\r\n\r\n    function animateCounters() {\r\n        counters.forEach(counter => {\r\n            const target = +counter.getAttribute('data-target');\r\n            let count = 0;\r\n            const increment = target / speed;\r\n\r\n            function updateCount() {\r\n                if (count < target) {\r\n                    count += increment;\r\n                    counter.innerText = Math.min(Math.ceil(count), target);\r\n                    setTimeout(updateCount, 10);\r\n                } else {\r\n                    counter.innerText = target;\r\n                }\r\n            }\r\n\r\n            updateCount();\r\n        });\r\n    }\r\n\r\n    // Intersection Observer for counters\r\n    const statsSection = document.querySelector('.benefits-stats');\r\n\r\n    if (statsSection) {\r\n        const observer = new IntersectionObserver((entries) => {\r\n            entries.forEach(entry => {\r\n                if (entry.isIntersecting) {\r\n                    animateCounters();\r\n                    observer.unobserve(entry.target);\r\n                }\r\n            });\r\n        }, { threshold: 0.5 });\r\n\r\n        observer.observe(statsSection);\r\n    }\r\n\r\n    // Testimonial Slider\r\n    const slides = document.querySelectorAll('.testimonial-slide');\r\n    const dots = document.querySelectorAll('.dot');\r\n    const prevBtn = document.querySelector('.prev-btn');\r\n    const nextBtn = document.querySelector('.next-btn');\r\n    let currentSlide = 0;\r\n\r\n    function showSlide(index) {\r\n        slides.forEach(slide => slide.classList.remove('active-slide'));\r\n        dots.forEach(dot => dot.classList.remove('active'));\r\n\r\n        slides[index].classList.add('active-slide');\r\n        dots[index].classList.add('active');\r\n        currentSlide = index;\r\n    }\r\n\r\n    if (prevBtn && nextBtn) {\r\n        nextBtn.addEventListener('click', () => {\r\n            currentSlide = (currentSlide + 1) % slides.length;\r\n            showSlide(currentSlide);\r\n        });\r\n\r\n        prevBtn.addEventListener('click', () => {\r\n            currentSlide = (currentSlide - 1 + slides.length) % slides.length;\r\n            showSlide(currentSlide);\r\n        });\r\n\r\n        dots.forEach((dot, index) => {\r\n            dot.addEventListener('click', () => {\r\n                showSlide(index);\r\n            });\r\n        });\r\n\r\n        // Auto-rotate slides\r\n        setInterval(() => {\r\n            currentSlide = (currentSlide + 1) % slides.length;\r\n            showSlide(currentSlide);\r\n        }, 5000);\r\n    }\r\n});\r\n\r\n// Scroll to top function\r\nfunction topFunction() {\r\n    document.body.scrollTop = 0;\r\n    document.documentElement.scrollTop = 0;\r\n}\r\n\r\n// Show/hide scroll to top button\r\nwindow.onscroll = function() {\r\n    let topButton = document.getElementById(\"topBtn\");\r\n    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {\r\n        topButton.style.display = \"block\";\r\n        topButton.classList.add('fade-in');\r\n    } else {\r\n        topButton.classList.remove('fade-in');\r\n        topButton.classList.add('fade-out');\r\n        setTimeout(() => {\r\n            if (document.body.scrollTop <= 300 && document.documentElement.scrollTop <= 300) {\r\n                topButton.style.display = \"none\";\r\n                topButton.classList.remove('fade-out');\r\n            }\r\n        }, 300);\r\n    }\r\n};\r\n\r\n// GSAP Animations\r\ndocument.addEventListener('DOMContentLoaded', function() {\r\n    // Hero animations\r\n    gsap.from(\".hero-title\", {\r\n        duration: 1.2,\r\n        y: 50,\r\n        opacity: 0,\r\n        ease: \"power3.out\",\r\n        delay: 0.3\r\n    });\r\n\r\n    gsap.from(\".hero-subtitle\", {\r\n        duration: 1.2,\r\n        y: 30,\r\n        opacity: 0,\r\n        ease: \"power3.out\",\r\n        delay: 0.6\r\n    });\r\n\r\n    gsap.from(\".hero-description\", {\r\n        duration: 1.2,\r\n        y: 30,\r\n        opacity: 0,\r\n        ease: \"power3.out\",\r\n        delay: 0.9\r\n    });\r\n\r\n    gsap.from(\".hero-buttons\", {\r\n        duration: 1.2,\r\n        y: 30,\r\n        opacity: 0,\r\n        ease: \"power3.out\",\r\n        delay: 1.2\r\n    });\r\n\r\n    // Scroll animations\r\n    gsap.registerPlugin(ScrollTrigger);\r\n\r\n    // Section title animations\r\n    gsap.utils.toArray(\".section-title\").forEach(title => {\r\n        gsap.from(title, {\r\n            scrollTrigger: {\r\n                trigger: title,\r\n                start: \"top 80%\",\r\n                toggleActions: \"play none none none\"\r\n            },\r\n            duration: 1,\r\n            y: 30,\r\n            opacity: 0,\r\n            ease: \"power3.out\"\r\n        });\r\n    });\r\n\r\n    // Title bar animations\r\n    gsap.utils.toArray(\".title-bar\").forEach(bar => {\r\n        gsap.from(bar, {\r\n            scrollTrigger: {\r\n                trigger: bar,\r\n                start: \"top 80%\",\r\n                toggleActions: \"play none none none\"\r\n            },\r\n            duration: 1.2,\r\n            width: 0,\r\n            ease: \"power3.inOut\",\r\n            delay: 0.3\r\n        });\r\n    });\r\n\r\n    // Parallax effect for CTA section\r\n    gsap.to(\".cta-background\", {\r\n        scrollTrigger: {\r\n            trigger: \".cta-section\",\r\n            start: \"top bottom\",\r\n            end: \"bottom top\",\r\n            scrub: true\r\n        },\r\n        y: -100,\r\n        ease: \"none\"\r\n    });\r\n});
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/js/resistance.js b/js/resistance.js
+--- a/js/resistance.js	(revision 162157a1372482e3f96cbb30560a55de20903f7d)
++++ b/js/resistance.js	(date 1746645304201)
+@@ -1,33 +1,31 @@
+ // AOS initialization
+-AOS.init({
+-    duration: 1000,
+-    once: true,
+-    offset: 100
+-});
++AOS.init({duration: 1000, once: true, offset: 100});
+ 
+ // Mobile Menu Toggle
+-document.addEventListener('DOMContentLoaded', function() {
+-    const hamburger = document.querySelector('.hamburger');
+-    const navMenu = document.querySelector('.nav-menu');
++document.addEventListener('DOMContentLoaded', () => {
++    const setupMobileMenu = () => {
++        const hamburger = document.querySelector('.hamburger');
++        const navMenu = document.querySelector('.nav-menu');
+ 
+-    if (hamburger) {
+-        hamburger.addEventListener('click', function() {
++        if (!hamburger) return;
++
++        hamburger.addEventListener('click', () => {
+             hamburger.classList.toggle('active');
+             navMenu.classList.toggle('active');
+         });
+-    }
++    };
+ 
+     // Counter Animation
+-    const counters = document.querySelectorAll('.counter');
+-    const speed = 200;
++    const animateCounters = () => {
++        const counters = document.querySelectorAll('.counter');
++        const speed = 200;
+ 
+-    function animateCounters() {
+         counters.forEach(counter => {
+             const target = +counter.getAttribute('data-target');
+             let count = 0;
+             const increment = target / speed;
+ 
+-            function updateCount() {
++            const updateCount = () => {
+                 if (count < target) {
+                     count += increment;
+                     counter.innerText = Math.min(Math.ceil(count), target);
+@@ -35,79 +33,77 @@
+                 } else {
+                     counter.innerText = target;
+                 }
+-            }
++            };
+ 
+             updateCount();
+         });
+-    }
++    };
+ 
+     // Intersection Observer for counters
+-    const statsSection = document.querySelector('.benefits-stats');
++    const setupCounterObserver = () => {
++        const statsSection = document.querySelector('.benefits-stats');
++        if (!statsSection) return;
+ 
+-    if (statsSection) {
+-        const observer = new IntersectionObserver((entries) => {
+-            entries.forEach(entry => {
++        const observer = new IntersectionObserver(
++            entries => entries.forEach(entry => {
+                 if (entry.isIntersecting) {
+                     animateCounters();
+                     observer.unobserve(entry.target);
+                 }
+-            });
+-        }, { threshold: 0.5 });
++            }),
++            {threshold: 0.5}
++        );
+ 
+         observer.observe(statsSection);
+-    }
++    };
+ 
+     // Testimonial Slider
+-    const slides = document.querySelectorAll('.testimonial-slide');
+-    const dots = document.querySelectorAll('.dot');
+-    const prevBtn = document.querySelector('.prev-btn');
+-    const nextBtn = document.querySelector('.next-btn');
+-    let currentSlide = 0;
++    const setupTestimonialSlider = () => {
++        const slides = document.querySelectorAll('.testimonial-slide');
++        const dots = document.querySelectorAll('.dot');
++        const prevBtn = document.querySelector('.prev-btn');
++        const nextBtn = document.querySelector('.next-btn');
++        let currentSlide = 0;
+ 
+-    function showSlide(index) {
+-        slides.forEach(slide => slide.classList.remove('active-slide'));
+-        dots.forEach(dot => dot.classList.remove('active'));
+-
+-        slides[index].classList.add('active-slide');
+-        dots[index].classList.add('active');
+-        currentSlide = index;
+-    }
++        const showSlide = index => {
++            slides.forEach(slide => slide.classList.remove('active-slide'));
++            dots.forEach(dot => dot.classList.remove('active'));
++            slides[index].classList.add('active-slide');
++            dots[index].classList.add('active');
++            currentSlide = index;
++        };
+ 
+-    if (prevBtn && nextBtn) {
+-        nextBtn.addEventListener('click', () => {
+-            currentSlide = (currentSlide + 1) % slides.length;
+-            showSlide(currentSlide);
+-        });
++        if (prevBtn && nextBtn) {
++            nextBtn.addEventListener('click', () =>
++                showSlide((currentSlide + 1) % slides.length));
+ 
+-        prevBtn.addEventListener('click', () => {
+-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+-            showSlide(currentSlide);
+-        });
++            prevBtn.addEventListener('click', () =>
++                showSlide((currentSlide - 1 + slides.length) % slides.length));
+ 
+-        dots.forEach((dot, index) => {
+-            dot.addEventListener('click', () => {
+-                showSlide(index);
+-            });
+-        });
++            dots.forEach((dot, index) =>
++                dot.addEventListener('click', () => showSlide(index)));
+ 
+-        // Auto-rotate slides
+-        setInterval(() => {
+-            currentSlide = (currentSlide + 1) % slides.length;
+-            showSlide(currentSlide);
+-        }, 5000);
+-    }
++            setInterval(() =>
++                showSlide((currentSlide + 1) % slides.length), 5000);
++        }
++    };
++
++    setupMobileMenu();
++    setupCounterObserver();
++    setupTestimonialSlider();
+ });
+ 
+-// Scroll to top function
+-function topFunction() {
++// Scroll controls
++const topFunction = () => {
+     document.body.scrollTop = 0;
+     document.documentElement.scrollTop = 0;
+-}
++};
+ 
+-// Show/hide scroll to top button
+-window.onscroll = function() {
+-    let topButton = document.getElementById("topBtn");
+-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
++const handleScrollButton = () => {
++    const topButton = document.getElementById("topBtn");
++    const scrolled = document.body.scrollTop > 300 || document.documentElement.scrollTop > 300;
++
++    if (scrolled) {
+         topButton.style.display = "block";
+         topButton.classList.add('fade-in');
+     } else {
+@@ -122,75 +118,58 @@
+     }
+ };
+ 
++window.onscroll = handleScrollButton;
++
+ // GSAP Animations
+-document.addEventListener('DOMContentLoaded', function() {
+-    // Hero animations
+-    gsap.from(".hero-title", {
+-        duration: 1.2,
+-        y: 50,
+-        opacity: 0,
+-        ease: "power3.out",
+-        delay: 0.3
+-    });
+-
+-    gsap.from(".hero-subtitle", {
+-        duration: 1.2,
+-        y: 30,
+-        opacity: 0,
+-        ease: "power3.out",
+-        delay: 0.6
+-    });
++document.addEventListener('DOMContentLoaded', () => {
++    const heroElements = [
++        {selector: ".hero-title", y: 50, delay: 0.3},
++        {selector: ".hero-subtitle", y: 30, delay: 0.6},
++        {selector: ".hero-description", y: 30, delay: 0.9},
++        {selector: ".hero-buttons", y: 30, delay: 1.2}
++    ];
+ 
+-    gsap.from(".hero-description", {
+-        duration: 1.2,
+-        y: 30,
+-        opacity: 0,
+-        ease: "power3.out",
+-        delay: 0.9
+-    });
+-
+-    gsap.from(".hero-buttons", {
+-        duration: 1.2,
+-        y: 30,
+-        opacity: 0,
+-        ease: "power3.out",
+-        delay: 1.2
++    heroElements.forEach(({selector, y, delay}) => {
++        gsap.from(selector, {
++            duration: 1.2,
++            y,
++            opacity: 0,
++            ease: "power3.out",
++            delay
++        });
+     });
+ 
+-    // Scroll animations
+     gsap.registerPlugin(ScrollTrigger);
+ 
+-    // Section title animations
+-    gsap.utils.toArray(".section-title").forEach(title => {
+-        gsap.from(title, {
+-            scrollTrigger: {
+-                trigger: title,
+-                start: "top 80%",
+-                toggleActions: "play none none none"
+-            },
+-            duration: 1,
+-            y: 30,
+-            opacity: 0,
+-            ease: "power3.out"
+-        });
++    // Section animations
++    const setupScrollAnimations = (elements, config) => {
++        gsap.utils.toArray(elements).forEach(element => {
++            gsap.from(element, {
++                scrollTrigger: {
++                    trigger: element,
++                    start: "top 80%",
++                    toggleActions: "play none none none"
++                },
++                ...config
++            });
++        });
++    };
++
++    setupScrollAnimations(".section-title", {
++        duration: 1,
++        y: 30,
++        opacity: 0,
++        ease: "power3.out"
+     });
+ 
+-    // Title bar animations
+-    gsap.utils.toArray(".title-bar").forEach(bar => {
+-        gsap.from(bar, {
+-            scrollTrigger: {
+-                trigger: bar,
+-                start: "top 80%",
+-                toggleActions: "play none none none"
+-            },
+-            duration: 1.2,
+-            width: 0,
+-            ease: "power3.inOut",
+-            delay: 0.3
+-        });
++    setupScrollAnimations(".title-bar", {
++        duration: 1.2,
++        width: 0,
++        ease: "power3.inOut",
++        delay: 0.3
+     });
+ 
+-    // Parallax effect for CTA section
++    // Parallax effect
+     gsap.to(".cta-background", {
+         scrollTrigger: {
+             trigger: ".cta-section",
+Index: js/cardio.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>AOS.init({\r\n    duration: 1000,\r\n    once: true,\r\n    offset: 100\r\n});\r\n\r\n// Mobile Menu Toggle\r\ndocument.addEventListener('DOMContentLoaded', function() {\r\n    const hamburger = document.querySelector('.hamburger');\r\n    const navMenu = document.querySelector('.nav-menu');\r\n\r\n    if (hamburger) {\r\n        hamburger.addEventListener('click', function() {\r\n            hamburger.classList.toggle('active');\r\n            navMenu.classList.toggle('active');\r\n        });\r\n    }\r\n\r\n    // Scroll to top button\r\n    let topButton = document.getElementById(\"topBtn\");\r\n    window.onscroll = function() {\r\n        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {\r\n            topButton.style.display = \"block\";\r\n            topButton.classList.add('fade-in');\r\n        } else {\r\n            topButton.classList.remove('fade-in');\r\n            topButton.classList.add('fade-out');\r\n            setTimeout(() => {\r\n                if (document.body.scrollTop <= 300 && document.documentElement.scrollTop <= 300) {\r\n                    topButton.style.display = \"none\";\r\n                    topButton.classList.remove('fade-out');\r\n                }\r\n            }, 300);\r\n        }\r\n    };\r\n\r\n    function topFunction() {\r\n        document.body.scrollTop = 0;\r\n        document.documentElement.scrollTop = 0;\r\n    }\r\n});
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/js/cardio.js b/js/cardio.js
+--- a/js/cardio.js	(revision 162157a1372482e3f96cbb30560a55de20903f7d)
++++ b/js/cardio.js	(date 1746645439966)
+@@ -1,41 +1,61 @@
+ AOS.init({
+-    duration: 1000,
++    duration: 1200,
++    easing: 'ease-in-out',
+     once: true,
+     offset: 100
+ });
+ 
+ // Mobile Menu Toggle
+-document.addEventListener('DOMContentLoaded', function() {
++document.addEventListener('DOMContentLoaded', function () {
+     const hamburger = document.querySelector('.hamburger');
+     const navMenu = document.querySelector('.nav-menu');
+ 
+     if (hamburger) {
+-        hamburger.addEventListener('click', function() {
++        hamburger.addEventListener('click', function () {
+             hamburger.classList.toggle('active');
+             navMenu.classList.toggle('active');
++            navMenu.style.transition = 'transform 0.3s ease-in-out';
+         });
+     }
+ 
+     // Scroll to top button
+     let topButton = document.getElementById("topBtn");
+-    window.onscroll = function() {
+-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+-            topButton.style.display = "block";
+-            topButton.classList.add('fade-in');
+-        } else {
+-            topButton.classList.remove('fade-in');
+-            topButton.classList.add('fade-out');
+-            setTimeout(() => {
+-                if (document.body.scrollTop <= 300 && document.documentElement.scrollTop <= 300) {
+-                    topButton.style.display = "none";
+-                    topButton.classList.remove('fade-out');
+-                }
+-            }, 300);
+-        }
++    let scrollThrottleTimer;
++
++    window.onscroll = function () {
++        if (scrollThrottleTimer) return;
++
++        scrollThrottleTimer = setTimeout(() => {
++            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
++                requestAnimationFrame(() => {
++                    topButton.style.display = "block";
++                    topButton.classList.add('fade-in');
++                    topButton.classList.remove('fade-out');
++                });
++            } else {
++                requestAnimationFrame(() => {
++                    topButton.classList.remove('fade-in');
++                    topButton.classList.add('fade-out');
++                    setTimeout(() => {
++                        if (document.body.scrollTop <= 300 && document.documentElement.scrollTop <= 300) {
++                            topButton.style.display = "none";
++                            topButton.classList.remove('fade-out');
++                        }
++                    }, 300);
++                });
++            }
++            scrollThrottleTimer = null;
++        }, 100);
+     };
++
++    if (topButton) {
++        topButton.addEventListener("click", topFunction);
++    }
+ 
+     function topFunction() {
+-        document.body.scrollTop = 0;
+-        document.documentElement.scrollTop = 0;
++        window.scrollTo({
++            top: 0,
++            behavior: 'smooth'
++        });
+     }
+ });
+\ No newline at end of file
