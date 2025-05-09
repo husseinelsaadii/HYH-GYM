@@ -31,44 +31,66 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Observer for stats section
+    const ANIMATION_CONFIG = {
+        STAT_DELAY: 200,
+        COUNTER_DURATION: 2000,
+        OBSERVER_THRESHOLD: 0.2
+    };
+
     const statsObserver = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting) {
-            // Animate stat items with delay
-            statItems.forEach((item, index) => {
-                setTimeout(() => {
-                    item.classList.add('visible');
-                }, index * 200);
-            });
-
-            // Add number counter animation
-            statItems.forEach(item => {
-                const statValue = item.querySelector('.stat-value');
-                const finalValue = parseInt(statValue.textContent);
-                const duration = 2000;
-                const startTime = Date.now();
-
-                function updateCounter() {
-                    const currentTime = Date.now();
-                    const progress = Math.min((currentTime - startTime) / duration, 1);
-
-                    let currentValue = Math.floor(progress * finalValue);
-                    statValue.textContent = currentValue + (statValue.querySelector('.stat-symbol') ? statValue.querySelector('.stat-symbol').outerHTML : '');
-
-                    if (progress < 1) {
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        statValue.innerHTML = finalValue + (statValue.querySelector('.stat-symbol') ? statValue.querySelector('.stat-symbol').outerHTML : '');
-                    }
-                }
-
-                updateCounter();
-            });
-
+            animateStatItems();
+            animateCounters();
             statsObserver.unobserve(entries[0].target);
         }
     }, {
-        threshold: 0.2
+        threshold: ANIMATION_CONFIG.OBSERVER_THRESHOLD
     });
+
+    function animateStatItems() {
+        statItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.classList.add('visible');
+            }, index * ANIMATION_CONFIG.STAT_DELAY);
+        });
+    }
+
+    function animateCounters() {
+        statItems.forEach(item => {
+            const statValue = item.querySelector('.stat-value');
+            const finalValue = parseInt(statValue.textContent);
+            const startTime = Date.now();
+
+            function getStatSymbol() {
+                const symbolElement = statValue.querySelector('.stat-symbol');
+                return symbolElement ? symbolElement.outerHTML : '';
+            }
+
+            function updateStatValue(value, symbol) {
+                statValue.innerHTML = `${value}${symbol}`;
+            }
+
+            function animate() {
+                const currentTime = Date.now();
+                const progress = Math.min(
+                    (currentTime - startTime) / ANIMATION_CONFIG.COUNTER_DURATION,
+                    1
+                );
+                const currentValue = Math.floor(progress * finalValue);
+                const symbol = getStatSymbol();
+
+                updateStatValue(currentValue, symbol);
+
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                } else {
+                    updateStatValue(finalValue, symbol);
+                }
+            }
+
+            animate();
+        });
+    }
 
     statsObserver.observe(statsSection);
 

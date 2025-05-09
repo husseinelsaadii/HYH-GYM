@@ -1,0 +1,97 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"9186725f-77ef-402c-8f56-59a56d8d7518\" name=\"Changes\" comment=\"Updated footer layout and adjusted design\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/cardio.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/cardio.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/js/cardio.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/js/cardio.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/js/resistance.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/js/resistance.js\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n        <option value=\"CSS File\" />\r\n        <option value=\"JavaScript File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main-body\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;husseinelsaadii&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\"><![CDATA[{\r\n  \"selectedUrlAndAccountId\": {\r\n    \"url\": \"https://github.com/husseinelsaadii/HYH-GYM\",\r\n    \"accountId\": \"8b7fda24-21ad-4034-9beb-7a7badbc91e8\"\r\n  }\r\n}]]></component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2uz69dbNSCX5sNQSWF94ucQtUxh\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"1\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"DefaultHtmlFileTemplate\": \"HTML File\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"junie.onboarding.icon.badge.shown\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/hamda/HYH-GYM\",\r\n    \"list.type.of.created.stylesheet\": \"CSS\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"settings.editor.selected.configurable\": \"project.propVCSSupport.DirectoryMappings\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"$PROJECT_DIR$\" />\r\n      <recent name=\"$PROJECT_DIR$/images\" />\r\n      <recent name=\"C:\\Users\\hamda\\HYH-GYM\\images\" />\r\n      <recent name=\"$PROJECT_DIR$/videos\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"9186725f-77ef-402c-8f56-59a56d8d7518\" name=\"Changes\" comment=\"\" />\r\n      <created>1743238905563</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1743238905563</updated>\r\n      <workItem from=\"1743238906623\" duration=\"8594000\" />\r\n      <workItem from=\"1743425091681\" duration=\"599000\" />\r\n      <workItem from=\"1743507511540\" duration=\"3477000\" />\r\n      <workItem from=\"1743585511241\" duration=\"574000\" />\r\n      <workItem from=\"1743657506091\" duration=\"357000\" />\r\n      <workItem from=\"1743658164831\" duration=\"944000\" />\r\n      <workItem from=\"1743659204835\" duration=\"9841000\" />\r\n      <workItem from=\"1744180717877\" duration=\"94000\" />\r\n      <workItem from=\"1744968097707\" duration=\"4097000\" />\r\n      <workItem from=\"1745142955421\" duration=\"160000\" />\r\n      <workItem from=\"1745145002927\" duration=\"2199000\" />\r\n      <workItem from=\"1745174355391\" duration=\"18000\" />\r\n      <workItem from=\"1745570625296\" duration=\"248000\" />\r\n      <workItem from=\"1745642607723\" duration=\"7991000\" />\r\n      <workItem from=\"1745665508372\" duration=\"10336000\" />\r\n      <workItem from=\"1745736668012\" duration=\"12801000\" />\r\n      <workItem from=\"1745771916494\" duration=\"338000\" />\r\n      <workItem from=\"1745778968037\" duration=\"4000\" />\r\n      <workItem from=\"1745814436367\" duration=\"18228000\" />\r\n      <workItem from=\"1745992171198\" duration=\"1269000\" />\r\n      <workItem from=\"1746039619512\" duration=\"970000\" />\r\n      <workItem from=\"1746096127305\" duration=\"1784000\" />\r\n      <workItem from=\"1746101692150\" duration=\"203000\" />\r\n      <workItem from=\"1746126533116\" duration=\"17973000\" />\r\n      <workItem from=\"1746292598003\" duration=\"141000\" />\r\n      <workItem from=\"1746446057394\" duration=\"45000\" />\r\n      <workItem from=\"1746447051066\" duration=\"42000\" />\r\n      <workItem from=\"1746470808827\" duration=\"3348000\" />\r\n      <workItem from=\"1746499734473\" duration=\"4654000\" />\r\n      <workItem from=\"1746523943066\" duration=\"853000\" />\r\n      <workItem from=\"1746557846776\" duration=\"57000\" />\r\n      <workItem from=\"1746595226515\" duration=\"1989000\" />\r\n      <workItem from=\"1746600552523\" duration=\"3005000\" />\r\n      <workItem from=\"1746622163079\" duration=\"3233000\" />\r\n      <workItem from=\"1746645596744\" duration=\"194000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Updated footer layout and adjusted design\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Updated footer layout and adjusted design\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 53eb160abcc818d3765fb4311c8d101ce66c3b9c)
++++ b/.idea/workspace.xml	(date 1746814088372)
+@@ -5,10 +5,10 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="9186725f-77ef-402c-8f56-59a56d8d7518" name="Changes" comment="Updated footer layout and adjusted design">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01-May-25_10_26_PM_[Changes]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01-May-25_10_26_PM__Changes_.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/cardio.html" beforeDir="false" afterPath="$PROJECT_DIR$/cardio.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/js/cardio.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cardio.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/js/resistance.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/resistance.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/js/about-us.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/about-us.js" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -38,12 +38,12 @@
+     &quot;assignee&quot;: &quot;husseinelsaadii&quot;
+   }
+ }</component>
+-  <component name="GithubPullRequestsUISettings"><![CDATA[{
+-  "selectedUrlAndAccountId": {
+-    "url": "https://github.com/husseinelsaadii/HYH-GYM",
+-    "accountId": "8b7fda24-21ad-4034-9beb-7a7badbc91e8"
+-  }
+-}]]></component>
++  <component name="GithubPullRequestsUISettings">{
++  &quot;selectedUrlAndAccountId&quot;: {
++    &quot;url&quot;: &quot;https://github.com/husseinelsaadii/HYH-GYM&quot;,
++    &quot;accountId&quot;: &quot;8b7fda24-21ad-4034-9beb-7a7badbc91e8&quot;
++  }
++}</component>
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 8
+ }</component>
+@@ -55,24 +55,24 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "DefaultHtmlFileTemplate": "HTML File",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.git.unshallow": "true",
+-    "git-widget-placeholder": "main",
+-    "junie.onboarding.icon.badge.shown": "true",
+-    "last_opened_file_path": "C:/Users/hamda/HYH-GYM",
+-    "list.type.of.created.stylesheet": "CSS",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/hamda/HYH-GYM&quot;,
++    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$" />
+@@ -131,6 +131,11 @@
+       <workItem from="1746600552523" duration="3005000" />
+       <workItem from="1746622163079" duration="3233000" />
+       <workItem from="1746645596744" duration="194000" />
++      <workItem from="1746645814176" duration="83000" />
++      <workItem from="1746716382861" duration="5436000" />
++      <workItem from="1746775450485" duration="178000" />
++      <workItem from="1746776035531" duration="601000" />
++      <workItem from="1746813198632" duration="884000" />
+     </task>
+     <servers />
+   </component>
