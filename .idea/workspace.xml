@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9307763-11ab-4ba2-98fb-b43c9e482c09" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01-May-25_10_26_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01-May-25_10_26_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/check-users.html" beforeDir="false" afterPath="$PROJECT_DIR$/check-users.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/membership.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/membership.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/bannerSlides.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/bannerSlides.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/slideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/slideshow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/membership.html" beforeDir="false" afterPath="$PROJECT_DIR$/membership.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/about-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/about-us.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/about-us.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +26,7 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2woi3eBlSrdwzOMBkNhzDIMy8T5" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
