@@ -15,9 +15,11 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .nav-menu li a.active {
     color: #FFDD00;
 }
+
 .membership-container {
     max-width: 1200px;
     margin: 2rem auto;
@@ -96,7 +98,7 @@ body {
     background-color: var(--primary-color);
     color: black;
     padding: 0.5rem 4rem;
-    transform: rotate(45deg);
+    transform: rotate(45deg); /* To appear as fit the corner well */
     font-size: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -232,7 +234,7 @@ body {
 }
 
 .x-icon {
-    color: #777;
+    color: #9a3131;
     font-size: 1.5rem;
 }
 
@@ -295,6 +297,7 @@ body {
     padding: 1.5rem;
 
 }
+
 /*Call To Action*/
 .cta-section {
     margin: 4rem 0;
@@ -380,12 +383,15 @@ body {
         flex-direction: column;
     }
 }
+
 .upper {
     text-transform: uppercase;
 }
+
 .lower {
     text-transform: none;
 }
+
 /* Plan Toggle Animation */
 .plan-container {
     display: none;
@@ -397,6 +403,10 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

@@ -14,23 +14,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to move to the next slide
     function nextSlide() {
-        // Remove active class from current slide
+        // hide current slide when time limit end
         slides[currentSlide].classList.remove('active');
 
-        // Add prev class to make it move left
+        // Make the current slide as the previous one
         slides[currentSlide].classList.add('prev');
 
-        // Calculate the index of the next slide
+        // Changing the current to the next one, using modulo to stay in the range
         currentSlide = (currentSlide + 1) % totalSlides;
 
-        // Remove prev class from all other slides
+        // if another slide is prev, we should remove it and keep only one previous slide
         slides.forEach((slide, index) => {
             if (index !== (currentSlide - 1 + totalSlides) % totalSlides) {
                 slide.classList.remove('prev');
             }
         });
 
-        // Add active class to new current slide
+        // Activate the new current slide which make it appear in CSS
         slides[currentSlide].classList.add('active');
 
         // Update the indicator
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         startTimerAnimation();
     }
 
-    // Function to update the slide indicator text
+    // This function for changing the slide indicator when needed (1/3 -> 2/3 -> 3/3) and then repeat
     function updateSlideIndicator() {
         slideNumber.textContent = `${currentSlide + 1}/${totalSlides}`;
     }
@@ -50,19 +50,20 @@ document.addEventListener('DOMContentLoaded', function() {
         // Reset the animation
         let progress = 0;
 
-        // Clear any existing interval
+        // Clear any existing interval, to not override them
         if (slideTimer) {
             clearInterval(slideTimer);
         }
 
         // Update timer every 100ms
         slideTimer = setInterval(() => {
-            progress += (100 / (slideInterval / 100));
+            progress += (100 / (slideInterval / 100)); // gives the right percentage until reach the full time
 
+            // when time limit end, it clear it and then restart a new one with new slide
             if (progress >= 100) {
                 clearInterval(slideTimer);
                 nextSlide();
-            } else {
+            } else { // else continue and changing the background of the circle to make it well responsive
                 timerProgress.style.background = `conic-gradient(#f44336 ${progress}%, transparent ${progress}%)`;
             }
         }, 100);

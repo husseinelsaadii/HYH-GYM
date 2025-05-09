@@ -8,6 +8,7 @@
     box-sizing: border-box;
     font-family: 'Bebas Neue', cursive;
 }
+
 /*
 * NAVBAR STYLES
 * Styling for the navigation bar and its components
@@ -107,6 +108,7 @@
     display: block;
 }
 
+/*------------------------------------------------------------------------------*/
 /*
 * HERO SECTION STYLES
 * Styling for the hero section with slides and video background
@@ -138,7 +140,7 @@
 .slide-timer {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 50%; /*to make it rounded*/
     background-color: rgba(0, 0, 0, 0.3);
     position: relative;
     display: flex;
@@ -149,7 +151,7 @@
 .timer-progress {
     width: 36px;
     height: 36px;
-    border-radius: 50%;
+    border-radius: 50%; /*to make it rounded*/
     background: conic-gradient(#f44336 0%, transparent 0%);
     transition: background 1s linear;
 }
@@ -166,18 +168,18 @@
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    transform: translateX(100%);
+    opacity: 0; /* Here to hide it */
+    transform: translateX(100%); /*to hide it all if not active (the 2 other slide)*/
     transition: transform 1s ease, opacity 1s ease;
 }
 
 .slide.active {
-    opacity: 1;
+    opacity: 1; /* to make the slide appear when it is active (handling it in javascript)*/
     transform: translateX(0);
 }
 
 .slide.prev {
-    opacity: 0;
+    opacity: 0; /* Here to hide the previous one (handled with JavaScript)*/
     transform: translateX(-100%);
 }
 
@@ -187,7 +189,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -1; /* To make it appear in the background */
 }
 
 .video-background::after {
@@ -265,7 +267,7 @@
 
 .primary-btn:hover {
     background-color: #d32f2f;
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* To move up 2 px when hover */
 }
 
 .secondary-btn {
@@ -276,7 +278,7 @@
 
 .secondary-btn:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* To move up 2 px when hover */
 }
 
 /*
@@ -347,6 +349,7 @@
     height: 100%;
     object-fit: cover;
 }
+
 .image-1 img {
     width: 100%;
     height: 100%;
@@ -378,6 +381,63 @@
     background-color: #f5f5f5;
     color: #121212;
     transform: translateY(-2px);
+}
+
+/*
+* SCROLLING BANNER SECTION
+* Horizontal scrolling banner with animation
+*/
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background-color: yellow;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.scrolling-wrapper {
+    display: flex;
+    width: max-content;
+}
+
+.banner-content {
+    display: inline-flex;
+    align-items: center;
+    animation: scroll-left 20s linear infinite; /* to make it scrol left and repeat each 20s infinitely */
+}
+
+.banner-container:hover .banner-content {
+    animation-play-state: paused; /* Stop moving when hover*/
+}
+
+.banner-text {
+    display: inline-block;
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.star {
+    color: red;
+    font-size: 36px;
+    margin: 0 15px;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.red-bar {
+    height: 20px;
+    background-color: #d9131a;
+    width: 100%;
 }
 
 /*
@@ -474,62 +534,6 @@
     transform: translateY(-2px);
 }
 
-/*
-* SCROLLING BANNER SECTION
-* Horizontal scrolling banner with animation
-*/
-.banner-container {
-    position: relative;
-    width: 100%;
-    height: 80px;
-    background-color: yellow;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.scrolling-wrapper {
-    display: flex;
-    width: max-content;
-}
-
-.banner-content {
-    display: inline-flex;
-    align-items: center;
-    animation: scroll-left 20s linear infinite;
-}
-
-.banner-container:hover .banner-content {
-    animation-play-state: paused;
-}
-
-.banner-text {
-    display: inline-block;
-    color: black;
-    font-size: 36px;
-    font-weight: bold;
-    padding: 20px 0;
-}
-
-.star {
-    color: red;
-    font-size: 36px;
-    margin: 0 15px;
-}
-
-@keyframes scroll-left {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-.red-bar {
-    height: 20px;
-    background-color: #d9131a;
-    width: 100%;
-}
 
 /*
 * FOOTER STYLING
@@ -732,12 +736,15 @@
     letter-spacing: 1px;
     font-family: Arial, sans-serif;
 }
+
 .upper {
     text-transform: uppercase;
 }
+
 .lower {
     text-transform: none;
 }
+
 /*
 * RESPONSIVE DESIGN
 * Media queries for different screen sizes
