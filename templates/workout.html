@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <meta charset="UTF-8">
+  <title>HYH Training | Workout Tracker</title>
+  
+  <!-- Local CSS Files -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/workout.css') }}">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+<div class="workout-container">
+    <button class="back-btn" onclick="window.location.href='{{ url_for('home_user') }}'">
+        <i class="fas fa-arrow-left"></i>
+        Back to Dashboard
+    </button>
+
+    <div class="workout-tracker">
+        <!-- Streak Counter -->
+        <div class="streak-counter">
+            <div class="streak-icon">
+                <i class="fas fa-fire"></i>
+            </div>
+            <div class="streak-info">
+                <div class="streak-number">{{ current_streak }}</div>
+                <div class="streak-label">Day Streak</div>
+            </div>
+        </div>
+
+        <!-- Calendar Header -->
+        <div class="calendar-header">
+            <h1>WORKOUT CALENDAR</h1>
+            <p>Track your daily workouts and build your streak!</p>
+        </div>
+
+        <!-- Monthly Calendar -->
+        <div class="calendar">
+            <div class="calendar-nav">
+                <button class="nav-btn" onclick="changeMonth(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <h2 id="current-month">{{ current_month_year }}</h2>
+                <button class="nav-btn" onclick="changeMonth(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="calendar-grid">
+                <!-- Days of week header -->
+                <div class="day-header">Sun</div>
+                <div class="day-header">Mon</div>
+                <div class="day-header">Tue</div>
+                <div class="day-header">Wed</div>
+                <div class="day-header">Thu</div>
+                <div class="day-header">Fri</div>
+                <div class="day-header">Sat</div>
+
+                
+            </div>
+            <!-- Calendar weeks will be populated by JavaScript -->
+            <div id="calendar-days"></div>
+        </div>
+
+        <!-- Today's Workout Section -->
+        {% if is_today_completed %}
+        <div class="today-section completed">
+            <div class="today-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Great Job!</h3>
+            <p>You've already completed your workout today!</p>
+        </div>
+        {% else %}
+        <div class="today-section">
+            <div class="today-icon">
+                <i class="fas fa-dumbbell"></i>
+            </div>
+            <h3>Ready to Workout Today?</h3>
+            <p>Mark your workout as complete to maintain your streak!</p>
+            <form method="POST" action="{{ url_for('mark_workout') }}">
+                <input type="hidden" name="date" value="{{ today_date }}">
+                <button type="submit" class="complete-workout-btn">
+                    <i class="fas fa-check"></i>
+                    Yes, I Worked Out Today!
+                </button>
+            </form>
+        </div>
+        {% endif %}
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-number">{{ workouts_this_month }}</div>
+                <div class="stat-label">This Month</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ total_workouts }}</div>
+                <div class="stat-label">Total Workouts</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ best_streak }}</div>
+                <div class="stat-label">Best Streak</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Pass workout data to JavaScript
+    window.workoutData = {{ workout_data | tojson }};
+    window.currentDate = new Date('{{ today_date }}');
+</script>
+<script src="{{ url_for('static', filename='js/workout.js') }}"></script>
+{% endblock %}

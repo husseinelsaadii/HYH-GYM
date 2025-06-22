@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title>HYH Training | Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<main class="login-container">
+    <div class="form-container">
+
+        <h2>WELCOME BACK</h2>
+
+        <!-- Display error messages -->
+        {% if error %}
+            <div class="alert alert-danger" style="background-color: #dc3545; color: white; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+                {{ error }}
+            </div>
+        {% endif %}
+
+        <!-- Flask-Login login form -->
+        <form method="POST" action="{{ url_for('login') }}">
+            
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember" class="form-label">Remember me</label>
+            </div>
+
+            <button type="submit" class="primary-btn">Login</button>
+        </form>
+
+        <!-- Link to register page -->
+        <div style="text-align: center; margin-top: 1.5rem;">
+            <p style="color: #ccc; font-size: 0.9rem;">
+                Don't have an account? 
+                <a href="{{ url_for('register') }}" style="color: #FFDD00; text-decoration: none;">Create Account</a>
+            </p>
+        </div>
+    </div>
+</main>
+{% endblock %}

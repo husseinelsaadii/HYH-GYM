@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Class Schedule Management</title>
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/schedule-admin.css') }}">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="admin-nav">
+      <h1>Admin - Class Schedule</h1>
+      <a href="{{ url_for('schedule') }}" class="view-schedule-btn">View Public Schedule</a>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <div class="admin-form">
+      <h2>Add/Edit Class</h2>
+      <form id="classForm">
+        <input type="hidden" id="editIndex" value="">
+        <input type="hidden" id="editDay" value="">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="day">Day:</label>
+            <select id="day" required>
+              <option value="">Select Day</option>
+              <option value="monday">Monday</option>
+              <option value="tuesday">Tuesday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thursday">Thursday</option>
+              <option value="friday">Friday</option>
+              <option value="saturday">Saturday</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="time">Time:</label>
+            <input type="time" id="time" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="className">Class Name:</label>
+            <input type="text" id="className" placeholder="Enter class name" required>
+          </div>
+          <div class="form-group">
+            <label for="coach">Coach:</label>
+            <input type="text" id="coach" placeholder="Enter coach name" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <button type="submit" id="submitBtn" class="btn-add">Add Class</button>
+          <button type="button" id="clearBtn" style="display: none;" class="btn-danger">Cancel Edit</button>
+        </div>
+      </form>
+    </div>
+
+    <h2>Current Schedule</h2>
+    <div id="scheduleDisplay">
+      <!-- Day sections will be dynamically generated here -->
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/schedule-admin.js') }}"></script>
+
+{% endblock %}

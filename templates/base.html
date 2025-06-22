@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+<!-- ------------------------------NAV-BAR----------------------- -->
+<nav class="nav-bar fixed-top">
+    <div class="nav-logo">
+        <a href="{{ url_for('index') }}">
+            <img class="logo" src="{{ url_for('static', filename='images/GYM Logo.png') }}" alt="HYH-logo">
+        </a>
+    </div>
+
+    <div class="navbar-container">
+        <ul class="nav-menu nav-left-links">
+            <li><a href="{{ url_for('about') }}" class="{% if request.endpoint == 'about' %}active{% endif %}">WHAT IS HYH?</a></li>
+            <li class="nav-dropdown">
+                <a href="{{ url_for('cardio') }}" class="{% if request.endpoint in ['cardio', 'resistance'] %}active{% endif %}">HYH WORKOUTS</a>
+                <div class="nav-dropdown-content">
+                    <a href="{{ url_for('cardio') }}" class="{% if request.endpoint == 'cardio' %}active{% endif %}">Cardio</a>
+                    <a href="{{ url_for('resistance') }}" class="{% if request.endpoint == 'resistance' %}active{% endif %}">Resistance</a>
+                </div>
+            </li>
+            <li><a href="{{ url_for('membership') }}" class="{% if request.endpoint == 'membership' %}active{% endif %}">MEMBERSHIP</a></li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <ul class="nav-menu nav-right-links">
+            {% if current_user.is_authenticated %}
+                {% if current_user.role_id == 'admin' %}
+                    <li><a href="{{ url_for('home_admin') }}" class="{% if request.endpoint == 'home_admin' %}active{% endif %}">ADMIN: {{ current_user.email.split('@')[0] | title }}</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('home_user') }}" class="{% if request.endpoint == 'home_user' %}active{% endif %}">Welcome, {{ current_user.email.split('@')[0] | title }}</a></li>
+                {% endif %}
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            {% else %}
+                <li><a href="{{ url_for('location') }}" class="{% if request.endpoint == 'location' %}active{% endif %}">Find A Studio</a></li>
+                <li><a href="{{ url_for('shop') }}" class="{% if request.endpoint == 'shop' %}active{% endif %}">HYH Shop</a></li>
+                <li>
+                    <button class="trial-btn" onclick="location.href='{{ url_for('login') }}'">Start A Trial</button>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+
+
+<!-- Main Content Area -->
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+<!-- ------------------------------FOOTER----------------------- -->
+<footer class="app-footer">
+    <div class="footer-content">
+        <div class="social-menu">
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-instagram footer-icons"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook footer-icons"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter footer-icons"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin footer-icons"></i></a></li>
+            </ul>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="app-footer__mailing-list">
+            <div class="small-text mb-3">JOIN OUR MAILING LIST TODAY</div>
+            <h3>GET 20% OFF YOUR FIRST ORDER AT THE HYH SHOP</h3>
+            <p>Gain exclusive access to special offers, product drops, new workouts, and upcoming events.</p>
+
+            {% if not current_user.is_authenticated %}
+                <a class="btn btn-sign-up" href="{{ url_for('login') }}">Sign Up</a>
+            {% endif %}
+        </div>
+
+        <div class="footer-links-container">
+            <div class="footer-links">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdwDiBgdGIWtEXVy0-GAehkD_U_CkeFiDbQrSO7ByL12VXpPg/viewform?usp=sharing" class="nav-link">RATE US!</a></li>
+                    <li class="nav-item"><a href="{{ url_for('location') }}" class="nav-link">Locations</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Newsroom</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Invest</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Careers</a></li>
+                    <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-partners">
+                <img class="footer-badge" src="{{ url_for('static', filename='images/entrepreneur-2023.png') }}" alt="Franchise Award">
+                <img class="footer-badge" src="{{ url_for('static', filename='images/mens-journal-1.png') }}" alt="Men's Journal">
+            </div>
+
+            <div class="language">
+                <button class="btn btn-outline-white">Change Region</button>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 HYH TRAINING. ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+</footer>
+
+
+<style>
+    .nav-menu a.active {
+    color: #ffeb3b !important; /* Yellow color */
+}
+</style>
+</body>
+</html>

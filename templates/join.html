@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <meta charset="UTF-8">
+  <title>HYH Training | Join Now</title>
+
+  <!-- Local Stylesheets -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/join.css') }}">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+<!-- Main Content -->
+<main class="join-container">
+  <div class="join-header">
+    <h1>THANKS FOR CHOOSING HYH TRAINING!</h1>
+    <p>You're just a few steps away from starting your fitness journey with us.</p>
+  </div>
+
+  <div class="success-icon">✓</div>
+
+  <div class="plan-notification">
+    <h3>YOUR MEMBERSHIP IS RESERVED</h3>
+    <p>We've saved your selected plan. Visit any HYH location to complete your registration.</p>
+    <p id="plan-message">Your membership will be activated immediately upon payment at the gym.</p>
+  </div>
+
+  <div class="join-steps">
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h3>VISIT OUR GYM</h3>
+        <p>Come to any HYH Training location during staffed hours. Our team members are ready to assist you in completing your membership registration.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h3>BRING IDENTIFICATION</h3>
+        <p>Please bring a valid photo ID and a payment method (credit card, debit card, or bank account details for direct debit).</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <h3>COMPLETE PAYMENT</h3>
+        <p>Our staff will help you complete your payment process and activate your membership. The joining fee and first payment will be collected at this time.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">4</div>
+      <div class="step-content">
+        <h3>GET YOUR ACCESS CARD</h3>
+        <p>You'll receive your membership card on the spot, giving you immediate access to the facilities based on your chosen plan.</p>
+      </div>
+    </div>
+  </div>
+
+<div class="action-buttons">
+    <a href="{{ url_for('membership') }}" class="btn btn-secondary">BACK TO PLANS</a>
+    <a href="{{ url_for('index') }}" class="btn btn-primary">RETURN HOME</a>
+</div>
+
+
+  <div class="contact-info">
+    <h3>QUESTIONS?</h3>
+    <p>Contact us at <a href="mailto:info@hyhtraining.com"><strong>info@hyhtraining.com</strong></a> or call <strong>(555) 123-4567</strong></p>
+    <p>Our staff hours: Monday-Friday 8AM-9PM, Saturday-Sunday 9AM-6PM</p>
+  </div>
+</main>
+<script src="{{ url_for('static', filename='js/join.js') }}"></script>
+
+{% endblock %}

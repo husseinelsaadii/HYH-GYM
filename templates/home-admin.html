@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <meta charset="UTF-8">
+  <title>HYH Training | Admin Dashboard</title>
+
+  <!-- Local Stylesheets -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+<!-- Main Content -->
+<main class="dashboard-container">
+  <div class="dashboard-header admin-header">
+    <h1>ADMIN DASHBOARD</h1>
+    <p class="welcome-message">Manage your fitness studio operations</p>
+  </div>
+
+  <div class="dashboard-grid">
+    <!-- User Management Card -->
+    <div class="dashboard-card">
+      <div class="card-icon">
+        <i class="fas fa-users"></i>
+      </div>
+      <h2>USER MANAGEMENT</h2>
+      <div class="stats-container">
+        <div class="stat-item">
+          <span class="stat-number">{{ total_users }}</span>
+          <span class="stat-label">Total Members</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">{{ regular_users }}</span>
+          <span class="stat-label">Regular Users</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">{{ admin_users }}</span>
+          <span class="stat-label">Admin Users</span>
+        </div>
+      </div>
+      <button class="primary-btn" onclick="location.href='{{ url_for('check_users') }}'">
+        <i class="fas fa-cog"></i> Manage Users
+      </button>
+    </div>
+
+    <!-- Class Schedule Card -->
+    <div class="dashboard-card">
+      <div class="card-icon">
+        <i class="fas fa-calendar-alt"></i>
+      </div>
+      <h2>CLASS SCHEDULE</h2>
+      <div class="stats-container">
+        <div class="stat-item">
+          <span class="stat-number">{{ total_classes }}</span>
+          <span class="stat-label">Total Classes</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">{{ classes_today }}</span>
+          <span class="stat-label">Classes Today</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">{{ unique_coaches }}</span>
+          <span class="stat-label">Active Coaches</span>
+        </div>
+      </div>
+      <button class="secondary-btn" onclick="location.href='{{ url_for('schedule_admin') }}'">
+        <i class="fas fa-edit"></i> Edit Schedule
+      </button>
+    </div>
+
+    <!-- Quick Actions Card -->
+    <div class="dashboard-card">
+      <div class="card-icon">
+        <i class="fas fa-bolt"></i>
+      </div>
+      <h2>QUICK ACTIONS</h2>
+      <div class="quick-actions">
+        <button class="action-btn" onclick="location.href='{{ url_for('schedule_admin') }}'">
+          <i class="fas fa-plus"></i> Add New Class
+        </button>
+        <button class="action-btn" onclick="location.href='{{ url_for('check_users') }}'">
+          <i class="fas fa-user-plus"></i> View Users
+        </button>
+        <button class="action-btn" onclick="showSystemInfo()">
+          <i class="fas fa-info-circle"></i> System Info
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- System Info Modal -->
+  <div id="systemInfoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>System Information</h2>
+      <div class="system-info">
+        <p><strong>Database Status:</strong> <span class="status-active">Active</span></p>
+        <p><strong>Total Records:</strong> {{ total_users + total_classes }}</p>
+        <p><strong>Last Updated:</strong> <span id="currentTime"></span></p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+// Update current time
+function updateTime() {
+  document.getElementById('currentTime').textContent = new Date().toLocaleString();
+}
+
+// Show system info modal
+function showSystemInfo() {
+  updateTime();
+  document.getElementById('systemInfoModal').style.display = 'block';
+}
+
+// Close modal
+function closeModal() {
+  document.getElementById('systemInfoModal').style.display = 'none';
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  const modal = document.getElementById('systemInfoModal');
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+}
+</script>
+
+<script src="{{ url_for('static', filename='js/home-admin.js') }}"></script>
+{% endblock %}

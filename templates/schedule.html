@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+
+{% block head %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class Schedule - HYH Gym</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/schedule.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Class Schedule</h1>
+    
+    <!-- Schedule Tabs -->
+    <div class="schedule-tabs">
+        <button class="tab-button active" data-day="monday">Monday</button>
+        <button class="tab-button" data-day="tuesday">Tuesday</button>
+        <button class="tab-button" data-day="wednesday">Wednesday</button>
+        <button class="tab-button" data-day="thursday">Thursday</button>
+        <button class="tab-button" data-day="friday">Friday</button>
+        <button class="tab-button" data-day="saturday">Saturday</button>
+    </div>
+
+    <!-- Schedule Content -->
+    <div id="monday" class="schedule-content active">
+        <div id="monday-grid" class="schedule-grid">
+            {% if schedule_data.monday %}
+                {% for class in schedule_data.monday %}
+                <div class="class-card">
+                    <h3 class="class-time">{{ class.formatted_time }}</h3>
+                    <h4 class="class-name upper">{{ class.class_name }}</h4>
+                    <div class="class-coach">
+                        <svg class="coach-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                        </svg>
+                        {{ class.coach }}
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="no-classes">No classes scheduled for this day</div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div id="tuesday" class="schedule-content">
+        <div id="tuesday-grid" class="schedule-grid">
+            {% if schedule_data.tuesday %}
+                {% for class in schedule_data.tuesday %}
+                <div class="class-card">
+                    <h3 class="class-time">{{ class.formatted_time }}</h3>
+                    <h4 class="class-name upper">{{ class.class_name }}</h4>
+                    <div class="class-coach">
+                        <svg class="coach-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                        </svg>
+                        {{ class.coach }}
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="no-classes">No classes scheduled for this day</div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div id="wednesday" class="schedule-content">
+        <div id="wednesday-grid" class="schedule-grid">
+            {% if schedule_data.wednesday %}
+                {% for class in schedule_data.wednesday %}
+                <div class="class-card">
+                    <h3 class="class-time">{{ class.formatted_time }}</h3>
+                    <h4 class="class-name upper">{{ class.class_name }}</h4>
+                    <div class="class-coach">
+                        <svg class="coach-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                        </svg>
+                        {{ class.coach }}
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="no-classes">No classes scheduled for this day</div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div id="thursday" class="schedule-content">
+        <div id="thursday-grid" class="schedule-grid">
+            {% if schedule_data.thursday %}
+                {% for class in schedule_data.thursday %}
+                <div class="class-card">
+                    <h3 class="class-time">{{ class.formatted_time }}</h3>
+                    <h4 class="class-name upper">{{ class.class_name }}</h4>
+                    <div class="class-coach">
+                        <svg class="coach-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                        </svg>
+                        {{ class.coach }}
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="no-classes">No classes scheduled for this day</div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div id="friday" class="schedule-content">
+        <div id="friday-grid" class="schedule-grid">
+            {% if schedule_data.friday %}
+                {% for class in schedule_data.friday %}
+                <div class="class-card">
+                    <h3 class="class-time">{{ class.formatted_time }}</h3>
+                    <h4 class="class-name upper">{{ class.class_name }}</h4>
+                    <div class="class-coach">
+                        <svg class="coach-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                        </svg>
+                        {{ class.coach }}
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="no-classes">No classes scheduled for this day</div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div id="saturday" class="schedule-content">
+        <div id="saturday-grid" class="schedule-grid">
+            {% if schedule_data.saturday %}
+                {% for class in schedule_data.saturday %}
+                <div class="class-card">
+                    <h3 class="class-time">{{ class.formatted_time }}</h3>
+                    <h4 class="class-name upper">{{ class.class_name }}</h4>
+                    <div class="class-coach">
+                        <svg class="coach-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                        </svg>
+                        {{ class.coach }}
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="no-classes">No classes scheduled for this day</div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Tab functionality
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const scheduleContents = document.querySelectorAll('.schedule-content');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all tabs
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            scheduleContents.forEach(content => content.classList.remove('active'));
+
+            // Add active class to current tab
+            button.classList.add('active');
+            const day = button.getAttribute('data-day');
+            document.getElementById(day).classList.add('active');
+        });
+    });
+});
+</script>
+{% endblock %}

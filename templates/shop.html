@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <meta charset="UTF-8">
+  <title>HYH Training | Shop</title>
+
+  <!-- Local Stylesheets -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/shop.css') }}">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+<!-- Main Content -->
+<main class="shop-container">
+  <div class="coming-soon-wrapper">
+    <div class="coming-soon-content">
+      <h1>THE HYH SHOP IS</h1>
+      <div class="highlight-text">COMING SOON</div>
+      <div class="construction-icon">
+        <i class="fas fa-dumbbell"></i>
+        <i class="fas fa-tools"></i>
+        <i class="fas fa-dumbbell"></i>
+      </div>
+      <p>We're currently working on bringing you the best fitness gear, supplements, and HYH merchandise to elevate your training experience.</p>
+      <p>Check back soon for exclusive products curated by our fitness experts.</p>
+
+      <div class="notification-box">
+        <h2>WANT TO BE THE FIRST TO KNOW?</h2>
+        <p>Sign up for our newsletter and get 20% off your first order when we launch!</p>
+        <a href="{{ url_for('login') }}" class="notify-btn">NOTIFY ME</a>
+      </div>
+
+      <div class="return-home">
+        <a href="{{ url_for('index') }}" class="return-link">
+          <i class="fas fa-arrow-left"></i> RETURN TO HOMEPAGE
+        </a>
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

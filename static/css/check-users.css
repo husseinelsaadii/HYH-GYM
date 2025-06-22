@@ -1,0 +1,375 @@
+/* Base Styles */
+:root {
+    --primary-color: #1c1c1c;
+    --accent-color: #ffdd00;
+    --text-color: #ffffff;
+    --highlight-color: #f4a261;
+    --grid-color: rgba(255, 255, 255, 0.1);
+    --success-color: #4caf50;
+    --danger-color: #f44336;
+    --info-color: #2196f3;
+    --warning-color: #ff9800;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a.active {
+    color: #FFDD00;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.lower {
+    text-transform: none;
+}
+
+/* Main Content Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.section-title {
+    font-family: 'Bebas Neue', cursive, Arial, sans-serif;
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.users-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Search Tools */
+.search-tools {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-bar {
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.search-bar input:focus {
+    outline: 2px solid var(--accent-color);
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.control-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 4px;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.control-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* Users Table */
+.users-table-container {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.users-table th {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.2rem 1rem;
+    text-align: left;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--grid-color);
+}
+
+.users-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--grid-color);
+}
+
+.users-table tr:last-child td {
+    border-bottom: none;
+}
+
+.users-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* User Status and Badges */
+.admin-badge {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.user-badge {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-active {
+    background-color: var(--success-color);
+}
+
+.status-inactive {
+    background-color: var(--danger-color);
+}
+
+.registration-date {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Action Buttons */
+.action-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.delete-btn {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+    transform: translateY(-1px);
+}
+
+.protected-user {
+    color: var(--accent-color);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 2rem;
+    z-index: 1001;
+    min-width: 400px;
+    max-width: 90vw;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.modal h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.modal p {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.cancel-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cancel-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.delete-confirm-btn {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.delete-confirm-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* No Users Message */
+.no-users-message {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Notification */
+.notification {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+
+.notification.success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.notification.error {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.notification.info {
+    background-color: var(--info-color);
+    color: white;
+}
+
+.notification.warning {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .divider {
+        width: 100%;
+        height: 1px;
+        margin: 1rem 0;
+    }
+
+    .search-tools {
+        flex-direction: column;
+    }
+
+    .search-bar {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .controls {
+        width: 100%;
+    }
+
+    .control-btn {
+        flex: 1;
+    }
+
+    .users-table-container {
+        overflow-x: auto;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .modal {
+        min-width: 300px;
+        padding: 1.5rem;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+    }
+
+    .modal-actions .control-btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}

@@ -1,0 +1,322 @@
+/* Dashboard Styles for both user and admin */
+.dashboard-container {
+    padding: 2rem;
+    min-height: calc(100vh - 200px);
+    background-color: #1A1A1A;
+    color: white;
+}
+
+.nav-menu li a.active {
+    color: #FFDD00;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #444;
+}
+
+.dashboard-header h1 {
+    font-size: 3.5rem;
+    color: #FFDD00;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-message {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.dashboard-card {
+    background: linear-gradient(135deg, #2A2A2A 0%, #1F1F1F 100%);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #FFDD00, #FFA500);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(255, 221, 0, 0.1);
+    border-color: #FFDD00;
+}
+
+.dashboard-card:hover::before {
+    opacity: 1;
+}
+
+.card-icon {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.card-icon i {
+    font-size: 2.5rem;
+    color: #FFDD00;
+    opacity: 0.8;
+}
+
+.dashboard-card h2 {
+    font-size: 1.8rem;
+    color: #FFDD00;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.8rem;
+    text-align: center;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.stat-item:hover {
+    background-color: #3A3A3A;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFDD00;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #ccc;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dashboard-card p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+/* Button Styles */
+.dashboard-card button {
+    margin-top: auto;
+    align-self: stretch;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, #FFDD00, #FFA500);
+    color: #1A1A1A;
+}
+
+.primary-btn:hover {
+    background: linear-gradient(135deg, #FFA500, #FFDD00);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 221, 0, 0.3);
+}
+
+.secondary-btn {
+    background: linear-gradient(135deg, #4A90E2, #2E5BBA);
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: linear-gradient(135deg, #2E5BBA, #4A90E2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+.tertiary-btn {
+    background: linear-gradient(135deg, #50C878, #228B22);
+    color: white;
+}
+
+.tertiary-btn:hover {
+    background: linear-gradient(135deg, #228B22, #50C878);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(80, 200, 120, 0.3);
+}
+
+/* Quick Actions */
+.quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.action-btn {
+    background-color: #333;
+    color: #FFDD00;
+    border: 1px solid #555;
+    padding: 12px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.action-btn:hover {
+    background-color: #FFDD00;
+    color: #1A1A1A;
+    border-color: #FFDD00;
+    transform: translateX(4px);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background-color: #2A2A2A;
+    margin: 15% auto;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+
+.close:hover {
+    color: #FFDD00;
+}
+
+.system-info {
+    margin-top: 2rem;
+}
+
+.system-info p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.status-active {
+    color: #50C878;
+    font-weight: bold;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.lower {
+    text-transform: none;
+}
+
+/* Admin-specific styles */
+.admin-header h1 {
+    color: #FFDD00;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .dashboard-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .dashboard-card {
+        padding: 1.5rem;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard-container {
+        padding: 1rem;
+    }
+}

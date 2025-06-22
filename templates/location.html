@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <meta charset="UTF-8">
+  <title>Find a Studio | HYH Training</title>
+
+  <!-- Local Stylesheets -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/location.css') }}">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<!-- Main Section -->
+<main>
+  <section class="location-hero">
+    <div class="location-hero-overlay"></div>
+    <div class="location-hero-content">
+      <h1 class="titles">FIND YOUR HYH STUDIO</h1>
+      <p>Three premium locations across Lebanon to help you transform your body and your life.</p>
+    </div>
+  </section>
+
+  <section class="location-intro">
+    <div class="stars">★ ★ ★</div>
+    <h2>OUR STUDIOS</h2>
+    <p>Each HYH Training studio is equipped with state-of-the-art fitness equipment and staffed with certified trainers ready to guide you through your fitness journey. Find the location closest to you and start your transformation today.</p>
+  </section>
+
+  <section class="locations-container">
+    <div class="location-card">
+      <div class="location-image">
+      <img src="{{ url_for('static', filename='images/beirut-location.jpeg') }}" alt="HYH Beirut Studio">
+      </div>
+      <div class="location-details">
+        <h3>BEIRUT</h3>
+        <p class="location-address">123 Hamra Street, Beirut, Lebanon</p>
+        <p class="location-contact">+961 1 234 567</p>
+        <div class="location-hours">
+          <p><strong>Hours:</strong></p>
+          <p>Monday - Friday: 6:00 AM - 10:00 PM</p>
+          <p>Saturday - Sunday: 8:00 AM - 8:00 PM</p>
+        </div>
+        <div class="location-actions">
+<a href="{{ url_for('login') }}" class="location-btn primary-btn">Book a Class</a>
+          <a href="https://goo.gl/maps/1234" target="_blank" class="location-btn secondary-btn">Get Directions</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="location-card">
+      <div class="location-image">
+      <img src="{{ url_for('static', filename='images/tripoli-location.jpg') }}" alt="HYH Tripoli Studio">
+      </div>
+      <div class="location-details">
+        <h3>TRIPOLI</h3>
+        <p class="location-address">45 Al Mina Road, Tripoli, Lebanon</p>
+        <p class="location-contact">+961 6 789 012</p>
+        <div class="location-hours">
+          <p><strong>Hours:</strong></p>
+          <p>Monday - Friday: 6:00 AM - 10:00 PM</p>
+          <p>Saturday - Sunday: 8:00 AM - 8:00 PM</p>
+        </div>
+        <div class="location-actions">
+<a href="{{ url_for('login') }}" class="location-btn primary-btn">Book a Class</a>
+          <a href="https://goo.gl/maps/5678" target="_blank" class="location-btn secondary-btn">Get Directions</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="location-card">
+      <div class="location-image">
+      <img src="{{ url_for('static', filename='images/tyre-location.jpg') }}" alt="HYH Tyre Studio">
+      </div>
+      <div class="location-details">
+        <h3>TYRE</h3>
+        <p class="location-address">78 Coastal Boulevard, Tyre, Lebanon</p>
+        <p class="location-contact">+961 7 345 678</p>
+        <div class="location-hours">
+          <p><strong>Hours:</strong></p>
+          <p>Monday - Friday: 6:00 AM - 10:00 PM</p>
+          <p>Saturday - Sunday: 8:00 AM - 8:00 PM</p>
+        </div>
+        <div class="location-actions">
+<a href="{{ url_for('login') }}" class="location-btn primary-btn">Book a Class</a>
+          <a href="https://goo.gl/maps/9012" target="_blank" class="location-btn secondary-btn">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <h2>LOCATE US ON THE MAP</h2>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d845944.9371891889!2d35.09246683907934!3d33.83900457928946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f17028422aaad%3A0xcc7d34096c00f970!2sLebanon!5e0!3m2!1sen!2sus!4v1714404825758!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-card">
+      <h3>QUESTIONS ABOUT OUR STUDIOS?</h3>
+      <p>Contact our team for more information about our locations, classes, or membership options.</p>
+<a href="{{ url_for('contact') }}" class="contact-btn">Contact Us</a>
+    </div>
+  </section>
+
+  <section class="banner-container">
+    <div class="banner-content">
+      <!-- First set of text -->
+      <span class="banner-text">SUPPORT</span>
+      <span class="star">★</span>
+      <span class="banner-text">SWEAT</span>
+      <span class="star">★</span>
+      <span class="banner-text">SUCCEED</span>
+      <span class="star">★</span>
+      <span class="banner-text">SUPPORT</span>
+      <span class="star">★</span>
+      <span class="banner-text">SWEAT</span>
+      <span class="star">★</span>
+      <span class="banner-text">SUCCEED</span>
+      <span class="star">★</span>
+      <!-- Duplicate to ensure seamless looping -->
+      <span class="banner-text">SUPPORT</span>
+      <span class="star">★</span>
+      <span class="banner-text">SWEAT</span>
+      <span class="star">★</span>
+      <span class="banner-text">SUCCEED</span>
+      <span class="star">★</span>
+      <span class="banner-text">SUPPORT</span>
+      <span class="star">★</span>
+      <span class="banner-text">SWEAT</span>
+      <span class="star">★</span>
+      <span class="banner-text">SUCCEED</span>
+      <span class="star">★</span>
+    </div>
+  </section>
+  <div class="red-bar"></div>
+</main>
+
+
+<script src="{{ url_for('static', filename='js/bannerSlides.js') }}"></script>
+
+{% endblock %}

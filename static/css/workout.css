@@ -1,0 +1,349 @@
+/* Fixed Workout Tracker Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1A1A1A;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.workout-container {
+    min-height: 100vh;
+    padding: 1rem;
+    background-color: #1A1A1A;
+    color: white;
+    width: 100%;
+}
+
+.back-btn {
+    background: linear-gradient(135deg, #333, #222);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.back-btn:hover {
+    background: linear-gradient(135deg, #FFDD00, #FFA500);
+    color: #1A1A1A;
+}
+
+.workout-tracker {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Streak Counter */
+.streak-counter {
+    background: linear-gradient(135deg, #FFDD00, #FFA500);
+    color: #1A1A1A;
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 10px 30px rgba(255, 221, 0, 0.3);
+}
+
+.streak-icon {
+    font-size: 3rem;
+}
+
+.streak-number {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.streak-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Calendar Header */
+.calendar-header {
+    margin-bottom: 2rem;
+}
+
+.calendar-header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: #FFDD00;
+    margin-bottom: 0.5rem;
+}
+
+.calendar-header p {
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+/* Calendar - FIXED */
+.calendar {
+    background: #2A2A2A;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.nav-btn {
+    background: linear-gradient(135deg, #FFDD00, #FFA500);
+    color: #1A1A1A;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 221, 0, 0.4);
+}
+
+#current-month {
+    color: #FFDD00;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+/* FIXED Calendar Grid */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    background-color: #1A1A1A;
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.day-header {
+    background-color: #FFDD00;
+    color: #1A1A1A;
+    padding: 15px 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.calendar-day {
+    background-color: #333;
+    padding: 15px 5px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.calendar-day:hover {
+    background-color: #444;
+}
+
+.calendar-day.other-month {
+    color: #666;
+    background-color: #222;
+}
+
+.calendar-day.today {
+    background: linear-gradient(135deg, #FFDD00, #FFA500);
+    color: #1A1A1A;
+    font-weight: bold;
+}
+
+.calendar-day.completed {
+    background: linear-gradient(135deg, #50C878, #228B22);
+    color: white;
+}
+
+.calendar-day.completed::after {
+    content: '✓';
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Today's Workout Section */
+.today-section {
+    background: #2A2A2A;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.today-section.completed {
+    border: 2px solid #50C878;
+    background: #1F2F1F;
+}
+
+.today-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #FFDD00;
+}
+
+.today-section.completed .today-icon {
+    color: #50C878;
+}
+
+.today-section h3 {
+    color: #FFDD00;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.today-section.completed h3 {
+    color: #50C878;
+}
+
+.today-section p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.complete-workout-btn {
+    background: linear-gradient(135deg, #50C878, #228B22);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.complete-workout-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(80, 200, 120, 0.4);
+}
+.calendar-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+#calendar-days {
+  display: block;
+}
+
+
+
+/* Stats Section */
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: #2A2A2A;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFDD00;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.stat-label {
+    color: #ccc;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .workout-container {
+        padding: 1rem;
+    }
+
+    .calendar-header h1 {
+        font-size: 2rem;
+    }
+
+    .streak-counter {
+        padding: 1.5rem;
+        gap: 0.5rem;
+    }
+
+    .streak-icon {
+        font-size: 2rem;
+    }
+
+    .streak-number {
+        font-size: 2rem;
+    }
+
+    .calendar {
+        padding: 1rem;
+    }
+
+    .calendar-day {
+        min-height: 40px;
+        padding: 10px 5px;
+        font-size: 0.9rem;
+    }
+
+    .today-section {
+        padding: 1.5rem;
+    }
+
+    .stats-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .nav-btn {
+        padding: 8px 12px;
+        font-size: 1rem;
+    }
+
+    #current-month {
+        font-size: 1.4rem;
+    }
+}
