@@ -49,12 +49,12 @@ HYH-GYM/
 │       └── register.html   # Registration page
 │
 ├── static/                 # Static files
-│   │── css/
-│   │   └── style.css       # All site styling
-│   │── js/
-│   │   └── script.js       # All site interactivity
-│   │── images/             # All images used in the website
-│   └── videos/             # Video files used on pages
+    │── css/
+    │   └── style.css       # All site styling
+    │── js/
+    │   └── script.js       # All site interactivity
+    │── images/             # All images used in the website
+    └── videos/             # Video files used on pages
 ```
 
 ---
